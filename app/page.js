@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react';
 import JobForm from '../components/JobForm';
 import ResultsDisplay from '../components/ResultsDisplay';
 import LoadingState from '../components/LoadingState';
+import SEOContent from '../components/SEOContent';
 
 export default function Home() {
   const [step, setStep] = useState('form'); // form | loading | results
@@ -93,12 +94,16 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
                 Will AI Replace Your Job?
               </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <p className="text-gray-600 max-w-2xl mx-auto mb-3">
                 Get a personalised risk assessment based on your actual daily tasks.
                 Not a generic score. A real analysis of what AI can and cannot do in your role.
               </p>
+              <p className="text-xs text-gray-400 max-w-xl mx-auto">
+                Analysis informed by research from the World Economic Forum, Goldman Sachs, McKinsey, and Oxford University.
+              </p>
             </div>
             <JobForm onSubmit={handleSubmit} initialData={formData} />
+            <SEOContent />
           </div>
         )}
 
@@ -137,4 +142,3 @@ export default function Home() {
     </main>
   );
 }
-
