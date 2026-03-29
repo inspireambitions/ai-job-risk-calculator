@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import EmailCapture from './EmailCapture';
 
 function getRiskColor(score) {
   if (score <= 30) return { bg: 'bg-green-500', text: 'text-green-700', light: 'bg-green-50', border: 'border-green-200' };
@@ -29,7 +30,6 @@ function TaskBar({ task }) {
           <span className="text-sm font-semibold text-gray-700 w-10 text-right">{task.riskScore}%</span>
         </div>
       </div>
-      {/* Bar */}
       <div className="w-full bg-gray-100 rounded-full h-2 mb-1.5">
         <div
           className={`h-2 rounded-full risk-fill ${colors.bg}`}
@@ -80,7 +80,6 @@ export default function ResultsDisplay({ results, formData, onReset }) {
           Your AI Displacement Risk Score
         </p>
 
-        {/* Big Score */}
         <div className="relative inline-flex items-center justify-center mb-4">
           <div className={`w-32 h-32 sm:w-40 sm:h-40 rounded-full border-8 ${colors.border} flex items-center justify-center`}>
             <div>
@@ -175,6 +174,9 @@ export default function ResultsDisplay({ results, formData, onReset }) {
         )}
       </div>
 
+      {/* Email Capture */}
+      <EmailCapture score={score} jobTitle={formData.jobTitle} />
+
       {/* Timeline */}
       {results.timeline && (
         <div className="bg-white rounded-xl border border-gray-200 p-5 sm:p-6 shadow-sm fade-in-up fade-in-up-delay-4">
@@ -260,4 +262,4 @@ export default function ResultsDisplay({ results, formData, onReset }) {
       </div>
     </div>
   );
-}
+          }
