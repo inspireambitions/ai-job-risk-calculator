@@ -42,21 +42,34 @@ function TaskBar({ task }) {
 }
 
 export default function ResultsDisplay({ results, formData, onReset }) {
-  const [shareText, setShareText] = useState('');
+  const [copyText, setCopyText] = useState('');
   const score = results.overallRiskScore;
   const colors = getRiskColor(score);
+  const toolUrl = 'https://ai-job-risk-calculator.vercel.app/';
 
-  const handleShare = () => {
-    const text = `I just checked my AI job displacement risk for "${formData.jobTitle}" and got ${score}% (${getRiskLabel(score)}). Check yours at inspireambitions.com/career-tools/`;
+  const shareMessage = `My AI Job Displacement Risk Score for "${formData.jobTitle}": ${score}% (${getRiskLabel(score)}). Check yours:`;
 
-    if (navigator.share) {
-      navigator.share({ title: 'My AI Job Risk Score', text }).catch(() => {});
-    } else {
-      navigator.clipboard.writeText(text).then(() => {
-        setShareText('Copied to clipboard!');
-        setTimeout(() => setShareText(''), 3000);
-      }).catch(() => {});
-    }
+  const handleLinkedIn = () => {
+    const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(toolUrl)}`;
+    window.open(url, '_blank', 'width=600,height=500');
+  };
+
+  const handleX = () => {
+    const url = `https://x.com/intent/tweet?text=${encodeURIComponent(shareMessage)}&url=${encodeURIComponent(toolUrl)}`;
+    window.open(url, '_blank', 'width=600,height=400');
+  };
+
+  const handleWhatsApp = () => {
+    const url = `https://wa.me/?text=${encodeURIComponent(shareMessage + ' ' + toolUrl)}`;
+    window.open(url, '_blank');
+  };
+
+  const handleCopy = () => {
+    const text = `${shareMessage} ${toolUrl}`;
+    navigator.clipboard.writeText(text).then(() => {
+      setCopyText('Copied!');
+      setTimeout(() => setCopyText(''), 3000);
+    }).catch(() => {});
   };
 
   return (
@@ -81,24 +94,47 @@ export default function ResultsDisplay({ results, formData, onReset }) {
           {getRiskLabel(score)}
         </p>
 
-        <p className="text-sm text-gray-600 max-w-lg mx-auto mb-4">
+        <p className="text-sm text-gray-600 max-w-lg mx-auto mb-5">
           {results.summary}
         </p>
 
-        <div className="flex justify-center gap-3">
-          <button
-            onClick={handleShare}
-            className="px-5 py-2 bg-brand-600 text-white rounded-lg text-sm font-medium hover:bg-brand-700 transition-colors"
-          >
-            {shareText || 'Share My Score'}
-          </button>
-          <button
-            onClick={onReset}
-            className="px-5 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
-          >
-            Analyse Another Role
-          </button>
+        {/* Share Buttons */}
+        <div className="mb-4">
+          <p className="text-xs text-gray-400 mb-2">Share your score</p>
+          <div className="flex justify-center gap-2 flex-wrap">
+            <button
+              onClick={handleLinkedIn}
+              className="px-4 py-2 bg-[#0A66C2] text-white rounded-lg text-sm font-medium hover:bg-[#004182] transition-colors"
+            >
+              LinkedIn
+            </button>
+            <button
+              onClick={handleX}
+              className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+            >
+              X / Twitter
+            </button>
+            <button
+              onClick={handleWhatsApp}
+              className="px-4 py-2 bg-[#25D366] text-white rounded-lg text-sm font-medium hover:bg-[#1DA851] transition-colors"
+            >
+              WhatsApp
+            </button>
+            <button
+              onClick={handleCopy}
+              className="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+            >
+              {copyText || 'Copy Link'}
+            </button>
+          </div>
         </div>
+
+        <button
+          onClick={onReset}
+          className="px-5 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+        >
+          Analyse Another Role
+        </button>
       </div>
 
       {/* Key Insight */}
