@@ -5,6 +5,7 @@ import JobForm from '../components/JobForm';
 import ResultsDisplay from '../components/ResultsDisplay';
 import LoadingState from '../components/LoadingState';
 import SEOContent from '../components/SEOContent';
+import ExampleResult from '../components/ExampleResult';
 
 export default function Home() {
   const [step, setStep] = useState('form'); // form | loading | results
@@ -78,7 +79,10 @@ export default function Home() {
             <div className="flex items-center justify-between">
               <p className="text-amber-800 text-sm">{error}</p>
               <button
-                onClick={() => { setError(null); if (formData) handleSubmit(formData); }}
+                onClick={() => {
+                  setError(null);
+                  if (formData) handleSubmit(formData);
+                }}
                 className="ml-4 px-4 py-2 bg-brand-600 text-white text-sm font-medium rounded-lg hover:bg-brand-700 transition-colors whitespace-nowrap"
               >
                 Try Again
@@ -95,13 +99,15 @@ export default function Home() {
                 Will AI Replace Your Job?
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto mb-3">
-                Get a personalised risk assessment based on your actual daily tasks.
-                Not a generic score. A real analysis of what AI can and cannot do in your role.
+                Get a personalised risk assessment based on your actual daily tasks. Not a generic score. A real analysis of what AI can and cannot do in your role.
               </p>
               <p className="text-xs text-gray-400 max-w-xl mx-auto">
                 Analysis informed by research from the World Economic Forum, Goldman Sachs, McKinsey, and Oxford University.
               </p>
             </div>
+
+            <ExampleResult />
+
             <JobForm onSubmit={handleSubmit} initialData={formData} />
             <SEOContent />
           </div>
@@ -135,10 +141,10 @@ export default function Home() {
             >
               InspireAmbitions.com
             </a>
-            {' '} | Your job is made of tasks. AI replaces tasks, not jobs.
+            {' '}| Your job is made of tasks. AI replaces tasks, not jobs.
           </p>
         </div>
       </footer>
     </main>
   );
-}
+        }
