@@ -136,7 +136,9 @@ You MUST respond in EXACTLY this JSON format (no markdown, no code blocks, just 
   "keyInsight": "<One powerful, memorable insight about their specific situation>"
 }
 
-Be specific to THIS person's tasks, not generic. Ground every assessment in what AI can actually do today and what is on the near horizon. Do not sugarcoat but do not fearmonger. Be precise and evidence-based.`;
+Be specific to THIS person's tasks, not generic. Ground every assessment in what AI can actually do today and what is on the near horizon. Do not sugarcoat but do not fearmonger. Be precise and evidence-based.
+
+IMPORTANT: Do NOT include any URLs, links, or website addresses in your response. No blog links, no article links, no resource links. Only return the raw JSON data as specified above.`;
 }
 
 function parseAnalysis(responseText) {
@@ -174,4 +176,3 @@ function parseAnalysis(responseText) {
     return { error: "Could not parse analysis", rawResponse: responseText };
   }
 }
-
