@@ -14,12 +14,23 @@ export default function ExampleResult() {
       </p>
 
       <div className="flex items-center gap-4 mb-4">
-        {/* Mini Score Circle */}
-        <div className="flex-shrink-0 w-16 h-16 rounded-full border-4 border-yellow-300 flex items-center justify-center">
-          <span className="text-xl font-bold text-yellow-600">47%</span>
+        {/* Dual Mini Scores */}
+        <div className="flex gap-3 flex-shrink-0">
+          <div className="text-center">
+            <div className="w-14 h-14 rounded-full border-4 border-yellow-300 flex items-center justify-center">
+              <span className="text-base font-bold text-yellow-600">47%</span>
+            </div>
+            <p className="text-[9px] text-gray-400 mt-1">Risk</p>
+          </div>
+          <div className="text-center">
+            <div className="w-14 h-14 rounded-full border-4 border-green-300 flex items-center justify-center">
+              <span className="text-base font-bold text-green-600">61%</span>
+            </div>
+            <p className="text-[9px] text-gray-400 mt-1">Protection</p>
+          </div>
         </div>
         <div>
-          <p className="text-sm font-bold text-gray-900">Moderate Risk</p>
+          <p className="text-sm font-bold text-gray-900">Moderate Risk | Displacement: ~2031</p>
           <p className="text-xs text-gray-500">
             Routine tasks face near-term automation. Strategy and relationship tasks remain safe for 10+ years.
           </p>
