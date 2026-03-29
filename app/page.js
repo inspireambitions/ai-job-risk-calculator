@@ -99,11 +99,17 @@ export default function Home() {
                 Will AI Replace Your Job?
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto mb-3">
-                Get a personalised risk assessment based on your actual daily tasks. Not a generic score. A real analysis of what AI can and cannot do in your role.
+                Get your AI Risk Score, Protection Score, and Displacement Year based on your actual daily tasks. Not a generic job-title lookup. A real analysis of what AI can and cannot do in your role.
               </p>
-              <p className="text-xs text-gray-400 max-w-xl mx-auto">
-                Analysis informed by research from the World Economic Forum, Goldman Sachs, McKinsey, and Oxford University.
-              </p>
+              <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-gray-400 max-w-xl mx-auto mt-3">
+                <span>WEF Future of Jobs 2025</span>
+                <span className="text-gray-300">|</span>
+                <span>Goldman Sachs Research</span>
+                <span className="text-gray-300">|</span>
+                <span>McKinsey Global Institute</span>
+                <span className="text-gray-300">|</span>
+                <span>Oxford University</span>
+              </div>
             </div>
 
             <ExampleResult />
