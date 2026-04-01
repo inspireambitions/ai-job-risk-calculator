@@ -72,7 +72,7 @@ export default function ResultsDisplay({ results, formData, onReset }) {
   const researchContext = results.researchContext || [];
   const colors = getRiskColor(score);
   const protColors = getProtectionColor(protectionScore);
-  const toolUrl = 'https://ai-job-risk-calculator.vercel.app/';
+  const toolUrl = 'https://calculator.inspireambitions.com/';
 
   const yearStr = displacementYear ? `AI could automate 50%+ of my tasks by ${displacementYear}.` : '';
   const shareMessage = `My AI Job Risk Score: ${score}% | Protection Score: ${protectionScore}% for "${formData.jobTitle}". ${yearStr} Check yours:`;
