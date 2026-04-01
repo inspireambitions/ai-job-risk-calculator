@@ -142,16 +142,16 @@ export default function EmailCapture({ score, jobTitle, results, formData }) {
     try {
       // Send full results email via WordPress
       const emailContent = buildEmailHTML(results, formData);
-      const wpData = new FormData();
-      wpData.append('action', 'tool_email_results');
-      wpData.append('email', email);
-      wpData.append('tool', 'AI Job Risk Calculator');
-      wpData.append('subject', `Your AI Job Risk Analysis: ${formData.jobTitle} — ${score}% Risk`);
-      wpData.append('content', emailContent);
 
-      const emailRes = await fetch('https://inspireambitions.com/wp-admin/admin-ajax.php', {
+      const emailRes = await fetch('/api/email-results', {
         method: 'POST',
-        body: wpData,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          tool: 'AI Job Risk Calculator',
+          subject: `Your AI Job Risk Analysis: ${formData.jobTitle} — ${score}% Risk`,
+          content: emailContent,
+        }),
       });
 
       // Also subscribe via existing Turso/local API
