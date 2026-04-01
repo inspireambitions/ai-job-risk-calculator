@@ -267,7 +267,7 @@ export default function ResultsDisplay({ results, formData, onReset }) {
       )}
 
       {/* Email Capture */}
-      <EmailCapture score={score} jobTitle={formData.jobTitle} />
+      <EmailCapture score={score} jobTitle={formData.jobTitle} results={results} formData={formData} />
 
       {/* Timeline */}
       {results.timeline && (
