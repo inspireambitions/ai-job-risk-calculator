@@ -6,12 +6,14 @@ import ResultsDisplay from '../components/ResultsDisplay';
 import LoadingState from '../components/LoadingState';
 import SEOContent from '../components/SEOContent';
 import ExampleResult from '../components/ExampleResult';
+import EmailGate from '../components/EmailGate';
 
 export default function Home() {
-  const [step, setStep] = useState('form'); // form | loading | results
+  const [step, setStep] = useState('form'); // form | loading | email-gate | results
   const [results, setResults] = useState(null);
   const [formData, setFormData] = useState(null);
   const [error, setError] = useState(null);
+  const [userEmail, setUserEmail] = useState(null);
 
   const handleSubmit = useCallback(async (data) => {
     setFormData(data);
@@ -32,11 +34,16 @@ export default function Home() {
       }
 
       setResults(analysis);
-      setStep('results');
+      setStep('email-gate');
     } catch (err) {
       setError(err.message || 'Our servers are busy right now. Please wait a moment and try again.');
       setStep('form');
     }
+  }, []);
+
+  const handleEmailUnlock = useCallback((email) => {
+    setUserEmail(email);
+    setStep('results');
   }, []);
 
   const handleReset = useCallback(() => {
@@ -44,6 +51,7 @@ export default function Home() {
     setResults(null);
     setFormData(null);
     setError(null);
+    setUserEmail(null);
   }, []);
 
   return (
@@ -122,6 +130,15 @@ export default function Home() {
         {/* Loading Step */}
         {step === 'loading' && (
           <LoadingState jobTitle={formData?.jobTitle} />
+        )}
+
+        {/* Email Gate Step */}
+        {step === 'email-gate' && results && (
+          <EmailGate
+            results={results}
+            formData={formData}
+            onUnlock={handleEmailUnlock}
+          />
         )}
 
         {/* Results Step */}

@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import EmailCapture from './EmailCapture';
 
 function getRiskColor(score) {
   if (score <= 30) return { bg: 'bg-green-500', text: 'text-green-700', light: 'bg-green-50', border: 'border-green-200' };
@@ -265,9 +264,6 @@ export default function ResultsDisplay({ results, formData, onReset }) {
           </div>
         </div>
       )}
-
-      {/* Email Capture */}
-      <EmailCapture score={score} jobTitle={formData.jobTitle} results={results} formData={formData} />
 
       {/* Timeline */}
       {results.timeline && (

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-function buildEmailHTML(results, formData) {
+export function buildEmailHTML(results, formData) {
   const score = results.overallRiskScore;
   const protectionScore = results.protectionScore || 0;
   const displacementYear = results.displacementYear || null;
