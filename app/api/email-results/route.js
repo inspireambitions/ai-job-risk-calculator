@@ -20,8 +20,10 @@ export async function POST(request) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        'User-Agent': 'InspireAmbitions-Calculator/1.0',
+        'User-Agent': 'Mozilla/5.0 (compatible; InspireAmbitions-Calculator/1.0)',
         'Accept': 'application/json, text/plain, */*',
+        'Origin': 'https://calculator.inspireambitions.com',
+        'Referer': 'https://calculator.inspireambitions.com/',
       },
       body: wpData.toString(),
     });
@@ -31,11 +33,14 @@ export async function POST(request) {
     if (wpRes.ok) {
       return NextResponse.json({ success: true });
     } else {
-      console.error('WP email error:', wpRes.status, wpText);
-      return NextResponse.json({ error: 'Email delivery failed' }, { status: 502 });
+      console.error('WP email error:', wpRes.status, wpText.substring(0, 500));
+      return NextResponse.json(
+        { error: 'Email delivery failed', wpStatus: wpRes.status, wpBody: wpText.substring(0, 200) },
+        { status: 502 }
+      );
     }
   } catch (err) {
     console.error('Email proxy error:', err);
-    return NextResponse.json({ error: 'Server error' }, { status: 500 });
+    return NextResponse.json({ error: 'Server error', detail: err.message }, { status: 500 });
   }
 }
