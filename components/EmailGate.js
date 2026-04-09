@@ -27,8 +27,11 @@ export default function EmailGate({ results, formData, onUnlock }) {
     try {
       const emailContent = buildEmailHTML(results, formData);
 
-      // Send email via the proxy API
-      const emailRes = await fetch('/api/email-results', {
+      // Unlock results immediately — email delivery is best-effort
+      onUnlock(email);
+
+      // Send email and subscribe in background (non-blocking)
+      fetch('/api/email-results', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -37,22 +40,16 @@ export default function EmailGate({ results, formData, onUnlock }) {
           subject: `Your AI Job Risk Analysis: ${formData.jobTitle} — ${score}% Risk`,
           content: emailContent,
         }),
-      });
+      }).catch(() => {});
 
-      // Subscribe to list
-      await fetch('/api/subscribe', {
+      fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, score, jobTitle: formData.jobTitle }),
       }).catch(() => {});
-
-      if (emailRes.ok) {
-        onUnlock(email);
-      } else {
-        setStatus('error');
-      }
     } catch {
-      setStatus('error');
+      // Even if something goes wrong, unlock results
+      onUnlock(email);
     }
   };
 

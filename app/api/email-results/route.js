@@ -18,7 +18,11 @@ export async function POST(request) {
 
     const wpRes = await fetch('https://inspireambitions.com/wp-admin/admin-ajax.php', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'User-Agent': 'InspireAmbitions-Calculator/1.0',
+        'Accept': 'application/json, text/plain, */*',
+      },
       body: wpData.toString(),
     });
 
