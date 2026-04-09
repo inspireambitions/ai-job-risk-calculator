@@ -34,13 +34,10 @@ export async function POST(request) {
       return NextResponse.json({ success: true });
     } else {
       console.error('WP email error:', wpRes.status, wpText.substring(0, 500));
-      return NextResponse.json(
-        { error: 'Email delivery failed', wpStatus: wpRes.status, wpBody: wpText.substring(0, 200) },
-        { status: 502 }
-      );
+      return NextResponse.json({ error: 'Email delivery failed' }, { status: 502 });
     }
   } catch (err) {
     console.error('Email proxy error:', err);
-    return NextResponse.json({ error: 'Server error', detail: err.message }, { status: 500 });
+    return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
 }
