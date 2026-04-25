@@ -123,10 +123,10 @@ export default function EmailGate({ results, formData, onUnlock }) {
             </svg>
           </div>
           <h3 className="text-lg font-bold text-gray-900 mb-1">
-            Enter your email to unlock your full results
+            Email yourself the full report
           </h3>
           <p className="text-sm text-gray-600">
-            We will also send a copy of your complete analysis to your inbox — including task breakdown, displacement timeline, career pivots, and skills roadmap.
+            Unlock the task breakdown, displacement timeline, career pivots, and skills roadmap, then keep a copy in your inbox.
           </p>
         </div>
 
@@ -144,7 +144,7 @@ export default function EmailGate({ results, formData, onUnlock }) {
             disabled={status === 'loading'}
             className="w-full py-3 bg-brand-600 text-white rounded-lg text-base font-semibold hover:bg-brand-700 transition-colors disabled:opacity-50"
           >
-            {status === 'loading' ? 'Unlocking...' : 'Unlock My Full Results'}
+            {status === 'loading' ? 'Unlocking...' : 'Email My Full Report'}
           </button>
         </form>
 

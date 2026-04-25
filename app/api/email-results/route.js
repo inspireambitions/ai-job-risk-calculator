@@ -15,6 +15,7 @@ export async function POST(request) {
     wpData.append('tool', tool || 'AI Job Risk Calculator');
     wpData.append('subject', subject || 'Your Assessment Results');
     wpData.append('content', content);
+    wpData.append('source', 'ai-job-risk-calculator');
 
     const wpRes = await fetch('https://inspireambitions.com/wp-admin/admin-ajax.php', {
       method: 'POST',
@@ -26,15 +27,27 @@ export async function POST(request) {
         'Referer': 'https://calculator.inspireambitions.com/',
       },
       body: wpData.toString(),
+      cache: 'no-store',
     });
 
     const wpText = await wpRes.text();
 
-    if (wpRes.ok) {
-      return NextResponse.json({ success: true });
-    } else {
+    if (!wpRes.ok) {
       console.error('WP email error:', wpRes.status, wpText.substring(0, 500));
       return NextResponse.json({ error: 'Email delivery failed' }, { status: 502 });
+    }
+
+    try {
+      const wpJson = JSON.parse(wpText);
+
+      if (wpJson.success) {
+        return NextResponse.json({ success: true, data: wpJson.data || null });
+      }
+
+      console.error('WP email rejected:', wpText.substring(0, 500));
+      return NextResponse.json({ error: 'Email delivery failed' }, { status: 502 });
+    } catch {
+      return NextResponse.json({ success: true });
     }
   } catch (err) {
     console.error('Email proxy error:', err);

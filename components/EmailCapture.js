@@ -185,9 +185,9 @@ export default function EmailCapture({ score, jobTitle, results, formData }) {
   return (
     <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 fade-in-up">
       <div className="text-center mb-4">
-        <p className="text-base font-bold text-gray-900">Get your full results by email</p>
+        <p className="text-base font-bold text-gray-900">Email yourself the full report</p>
         <p className="text-sm text-gray-600 mt-1">
-          Receive your complete AI risk analysis, career pivot options, and personalised skills roadmap — plus weekly career insights.
+          Keep your AI risk analysis, career pivot options, and personalised skills roadmap in your inbox.
         </p>
       </div>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
@@ -204,7 +204,7 @@ export default function EmailCapture({ score, jobTitle, results, formData }) {
           disabled={status === 'loading'}
           className="px-5 py-2.5 bg-brand-600 text-white rounded-lg text-sm font-medium hover:bg-brand-700 transition-colors disabled:opacity-50 whitespace-nowrap"
         >
-          {status === 'loading' ? 'Sending...' : 'Email My Results'}
+          {status === 'loading' ? 'Sending...' : 'Email My Report'}
         </button>
       </form>
       {status === 'error' && (
