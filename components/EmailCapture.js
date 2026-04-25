@@ -2,6 +2,10 @@
 
 import { useState } from 'react';
 
+function getTimelineText(timeline, legacyKey, currentKey) {
+  return timeline?.[legacyKey] || timeline?.[currentKey] || '';
+}
+
 export function buildEmailHTML(results, formData) {
   const score = results.overallRiskScore;
   const protectionScore = results.protectionScore || 0;
@@ -88,14 +92,18 @@ export function buildEmailHTML(results, formData) {
   }
 
   if (results.timeline) {
+    const shortTerm = getTimelineText(results.timeline, 'shortTerm', 'immediateRisk');
+    const midTerm = getTimelineText(results.timeline, 'midTerm', 'mediumTermRisk');
+    const longTerm = getTimelineText(results.timeline, 'longTerm', 'longTermRisk');
+
     html += `<h3 style="margin:20px 0 12px;color:#1a1a2e;font-size:16px;">Timeline Forecast</h3>
 <table style="width:100%;border-collapse:collapse;margin-bottom:20px;">
 <tr><td style="padding:8px;font-size:12px;font-weight:600;color:#4338ca;background:#eef2ff;width:80px;border-radius:4px;">1-2 years</td>
-<td style="padding:8px;font-size:13px;color:#555;">${results.timeline.shortTerm}</td></tr>
+<td style="padding:8px;font-size:13px;color:#555;">${shortTerm}</td></tr>
 <tr><td style="padding:8px;font-size:12px;font-weight:600;color:#ca8a04;background:#fefce8;width:80px;border-radius:4px;">3-5 years</td>
-<td style="padding:8px;font-size:13px;color:#555;">${results.timeline.midTerm}</td></tr>
+<td style="padding:8px;font-size:13px;color:#555;">${midTerm}</td></tr>
 <tr><td style="padding:8px;font-size:12px;font-weight:600;color:#ea580c;background:#fff7ed;width:80px;border-radius:4px;">5-10 years</td>
-<td style="padding:8px;font-size:13px;color:#555;">${results.timeline.longTerm}</td></tr>
+<td style="padding:8px;font-size:13px;color:#555;">${longTerm}</td></tr>
 </table>`;
   }
 

@@ -39,6 +39,10 @@ function getDisplacementUrgency(year) {
   return { label: 'Long-term', color: 'text-green-600', bg: 'bg-green-50', border: 'border-green-200' };
 }
 
+function getTimelineText(timeline, legacyKey, currentKey) {
+  return timeline?.[legacyKey] || timeline?.[currentKey] || '';
+}
+
 function TaskBar({ task }) {
   const colors = getRiskColor(task.riskScore);
   return (
@@ -274,19 +278,19 @@ export default function ResultsDisplay({ results, formData, onReset }) {
               <div className="flex-shrink-0 w-20 sm:w-24">
                 <span className="text-xs font-bold text-brand-600 bg-brand-50 px-2 py-1 rounded">1-2 years</span>
               </div>
-              <p className="text-sm text-gray-700">{results.timeline.shortTerm}</p>
+              <p className="text-sm text-gray-700">{getTimelineText(results.timeline, 'shortTerm', 'immediateRisk')}</p>
             </div>
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-20 sm:w-24">
                 <span className="text-xs font-bold text-yellow-600 bg-yellow-50 px-2 py-1 rounded">3-5 years</span>
               </div>
-              <p className="text-sm text-gray-700">{results.timeline.midTerm}</p>
+              <p className="text-sm text-gray-700">{getTimelineText(results.timeline, 'midTerm', 'mediumTermRisk')}</p>
             </div>
             <div className="flex gap-4">
               <div className="flex-shrink-0 w-20 sm:w-24">
                 <span className="text-xs font-bold text-orange-600 bg-orange-50 px-2 py-1 rounded">5-10 years</span>
               </div>
-              <p className="text-sm text-gray-700">{results.timeline.longTerm}</p>
+              <p className="text-sm text-gray-700">{getTimelineText(results.timeline, 'longTerm', 'longTermRisk')}</p>
             </div>
           </div>
         </div>
