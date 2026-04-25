@@ -7,6 +7,7 @@ import LoadingState from '../components/LoadingState';
 import SEOContent from '../components/SEOContent';
 import ExampleResult from '../components/ExampleResult';
 import EmailGate from '../components/EmailGate';
+import { trackToolEvent } from '../components/analytics';
 
 export default function Home() {
   const [step, setStep] = useState('form'); // form | loading | email-gate | results
@@ -19,6 +20,7 @@ export default function Home() {
     setFormData(data);
     setStep('loading');
     setError(null);
+    trackToolEvent('tool_started', { surface: 'ai_job_risk_form' });
 
     try {
       const response = await fetch('/api/analyze', {

@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { trackToolEvent } from './analytics';
 
 function getTimelineText(timeline, legacyKey, currentKey) {
   return timeline?.[legacyKey] || timeline?.[currentKey] || '';
@@ -131,8 +132,14 @@ export function buildEmailHTML(results, formData) {
     html += `</table>`;
   }
 
-  html += `<div style="text-align:center;margin-top:24px;">
-<a href="https://inspireambitions.com/career-tools/" style="display:inline-block;background:#2eaa6f;color:#ffffff;padding:12px 32px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600;">Explore More Career Tools</a>
+  html += `<div style="text-align:center;margin-top:24px;padding:18px;background:#f8fafc;border-radius:10px;">
+<p style="margin:0 0 10px;color:#334155;font-size:14px;font-weight:600;">Turn this AI risk score into a practical career plan</p>
+<a href="https://inspireambitions.com/creative-thinking-ai-fluency-career-skills-2026/?utm_source=email&utm_medium=tool_result&utm_campaign=ai_job_risk_result&utm_content=ai_job_risk_calculator_primary_cta" style="display:inline-block;background:#2eaa6f;color:#ffffff;padding:12px 32px;border-radius:6px;text-decoration:none;font-size:14px;font-weight:600;">Build AI-Proof Career Skills</a>
+<p style="margin:14px 0 0;font-size:12px;line-height:1.7;">
+<a href="https://inspireambitions.com/will-ai-take-my-job/?utm_source=email&utm_medium=tool_result&utm_campaign=ai_job_risk_result&utm_content=ai_job_risk_calculator_related_1" style="color:#2563eb;text-decoration:none;">Read the full AI job-risk guide</a><br>
+<a href="https://inspireambitions.com/will-ai-replace-hr/?utm_source=email&utm_medium=tool_result&utm_campaign=ai_job_risk_result&utm_content=ai_job_risk_calculator_related_2" style="color:#2563eb;text-decoration:none;">See what AI means for HR careers</a><br>
+<a href="https://inspireambitions.com/career-tools/?utm_source=email&utm_medium=tool_result&utm_campaign=ai_job_risk_result&utm_content=ai_job_risk_calculator_related_3" style="color:#2563eb;text-decoration:none;">Open more free career tools</a>
+</p>
 </div>`;
 
   return html;
@@ -142,6 +149,10 @@ export default function EmailCapture({ score, jobTitle, results, formData }) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle');
 
+  useEffect(() => {
+    trackToolEvent('email_prompt_seen', { surface: 'ai_job_risk_results_email_card' });
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || status === 'loading') return;
@@ -150,6 +161,7 @@ export default function EmailCapture({ score, jobTitle, results, formData }) {
     try {
       // Send full results email via WordPress
       const emailContent = buildEmailHTML(results, formData);
+      trackToolEvent('email_submitted', { surface: 'ai_job_risk_results_email_card' });
 
       const emailRes = await fetch('/api/email-results', {
         method: 'POST',
@@ -159,17 +171,28 @@ export default function EmailCapture({ score, jobTitle, results, formData }) {
           tool: 'AI Job Risk Calculator',
           subject: `Your AI Job Risk Analysis: ${formData.jobTitle} — ${score}% Risk`,
           content: emailContent,
+          source: 'ai-job-risk-calculator',
         }),
       });
 
       // Also subscribe via existing Turso/local API
-      await fetch('/api/subscribe', {
+      const subscribeRes = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, score, jobTitle }),
       }).catch(() => {});
 
       if (emailRes.ok) {
+        let emailData = null;
+        try {
+          emailData = await emailRes.json();
+        } catch {}
+        trackToolEvent('email_report_sent', { surface: 'ai_job_risk_results_email_card' });
+        if (emailData?.data?.subscribed) {
+          trackToolEvent('sendy_subscribed', { surface: 'ai_job_risk_results_email_card' });
+        } else if (subscribeRes?.ok) {
+          trackToolEvent('sendy_subscribed', { surface: 'ai_job_risk_results_email_card' });
+        }
         setStatus('success');
       } else {
         setStatus('error');

@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request) {
   try {
-    const { email, tool, subject, content } = await request.json();
+    const { email, tool, subject, content, source } = await request.json();
 
     if (!email || !email.includes('@') || !content) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -15,7 +15,7 @@ export async function POST(request) {
     wpData.append('tool', tool || 'AI Job Risk Calculator');
     wpData.append('subject', subject || 'Your Assessment Results');
     wpData.append('content', content);
-    wpData.append('source', 'ai-job-risk-calculator');
+    wpData.append('source', source || 'ai-job-risk-calculator');
 
     const wpRes = await fetch('https://inspireambitions.com/wp-admin/admin-ajax.php', {
       method: 'POST',

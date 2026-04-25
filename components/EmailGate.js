@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { buildEmailHTML } from './EmailCapture';
+import { trackToolEvent } from './analytics';
 
 export default function EmailGate({ results, formData, onUnlock }) {
   const [email, setEmail] = useState('');
@@ -10,6 +11,10 @@ export default function EmailGate({ results, formData, onUnlock }) {
   const score = results.overallRiskScore;
   const protectionScore = results.protectionScore || 0;
   const riskLabel = score <= 30 ? 'Low Risk' : score <= 55 ? 'Moderate Risk' : score <= 75 ? 'High Risk' : 'Very High Risk';
+
+  useEffect(() => {
+    trackToolEvent('email_prompt_seen', { surface: 'ai_job_risk_email_gate' });
+  }, []);
 
   const riskColor = score <= 30
     ? { border: 'border-green-300', text: 'text-green-600', bg: 'bg-green-50' }
@@ -26,8 +31,15 @@ export default function EmailGate({ results, formData, onUnlock }) {
     setStatus('loading');
     try {
       const emailContent = buildEmailHTML(results, formData);
+      let sendyTracked = false;
+      const trackSendy = () => {
+        if (sendyTracked) return;
+        sendyTracked = true;
+        trackToolEvent('sendy_subscribed', { surface: 'ai_job_risk_email_gate' });
+      };
 
       // Unlock results immediately — email delivery is best-effort
+      trackToolEvent('email_submitted', { surface: 'ai_job_risk_email_gate' });
       onUnlock(email);
 
       // Send email and subscribe in background (non-blocking)
@@ -39,13 +51,33 @@ export default function EmailGate({ results, formData, onUnlock }) {
           tool: 'AI Job Risk Calculator',
           subject: `Your AI Job Risk Analysis: ${formData.jobTitle} — ${score}% Risk`,
           content: emailContent,
+          source: 'ai-job-risk-calculator',
         }),
+      }).then(async (response) => {
+        if (!response.ok) return;
+        let data = null;
+        try {
+          data = await response.json();
+        } catch {}
+        trackToolEvent('email_report_sent', { surface: 'ai_job_risk_email_gate' });
+        if (data?.data?.subscribed) {
+          trackSendy();
+        }
       }).catch(() => {});
 
       fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, score, jobTitle: formData.jobTitle }),
+      }).then(async (response) => {
+        if (!response.ok) return;
+        let data = null;
+        try {
+          data = await response.json();
+        } catch {}
+        if (data?.sendySubscribed || data?.success) {
+          trackSendy();
+        }
       }).catch(() => {});
     } catch {
       // Even if something goes wrong, unlock results
