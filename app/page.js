@@ -1,13 +1,15 @@
 'use client';
 
 import { useState, useCallback, useEffect, useRef } from 'react';
+import dynamic from 'next/dynamic';
 import JobForm from '../components/JobForm';
-import ResultsDisplay from '../components/ResultsDisplay';
-import LoadingState from '../components/LoadingState';
 import SEOContent from '../components/SEOContent';
 import ExampleResult from '../components/ExampleResult';
 import { trackToolEvent } from '../components/analytics';
 import ThemeToggle from '../components/ThemeToggle';
+
+const LoadingState = dynamic(() => import('../components/LoadingState'));
+const ResultsDisplay = dynamic(() => import('../components/ResultsDisplay'));
 
 export default function Home() {
   const [step, setStep] = useState('form'); // form | loading | results
