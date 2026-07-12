@@ -165,15 +165,10 @@ export default function ResultsDisplay({ results, formData, onReset }) {
               Estimated Displacement Horizon
             </p>
             <p className={`text-3xl sm:text-4xl font-extrabold ${urgency.color} mb-1`}>
-              ~{displacementYear}
+              ~{displacementYear}{displacementRange ? ` (${displacementRange.earliest}-${displacementRange.latest})` : ''}
             </p>
-            {displacementRange && (
-              <p className={`text-sm font-semibold ${urgency.color} mb-1`}>
-                Range: {displacementRange.earliest}-{displacementRange.latest}
-              </p>
-            )}
             <p className="text-xs text-gray-500">
-              Year when AI could automate 50%+ of your current tasks
+              Estimated range for when AI could automate 50%+ of your current tasks. This is a planning signal, not a promised date.
             </p>
             <span className={`inline-block mt-2 text-xs font-bold px-3 py-1 rounded-full ${urgency.bg} ${urgency.color} border ${urgency.border}`}>
               {urgency.label}
@@ -267,8 +262,8 @@ export default function ResultsDisplay({ results, formData, onReset }) {
       {/* Research Context */}
       {researchContext.length > 0 && (
         <div className="bg-white rounded-xl border border-gray-200 p-5 sm:p-6 shadow-sm fade-in-up fade-in-up-delay-3">
-          <h3 className="text-base font-bold text-gray-900 mb-1">Research-Backed Context</h3>
-          <p className="text-xs text-gray-400 mb-4">Findings from leading research institutions relevant to your role</p>
+          <h3 className="text-base font-bold text-gray-900 mb-1">Context informed by published research</h3>
+          <p className="text-xs text-gray-400 mb-4">Published findings used as context, not endorsements of this calculator</p>
           <div className="space-y-3">
             {researchContext.map((ref, idx) => (
               <div key={idx} className="flex gap-3 items-start p-3 bg-gray-50 rounded-lg border border-gray-100">
@@ -365,6 +360,20 @@ export default function ResultsDisplay({ results, formData, onReset }) {
       </div>
 
       {/* CTA */}
+      <div className="border border-brand-200 bg-brand-50 p-6 text-center fade-in-up">
+        <p className="text-base font-bold text-gray-900 mb-2">Turn your real tasks into a stronger GCC CV</p>
+        <p className="text-sm text-gray-600 mb-4">
+          Use the CV builder to turn your experience into evidence-led achievements and tailor it to a real vacancy.
+        </p>
+        <a
+          href={`https://cv.inspireambitions.com/?source=ai-risk-calculator&role=${encodeURIComponent(formData.jobTitle || '')}`}
+          className="inline-block px-6 py-2.5 bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors"
+        >
+          Build and Tailor My CV
+        </a>
+      </div>
+
+      {/* General guidance CTA */}
       <div className="bg-gray-900 text-white rounded-xl p-6 text-center fade-in-up">
         <p className="text-base font-bold mb-2">Want deeper career guidance?</p>
         <p className="text-sm text-gray-300 mb-4">

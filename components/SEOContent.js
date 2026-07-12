@@ -37,13 +37,13 @@ export default function SEOContent() {
           <>
             <h3 className="text-lg font-bold text-gray-900 mb-4 mt-8">Key Statistics on AI and Jobs</h3>
             <p className="text-sm text-gray-600 mb-3">
-              The World Economic Forum estimates that 23% of global jobs will change significantly by 2027 through
-              AI and automation. Goldman Sachs research suggests AI could automate the equivalent of 300 million
-              full-time jobs globally, with administrative and legal roles facing the highest exposure. McKinsey
-              Global Institute projects that by 2030, up to 30% of hours currently worked could be automated.
+              This calculator is informed by published research, including the{' '}
+              <a className="text-brand-700 underline" href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" target="_blank" rel="noopener noreferrer">World Economic Forum Future of Jobs Report 2025</a>,{' '}
+              <a className="text-brand-700 underline" href="https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent" target="_blank" rel="noopener noreferrer">Goldman Sachs research on generative AI</a> and{' '}
+              <a className="text-brand-700 underline" href="https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america" target="_blank" rel="noopener noreferrer">McKinsey Global Institute workforce research</a>. These organisations do not endorse this tool.
             </p>
             <p className="text-sm text-gray-600 mb-4">
-              Oxford University researchers found that 47% of US employment is at high risk of automation, though
+              <a className="text-brand-700 underline" href="https://www.oxfordmartin.ox.ac.uk/publications/the-future-of-employment" target="_blank" rel="noopener noreferrer">Oxford Martin School researchers</a> estimated that 47% of US employment was at high risk of automation, though
               this figure has been revised downward as experts recognise that most jobs contain a mix of automatable
               and non-automatable tasks. The consensus view: AI replaces tasks within jobs, not entire jobs.
             </p>

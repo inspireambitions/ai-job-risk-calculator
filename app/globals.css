@@ -55,6 +55,23 @@ body {
   color: var(--ia-ink);
   font-size: 12px;
   font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-icon {
+  width: 18px;
+  height: 18px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  box-shadow: inset -4px -2px 0 0 var(--ia-surface);
+}
+
+:root[data-theme='dark'] .theme-icon {
+  background: var(--ia-accent);
+  border-color: var(--ia-accent);
+  box-shadow: none;
 }
 
 :root[data-theme='dark'] .bg-white { background-color: var(--ia-surface) !important; }

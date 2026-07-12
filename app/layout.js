@@ -6,12 +6,12 @@ const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-int
 
 export const metadata = {
   title: 'AI Job Risk Calculator | Will AI Take My Job?',
-  description: 'Find out if AI will replace your job. Get your AI Risk Score, Protection Score, and Displacement Year based on your actual daily tasks. Research-backed by WEF, Goldman Sachs, McKinsey, and Oxford. Free.',
+  description: 'Find out how AI may change your work. Get an AI Risk Score, Protection Score, and displacement range based on your actual daily tasks, informed by published research. Free.',
   keywords: 'AI job risk, will AI take my job, AI replace job, automation risk calculator, AI job displacement, future of work, AI career impact, AI protection score, when will AI replace my job',
   metadataBase: new URL('https://calculator.inspireambitions.com'),
   openGraph: {
     title: 'AI Job Risk Calculator | Will AI Take My Job?',
-    description: 'Get your AI Risk Score, Protection Score, and Displacement Year. Task-level analysis backed by WEF, Goldman Sachs, and McKinsey research. Free.',
+    description: 'Get an AI Risk Score, Protection Score, and displacement range. Task-level analysis informed by published research. Free.',
     url: 'https://calculator.inspireambitions.com',
     siteName: 'AI Job Risk Calculator',
     type: 'website',
@@ -20,7 +20,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'AI Job Risk Calculator | Will AI Take My Job?',
-    description: 'Get your AI Risk Score, Protection Score, and Displacement Year based on your actual daily tasks. Research-backed. Free.',
+    description: 'Get an AI Risk Score, Protection Score, and displacement range based on your actual daily tasks. Informed by published research. Free.',
     creator: '@InspireAmbition',
   },
   robots: {

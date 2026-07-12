@@ -11,6 +11,7 @@ export function buildEmailHTML(results, formData) {
   const score = results.overallRiskScore;
   const protectionScore = results.protectionScore || 0;
   const displacementYear = results.displacementYear || null;
+  const displacementRange = results.displacementRange || null;
 
   const riskColor = score <= 30 ? '#22c55e' : score <= 55 ? '#eab308' : score <= 75 ? '#f97316' : '#ef4444';
   const protColor = protectionScore >= 70 ? '#22c55e' : protectionScore >= 45 ? '#eab308' : protectionScore >= 25 ? '#f97316' : '#ef4444';
@@ -38,7 +39,8 @@ export function buildEmailHTML(results, formData) {
   if (displacementYear) {
     html += `<div style="background:#fff8f0;border:1px solid #fed7aa;border-radius:8px;padding:16px;text-align:center;margin-bottom:20px;">
 <div style="font-size:11px;text-transform:uppercase;color:#888;letter-spacing:1px;">Estimated Displacement Horizon</div>
-<div style="font-size:32px;font-weight:800;color:#ea580c;margin:6px 0;">${displacementYear}</div>
+<div style="font-size:32px;font-weight:800;color:#ea580c;margin:6px 0;">~${displacementYear}${displacementRange ? ` (${displacementRange.earliest}-${displacementRange.latest})` : ''}</div>
+<div style="font-size:12px;color:#666;">Planning range, not a promised date.</div>
 <div style="font-size:12px;color:#888;">Year when AI could automate 50%+ of your current tasks</div>
 </div>`;
   }

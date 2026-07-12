@@ -175,7 +175,7 @@ export default function JobForm({ onSubmit, initialData }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {/* Industry */}
           <div>
-            <label htmlFor="industry" className="block text-sm text-gray-600 mb-1">Industry</label>
+            <label htmlFor="industry" className="block text-sm text-gray-600 mb-1">Industry <span className="text-gray-400">(optional)</span></label>
             <select
               id="industry"
               name="industry"
@@ -183,7 +183,7 @@ export default function JobForm({ onSubmit, initialData }) {
               onChange={(e) => setIndustry(e.target.value)}
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm bg-white"
             >
-              <option value="">Select industry</option>
+              <option value="">Choose industry</option>
               {industries.map((ind) => (
                 <option key={ind} value={ind}>{ind}</option>
               ))}
@@ -192,7 +192,7 @@ export default function JobForm({ onSubmit, initialData }) {
 
           {/* Experience */}
           <div>
-            <label htmlFor="experience" className="block text-sm text-gray-600 mb-1">Experience Level</label>
+            <label htmlFor="experience" className="block text-sm text-gray-600 mb-1">Experience Level <span className="text-gray-400">(optional)</span></label>
             <select
               id="experience"
               name="experience"
@@ -200,7 +200,7 @@ export default function JobForm({ onSubmit, initialData }) {
               onChange={(e) => setExperience(e.target.value)}
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm bg-white"
             >
-              <option value="">Select experience</option>
+              <option value="">Choose experience level</option>
               {experienceLevels.map((exp) => (
                 <option key={exp.value} value={exp.value}>{exp.label}</option>
               ))}
@@ -209,7 +209,7 @@ export default function JobForm({ onSubmit, initialData }) {
 
           {/* Work Environment */}
           <div>
-            <label htmlFor="work-environment" className="block text-sm text-gray-600 mb-1">Work Environment</label>
+            <label htmlFor="work-environment" className="block text-sm text-gray-600 mb-1">Work Environment <span className="text-gray-400">(optional)</span></label>
             <select
               id="work-environment"
               name="workEnvironment"
@@ -217,7 +217,7 @@ export default function JobForm({ onSubmit, initialData }) {
               onChange={(e) => setWorkEnvironment(e.target.value)}
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm bg-white"
             >
-              <option value="">Select environment</option>
+              <option value="">Choose work environment</option>
               {workEnvironments.map((env) => (
                 <option key={env} value={env}>{env}</option>
               ))}
@@ -226,7 +226,7 @@ export default function JobForm({ onSubmit, initialData }) {
 
           {/* Country */}
           <div>
-            <label htmlFor="country" className="block text-sm text-gray-600 mb-1">Country/Region</label>
+            <label htmlFor="country" className="block text-sm text-gray-600 mb-1">Country/Region <span className="text-gray-400">(optional)</span></label>
             <select
               id="country"
               name="country"
@@ -234,7 +234,7 @@ export default function JobForm({ onSubmit, initialData }) {
               onChange={(e) => setCountry(e.target.value)}
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm bg-white"
             >
-              <option value="">Select country</option>
+              <option value="">Choose country or region</option>
               {countries.map((c) => (
                 <option key={c} value={c}>{c}</option>
               ))}

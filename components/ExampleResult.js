@@ -30,7 +30,7 @@ export default function ExampleResult() {
           </div>
         </div>
         <div>
-          <p className="text-sm font-bold text-gray-900">Moderate Risk | Displacement: ~2031</p>
+          <p className="text-sm font-bold text-gray-900">Moderate Risk | Horizon: ~2031 (2029-2034)</p>
           <p className="text-xs text-gray-500">
             Routine tasks face near-term automation. Strategy and relationship tasks remain safe for 10+ years.
           </p>
@@ -59,7 +59,7 @@ export default function ExampleResult() {
       </div>
 
       <p className="text-[11px] text-gray-400 mt-3 text-center">
-        This is a sample. Your analysis will be personalised to your actual tasks and region.
+        This is a sample range, not a promised date. Your analysis will be personalised to your actual tasks and region.
       </p>
     </div>
   );

@@ -34,7 +34,7 @@ export default function ThemeToggle() {
       aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
       title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
-      {theme === 'dark' ? 'Sun' : 'Moon'}
+      <span className="theme-icon" aria-hidden="true" />
     </button>
   );
 }
