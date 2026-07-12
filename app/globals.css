@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ia-ground: #faf9f6;
+  --ia-surface: #ffffff;
+  --ia-ink: #1c1d1f;
+  --ia-ink-muted: #5f6268;
+  --ia-border: #d9dadd;
+  --ia-accent: #806017;
+  --ia-focus: #8a611f;
+  --ia-success: #2f6b5e;
+  --ia-warning: #93601f;
+  --ia-danger: #a8472c;
+  --ia-radius-control: 8px;
+  --ia-radius-card: 12px;
+  --ia-motion-fast: 180ms ease-out;
+}
+
+:root[data-theme='dark'] {
+  --ia-ground: #141517;
+  --ia-surface: #1d1f22;
+  --ia-ink: #ecebe6;
+  --ia-ink-muted: #b7b7b2;
+  --ia-border: #3a3d42;
+  --ia-accent: #d9a94f;
+  --ia-focus: #d9a94f;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,8 +35,43 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  background: var(--ia-ground);
+  color: var(--ia-ink);
+  transition: background-color var(--ia-motion-fast), color var(--ia-motion-fast);
 }
+
+:where(button, a, input, select, textarea):focus-visible {
+  outline: 2px solid var(--ia-focus);
+  outline-offset: 2px;
+}
+
+.theme-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid var(--ia-border);
+  border-radius: var(--ia-radius-control);
+  background: var(--ia-surface);
+  color: var(--ia-ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+:root[data-theme='dark'] .bg-white { background-color: var(--ia-surface) !important; }
+:root[data-theme='dark'] .bg-gray-50 { background-color: var(--ia-ground) !important; }
+:root[data-theme='dark'] .bg-gray-100 { background-color: #292c31 !important; }
+:root[data-theme='dark'] .text-gray-900,
+:root[data-theme='dark'] .text-gray-800,
+:root[data-theme='dark'] .text-gray-700 { color: var(--ia-ink) !important; }
+:root[data-theme='dark'] .text-gray-600,
+:root[data-theme='dark'] .text-gray-500,
+:root[data-theme='dark'] .text-gray-400 { color: var(--ia-ink-muted) !important; }
+:root[data-theme='dark'] .border-gray-100,
+:root[data-theme='dark'] .border-gray-200,
+:root[data-theme='dark'] .border-gray-300 { border-color: var(--ia-border) !important; }
+:root[data-theme='dark'] input,
+:root[data-theme='dark'] select,
+:root[data-theme='dark'] textarea { background: #25282c; color: var(--ia-ink); }
 
 @keyframes fillMeter {
   from { width: 0%; }
@@ -57,6 +118,15 @@ body {
 
 .spinner {
   animation: spin 1s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 ::-webkit-scrollbar {

@@ -58,10 +58,12 @@ export default function JobForm({ onSubmit, initialData }) {
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Job Title */}
       <div className="bg-white rounded-xl border border-gray-200 p-5 sm:p-6 shadow-sm">
-        <label className="block text-sm font-semibold text-gray-700 mb-2">
+        <label htmlFor="job-title" className="block text-sm font-semibold text-gray-700 mb-2">
           Your Job Title <span className="text-red-500">*</span>
         </label>
         <input
+          id="job-title"
+          name="jobTitle"
           type="text"
           value={jobTitle}
           onChange={(e) => setJobTitle(e.target.value)}
@@ -73,10 +75,10 @@ export default function JobForm({ onSubmit, initialData }) {
 
       {/* Tasks Section */}
       <div className="bg-white rounded-xl border border-gray-200 p-5 sm:p-6 shadow-sm">
-        <label className="block text-sm font-semibold text-gray-700 mb-1">
+        <div className="block text-sm font-semibold text-gray-700 mb-1">
           Your Daily Tasks <span className="text-red-500">*</span>
-        </label>
-        <p className="text-sm text-gray-500 mb-4">
+        </div>
+        <p id="task-help" className="text-sm text-gray-500 mb-4">
           Select or type the tasks you actually do every day. This is what makes the analysis personal to you.
         </p>
 
@@ -108,7 +110,10 @@ export default function JobForm({ onSubmit, initialData }) {
 
         {/* Custom Task Input */}
         <div className="flex gap-2 mb-4">
+          <label htmlFor="custom-task" className="sr-only">Add a daily task</label>
           <input
+            id="custom-task"
+            name="customTask"
             type="text"
             value={customTask}
             onChange={(e) => setCustomTask(e.target.value)}
@@ -119,6 +124,7 @@ export default function JobForm({ onSubmit, initialData }) {
               }
             }}
             placeholder="Type a task and press Enter"
+            aria-describedby="task-help"
             className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm"
           />
           <button
@@ -145,7 +151,8 @@ export default function JobForm({ onSubmit, initialData }) {
                 <button
                   type="button"
                   onClick={() => removeTask(idx)}
-                  className="text-gray-400 hover:text-red-500 transition-colors ml-3 text-lg leading-none"
+                  className="text-gray-400 hover:text-red-500 transition-colors ms-3 text-lg leading-none"
+                  aria-label={`Remove task: ${task}`}
                 >
                   x
                 </button>
@@ -168,8 +175,10 @@ export default function JobForm({ onSubmit, initialData }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {/* Industry */}
           <div>
-            <label className="block text-sm text-gray-600 mb-1">Industry</label>
+            <label htmlFor="industry" className="block text-sm text-gray-600 mb-1">Industry</label>
             <select
+              id="industry"
+              name="industry"
               value={industry}
               onChange={(e) => setIndustry(e.target.value)}
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm bg-white"
@@ -183,8 +192,10 @@ export default function JobForm({ onSubmit, initialData }) {
 
           {/* Experience */}
           <div>
-            <label className="block text-sm text-gray-600 mb-1">Experience Level</label>
+            <label htmlFor="experience" className="block text-sm text-gray-600 mb-1">Experience Level</label>
             <select
+              id="experience"
+              name="experience"
               value={experience}
               onChange={(e) => setExperience(e.target.value)}
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm bg-white"
@@ -198,8 +209,10 @@ export default function JobForm({ onSubmit, initialData }) {
 
           {/* Work Environment */}
           <div>
-            <label className="block text-sm text-gray-600 mb-1">Work Environment</label>
+            <label htmlFor="work-environment" className="block text-sm text-gray-600 mb-1">Work Environment</label>
             <select
+              id="work-environment"
+              name="workEnvironment"
               value={workEnvironment}
               onChange={(e) => setWorkEnvironment(e.target.value)}
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm bg-white"
@@ -213,8 +226,10 @@ export default function JobForm({ onSubmit, initialData }) {
 
           {/* Country */}
           <div>
-            <label className="block text-sm text-gray-600 mb-1">Country/Region</label>
+            <label htmlFor="country" className="block text-sm text-gray-600 mb-1">Country/Region</label>
             <select
+              id="country"
+              name="country"
               value={country}
               onChange={(e) => setCountry(e.target.value)}
               className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none text-sm bg-white"

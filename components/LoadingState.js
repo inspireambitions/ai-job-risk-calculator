@@ -22,8 +22,12 @@ export default function LoadingState({ jobTitle }) {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center py-20">
-      <div className="w-16 h-16 border-4 border-gray-200 border-t-brand-600 rounded-full spinner mb-8"></div>
+    <div className="flex flex-col items-center justify-center py-20" role="status" aria-live="polite" aria-busy="true">
+      <div className="w-full max-w-md space-y-4 mb-8" aria-hidden="true">
+        <div className="h-5 w-2/3 mx-auto rounded bg-gray-200 pulse-slow" />
+        <div className="h-3 w-full rounded bg-gray-200 pulse-slow" />
+        <div className="h-3 w-5/6 mx-auto rounded bg-gray-200 pulse-slow" />
+      </div>
       <h3 className="text-lg font-semibold text-gray-800 mb-2">Analysing: {jobTitle}</h3>
       <p className="text-sm text-gray-500 pulse-slow text-center max-w-md">{loadingMessages[messageIndex]}</p>
       <div className="flex gap-2 mt-8">

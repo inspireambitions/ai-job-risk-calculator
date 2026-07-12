@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import JobForm from '../components/JobForm';
 import ResultsDisplay from '../components/ResultsDisplay';
 import LoadingState from '../components/LoadingState';
 import SEOContent from '../components/SEOContent';
 import ExampleResult from '../components/ExampleResult';
 import { trackToolEvent } from '../components/analytics';
+import ThemeToggle from '../components/ThemeToggle';
 
 export default function Home() {
   const [step, setStep] = useState('form'); // form | loading | results
@@ -14,6 +15,11 @@ export default function Home() {
   const [formData, setFormData] = useState(null);
   const [error, setError] = useState(null);
   const [submitting, setSubmitting] = useState(false);
+  const errorRef = useRef(null);
+
+  useEffect(() => {
+    if (error) errorRef.current?.focus();
+  }, [error]);
 
   const handleSubmit = useCallback(async (data) => {
     if (submitting) return;
@@ -74,7 +80,7 @@ export default function Home() {
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-4 sm:py-6">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-4">
             <div>
               <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
                 AI Job Risk Calculator
@@ -91,6 +97,7 @@ export default function Home() {
                 New Analysis
               </button>
             )}
+            <ThemeToggle />
           </div>
         </div>
       </header>
@@ -98,7 +105,7 @@ export default function Home() {
       <div className="max-w-4xl mx-auto px-4 py-6 sm:py-10">
         {/* Error banner with retry */}
         {error && (
-          <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+          <div ref={errorRef} tabIndex={-1} role="alert" className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
             <div className="flex items-center justify-between">
               <p className="text-amber-800 text-sm">{error}</p>
               <button
@@ -106,7 +113,7 @@ export default function Home() {
                   setError(null);
                   if (formData) handleSubmit(formData);
                 }}
-                className="ml-4 px-4 py-2 bg-brand-600 text-white text-sm font-medium rounded-lg hover:bg-brand-700 transition-colors whitespace-nowrap"
+                className="ms-4 px-4 py-2 bg-brand-600 text-white text-sm font-medium rounded-lg hover:bg-brand-700 transition-colors whitespace-nowrap"
               >
                 Try Again
               </button>

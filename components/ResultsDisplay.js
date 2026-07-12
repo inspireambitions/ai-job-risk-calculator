@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 function getRiskColor(score) {
   if (score <= 30) return { bg: 'bg-green-500', text: 'text-green-700', light: 'bg-green-50', border: 'border-green-200' };
@@ -53,7 +53,7 @@ function TaskBar({ task }) {
           <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${colors.light} ${colors.text} ${colors.border} border`}>
             {task.timeframe}
           </span>
-          <span className="text-sm font-semibold text-gray-700 w-10 text-right">{task.riskScore}%</span>
+          <span className="text-sm font-semibold text-gray-700 w-10 text-end">{task.riskScore}%</span>
         </div>
       </div>
       <div className="w-full bg-gray-100 rounded-full h-2 mb-1.5">
@@ -68,6 +68,7 @@ function TaskBar({ task }) {
 }
 
 export default function ResultsDisplay({ results, formData, onReset }) {
+  const resultHeadingRef = useRef(null);
   const [copyText, setCopyText] = useState('');
   const score = results.overallRiskScore;
   const protectionScore = results.protectionScore || 0;
@@ -108,8 +109,15 @@ export default function ResultsDisplay({ results, formData, onReset }) {
 
   const urgency = displacementYear ? getDisplacementUrgency(displacementYear) : null;
 
+  useEffect(() => {
+    resultHeadingRef.current?.focus();
+  }, []);
+
   return (
     <div className="space-y-6">
+      <h2 ref={resultHeadingRef} tabIndex={-1} className="sr-only">
+        AI job risk results for {formData.jobTitle}
+      </h2>
       {/* Dual Score Card */}
       <div className={`bg-white rounded-xl border-2 ${colors.border} p-6 sm:p-8 fade-in-up`}>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-6">

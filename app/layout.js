@@ -1,4 +1,7 @@
 import './globals.css';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter', weight: '600' });
 
 export const metadata = {
   title: 'AI Job Risk Calculator | Will AI Take My Job?',
@@ -30,8 +33,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className={inter.variable}>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('ia-theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}catch(e){}})();`,
+          }}
+        />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY9B70N583" />
         <script
           dangerouslySetInnerHTML={{
@@ -42,12 +50,6 @@ export default function RootLayout({ children }) {
               gtag('config', 'G-PY9B70N583');
             `,
           }}
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
         />
       </head>
       <body className="bg-gray-50 text-gray-900 antialiased">

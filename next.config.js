@@ -7,11 +7,19 @@ const nextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'ALLOWALL',
+            value: 'DENY',
           },
           {
             key: 'Content-Security-Policy',
-            value: "frame-ancestors *;",
+            value: "frame-ancestors 'none';",
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
           },
         ],
       },

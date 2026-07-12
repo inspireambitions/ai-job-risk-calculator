@@ -19,8 +19,23 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Unit tests
+        run: npm test
 
       - name: Build
         run: npm run build
+
+      - name: Performance budgets
+        run: npm run check:perf
+
+      - name: Browser tests
+        run: npm run test:e2e
+
+      - name: Lighthouse
+        run: npm run test:lighthouse
 
