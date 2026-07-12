@@ -6,27 +6,31 @@ import ResultsDisplay from '../components/ResultsDisplay';
 import LoadingState from '../components/LoadingState';
 import SEOContent from '../components/SEOContent';
 import ExampleResult from '../components/ExampleResult';
-import EmailGate from '../components/EmailGate';
 import { trackToolEvent } from '../components/analytics';
 
 export default function Home() {
-  const [step, setStep] = useState('form'); // form | loading | email-gate | results
+  const [step, setStep] = useState('form'); // form | loading | results
   const [results, setResults] = useState(null);
   const [formData, setFormData] = useState(null);
   const [error, setError] = useState(null);
-  const [userEmail, setUserEmail] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = useCallback(async (data) => {
+    if (submitting) return;
     setFormData(data);
     setStep('loading');
     setError(null);
+    setSubmitting(true);
     trackToolEvent('tool_started', { surface: 'ai_job_risk_form' });
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 45000);
     try {
       const response = await fetch('/api/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
+        signal: controller.signal,
       });
 
       const analysis = await response.json();
@@ -36,24 +40,33 @@ export default function Home() {
       }
 
       setResults(analysis);
-      setStep('email-gate');
+      setStep('results');
+      trackToolEvent('risk_analysis_run', {
+        surface: 'ai_job_risk_results',
+        score_band: analysis.riskLevel,
+        country: data.country || 'not_specified',
+        industry: data.industry || 'not_specified',
+        task_count: data.tasks.length,
+      });
     } catch (err) {
-      setError(err.message || 'Our servers are busy right now. Please wait a moment and try again.');
+      const message = err.name === 'AbortError'
+        ? 'The analysis took too long. Your details are still here, so you can try again.'
+        : err.message || 'Our servers are busy right now. Please wait a moment and try again.';
+      setError(message);
+      trackToolEvent('analysis_failed', { surface: 'ai_job_risk_form' });
       setStep('form');
+    } finally {
+      clearTimeout(timeout);
+      setSubmitting(false);
     }
-  }, []);
-
-  const handleEmailUnlock = useCallback((email) => {
-    setUserEmail(email);
-    setStep('results');
-  }, []);
+  }, [submitting]);
 
   const handleReset = useCallback(() => {
     setStep('form');
     setResults(null);
     setFormData(null);
     setError(null);
-    setUserEmail(null);
+    setSubmitting(false);
   }, []);
 
   return (
@@ -132,15 +145,6 @@ export default function Home() {
         {/* Loading Step */}
         {step === 'loading' && (
           <LoadingState jobTitle={formData?.jobTitle} />
-        )}
-
-        {/* Email Gate Step */}
-        {step === 'email-gate' && results && (
-          <EmailGate
-            results={results}
-            formData={formData}
-            onUnlock={handleEmailUnlock}
-          />
         )}
 
         {/* Results Step */}

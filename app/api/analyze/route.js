@@ -1,193 +1,138 @@
 import Anthropic from '@anthropic-ai/sdk';
+import { createHash, randomUUID } from 'node:crypto';
 import { NextResponse } from 'next/server';
+import { ANALYSIS_TOOL, buildAnalysisPrompt, normalizeAnalysis, validateAnalysisInput } from '../../../lib/analysis';
 
+export const runtime = 'nodejs';
+export const maxDuration = 60;
+
+const REQUEST_TIMEOUT_MS = Number(process.env.ANTHROPIC_TIMEOUT_MS || 25000);
+const CACHE_TTL_MS = Number(process.env.ANALYSIS_CACHE_TTL_MS || 30 * 60 * 1000);
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000;
+const RATE_LIMIT_MAX = Number(process.env.ANALYSIS_RATE_LIMIT_PER_HOUR || 20);
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
+  maxRetries: 0,
+  timeout: REQUEST_TIMEOUT_MS,
 });
 
+const state = globalThis.__riskAnalysisState || {
+  cache: new Map(), inFlight: new Map(), rateLimits: new Map(),
+};
+globalThis.__riskAnalysisState = state;
 
-async function callClaudeWithRetry(prompt, maxRetries = 3) {
-  let lastError = null;
+function getModelCandidates() {
+  const configured = [process.env.ANTHROPIC_PRIMARY_MODEL, ...(process.env.ANTHROPIC_FALLBACK_MODELS || '').split(',')]
+    .map((model) => model?.trim()).filter(Boolean);
+  return [...new Set(configured.length > 0 ? configured : ['claude-haiku-4-5-20251001', 'claude-sonnet-4-5'])];
+}
 
+const hash = (value) => createHash('sha256').update(value).digest('hex');
 
-  for (let attempt = 1; attempt <= maxRetries; attempt++) {
-    try {
-      const message = await anthropic.messages.create({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 3000,
-        messages: [
-          {
-            role: 'user',
-            content: prompt,
-          },
-        ],
-      });
-      return message.content[0].text;
-    } catch (error) {
-      lastError = error;
-      if (attempt < maxRetries) {
-        await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+function getClientKey(request) {
+  const forwardedFor = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim();
+  return hash(forwardedFor || request.headers.get('x-real-ip') || 'unknown');
+}
+
+function checkRateLimit(clientKey) {
+  const now = Date.now();
+  const existing = state.rateLimits.get(clientKey);
+  if (!existing || existing.resetAt <= now) {
+    state.rateLimits.set(clientKey, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return { allowed: true };
+  }
+  if (existing.count >= RATE_LIMIT_MAX) {
+    return { allowed: false, retryAfter: Math.ceil((existing.resetAt - now) / 1000) };
+  }
+  existing.count += 1;
+  return { allowed: true };
+}
+
+function isRetryable(error) {
+  const status = Number(error?.status || 0);
+  return status === 408 || status === 409 || status === 429 || status >= 500 ||
+    error?.name === 'AbortError' || error?.code === 'ETIMEDOUT';
+}
+
+function publicError(error) {
+  const status = Number(error?.status || 0);
+  if (status === 429) return { code: 'PROVIDER_BUSY', message: 'The analysis service is busy. Please wait a moment and try again.' };
+  if (error?.name === 'AbortError' || error?.code === 'ETIMEDOUT') {
+    return { code: 'ANALYSIS_TIMEOUT', message: 'The analysis took too long. Your details are still here, so you can try again.' };
+  }
+  return { code: 'ANALYSIS_UNAVAILABLE', message: 'We could not complete the analysis right now. Your details are still here, so you can try again.' };
+}
+
+function extractToolResult(message) {
+  const toolUse = message.content?.find((block) => block.type === 'tool_use' && block.name === ANALYSIS_TOOL.name);
+  if (!toolUse?.input) {
+    throw Object.assign(new Error('The model returned no structured analysis.'), { code: 'INVALID_MODEL_RESPONSE' });
+  }
+  return normalizeAnalysis(toolUse.input);
+}
+
+export async function runAnalysis(input, client = anthropic) {
+  const prompt = buildAnalysisPrompt(input);
+  let lastError;
+  for (const model of getModelCandidates()) {
+    for (let attempt = 1; attempt <= 2; attempt += 1) {
+      try {
+        const message = await client.messages.create({
+          model, max_tokens: 4000, temperature: 0,
+          tools: [ANALYSIS_TOOL],
+          tool_choice: { type: 'tool', name: ANALYSIS_TOOL.name },
+          messages: [{ role: 'user', content: prompt }],
+        });
+        return { analysis: extractToolResult(message), model };
+      } catch (error) {
+        lastError = error;
+        if (!(attempt < 2 && isRetryable(error))) break;
+        await new Promise((resolve) => setTimeout(resolve, 500 * attempt));
       }
     }
   }
-  throw lastError;
+  throw lastError || new Error('No analysis model is configured.');
 }
 
-
 export async function POST(request) {
+  const requestId = randomUUID();
   try {
-    const body = await request.json();
-    const { jobTitle, industry, experience, tasks, workEnvironment, country } = body;
+    if (!process.env.ANTHROPIC_API_KEY) throw Object.assign(new Error('ANTHROPIC_API_KEY is missing.'), { code: 'CONFIGURATION_ERROR' });
 
-    if (!jobTitle || !tasks || tasks.length === 0) {
+    const rateLimit = checkRateLimit(getClientKey(request));
+    if (!rateLimit.allowed) {
       return NextResponse.json(
-        { error: 'Job title and tasks are required' },
-        { status: 400 }
+        { error: 'Too many analyses. Please try again later.', code: 'RATE_LIMITED', requestId },
+        { status: 429, headers: { 'Retry-After': String(rateLimit.retryAfter) } }
       );
     }
 
-    const prompt = buildAnalysisPrompt(jobTitle, industry, experience, tasks, workEnvironment, country);
+    const validation = validateAnalysisInput(await request.json());
+    if (!validation.ok) {
+      return NextResponse.json({ error: validation.error, code: 'INVALID_INPUT', requestId }, { status: 400 });
+    }
 
-    const responseText = await callClaudeWithRetry(prompt);
-    const analysis = parseAnalysis(responseText);
+    const input = validation.value;
+    const cacheKey = hash(JSON.stringify(input));
+    const cached = state.cache.get(cacheKey);
+    if (cached && cached.expiresAt > Date.now()) {
+      return NextResponse.json(cached.analysis, { headers: { 'X-Analysis-Cache': 'HIT', 'X-Request-Id': requestId } });
+    }
 
-    return NextResponse.json(analysis);
+    let pending = state.inFlight.get(cacheKey);
+    if (!pending) {
+      pending = runAnalysis(input).finally(() => state.inFlight.delete(cacheKey));
+      state.inFlight.set(cacheKey, pending);
+    }
+    const { analysis, model } = await pending;
+    state.cache.set(cacheKey, { analysis, expiresAt: Date.now() + CACHE_TTL_MS });
 
+    console.info('Analysis completed', { requestId, model, taskCount: input.tasks.length });
+    return NextResponse.json(analysis, { headers: { 'X-Analysis-Cache': 'MISS', 'X-Request-Id': requestId } });
   } catch (error) {
-    console.error('Analysis error:', error);
-    return NextResponse.json(
-      { error: 'Analysis failed', details: error.message },
-      { status: 500 }
-    );
-  }
-}
-
-
-function buildAnalysisPrompt(jobTitle, industry, experience, tasks, workEnvironment, country) {
-  return `You are an expert workforce analyst specialising in AI automation impact assessment. You draw on published research from the World Economic Forum Future of Jobs Report 2025, Goldman Sachs ("The Potentially Large Effects of AI on Economic Growth", 2023), McKinsey Global Institute ("A New Future of Work", 2023-2025), and Oxford University's Frey & Osborne automation probability studies.
-
-Analyse the following job profile and provide a detailed, personalised AI displacement risk assessment.
-
-JOB PROFILE:
-- Job Title: ${jobTitle}
-- Industry: ${industry || 'Not specified'}
-- Experience Level: ${experience || 'Not specified'}
-- Work Environment: ${workEnvironment || 'Not specified'}
-- Country/Region: ${country || 'Not specified'}
-- Core Daily Tasks:
-${tasks.map((t, i) => `  ${i + 1}. ${t}`).join('\n')}
-
-INSTRUCTIONS: Analyse each task individually for AI automation potential. Consider:
-1. Current AI capabilities (as of 2025-2026)
-2. The specific industry context and regional labour market dynamics
-3. Regulatory and trust barriers in their country/region
-4. Physical vs cognitive nature of each task
-5. Human relationship and judgement requirements
-6. Published automation probability data for similar occupations
-
-You MUST respond in EXACTLY this JSON format (no markdown, no code blocks, just raw JSON):
-{
-  "overallRiskScore": <number 0-100>,
-  "protectionScore": <number 0-100, how protected this person is based on their human-centric, creative, strategic, or physical tasks that AI cannot replicate>,
-  "riskLevel": "<LOW|MEDIUM|HIGH|VERY HIGH>",
-  "displacementYear": <number, the estimated year by which AI could automate 50% or more of this person's current tasks, e.g. 2029, 2032, 2040. Base this on realistic AI capability timelines, not hype>,
-  "summary": "<2-3 sentence personalised summary of their situation>",
-  "taskAnalysis": [
-    {
-      "task": "<task name>",
-      "riskScore": <0-100>,
-      "timelineYears": <1-20>,
-      "reasoning": "<specific reasoning>",
-      "automationBarriers": ["<barrier1>", "<barrier2>"]
-    }
-  ],
-  "timeline": {
-    "immediateRisk": "<roles/tasks at risk within 2 years>",
-    "mediumTermRisk": "<3-5 year outlook>",
-    "longTermRisk": "<5-10 year outlook>"
-  },
-  "skillsToBuilt": ["<skill1>", "<skill2>", "<skill3>", "<skill4>", "<skill5>"],
-  "careerPivots": [
-    {
-      "role": "<pivot role>",
-      "reason": "<why this is a good pivot>"
-    }
-  ],
-  "keyInsight": "<One powerful, memorable insight about their specific situation>",
-  "researchContext": [
-    {
-      "source": "<e.g. World Economic Forum, 2025>",
-      "finding": "<One sentence summarising a relevant finding from this source that applies to this person's role>"
-    },
-    {
-      "source": "<e.g. Goldman Sachs, 2023>",
-      "finding": "<One sentence relevant finding>"
-    },
-    {
-      "source": "<e.g. McKinsey Global Institute, 2024>",
-      "finding": "<One sentence relevant finding>"
-    }
-  ]
-}
-
-RULES:
-- Be specific to THIS person's tasks, not generic. Ground every assessment in what AI can actually do today and what is on the near horizon.
-- Do not sugarcoat but do not fearmonger. Be precise and evidence-based.
-- The protectionScore measures how much of their work requires uniquely human capabilities (empathy, physical presence, creative judgement, complex negotiation, ethical reasoning). A high protectionScore means they have strong natural defences against AI displacement.
-- The displacementYear must be realistic. For roles heavy in routine cognitive tasks, it could be 2027-2030. For highly protected roles, it could be 2035-2045+. Do not default to a single year for all roles.
-- researchContext must cite real published research. Do not fabricate citations. Use findings you actually know from WEF, Goldman Sachs, McKinsey, Oxford, Gartner, or OECD reports.
-- Do NOT include any URLs, links, or website addresses in your response. No blog links, no article links, no resource links. Only return the raw JSON data as specified above.`;
-}
-
-
-function parseAnalysis(responseText) {
-  try {
-    const parsed = JSON.parse(responseText);
-    return parsed;
-  } catch (e) {
-    const jsonMatch = responseText.match(/\{[\s\S]*\}/);
-    if (jsonMatch) {
-      try {
-        return JSON.parse(jsonMatch[0]);
-      } catch (e2) {
-        return {
-          overallRiskScore: 50,
-          protectionScore: 50,
-          riskLevel: "MEDIUM",
-          displacementYear: 2032,
-          summary: "Analysis completed but formatting was imperfect. The AI assessment suggests moderate automation risk for this role.",
-          taskAnalysis: [],
-          timeline: {
-            immediateRisk: "Unable to determine",
-            mediumTermRisk: "Unable to determine",
-            longTermRisk: "Unable to determine"
-          },
-          skillsToBuilt: ["AI tool proficiency", "Critical thinking", "Emotional intelligence", "Strategic planning", "Adaptability"],
-          careerPivots: [],
-          keyInsight: responseText.substring(0, 200),
-          researchContext: [],
-          rawResponse: responseText
-        };
-      }
-    }
-    return {
-      overallRiskScore: 50,
-      protectionScore: 50,
-      riskLevel: "MEDIUM",
-      displacementYear: 2032,
-      summary: "Analysis completed but could not be parsed. Please try again.",
-      taskAnalysis: [],
-      timeline: {
-        immediateRisk: "Unable to determine",
-        mediumTermRisk: "Unable to determine",
-        longTermRisk: "Unable to determine"
-      },
-      skillsToBuilt: ["AI tool proficiency", "Critical thinking", "Emotional intelligence", "Strategic planning", "Adaptability"],
-      careerPivots: [],
-      keyInsight: "Analysis unavailable",
-      researchContext: [],
-      rawResponse: responseText
-    };
+    const safe = publicError(error);
+    console.error('Analysis failed', { requestId, code: error?.code || error?.name || 'UNKNOWN', status: error?.status || 500, message: error?.message });
+    return NextResponse.json({ error: safe.message, code: safe.code, requestId }, { status: safe.code === 'PROVIDER_BUSY' ? 503 : 500 });
   }
 }

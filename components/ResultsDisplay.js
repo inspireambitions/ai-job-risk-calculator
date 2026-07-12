@@ -72,12 +72,15 @@ export default function ResultsDisplay({ results, formData, onReset }) {
   const score = results.overallRiskScore;
   const protectionScore = results.protectionScore || 0;
   const displacementYear = results.displacementYear || null;
+  const displacementRange = results.displacementRange || null;
   const researchContext = results.researchContext || [];
   const colors = getRiskColor(score);
   const protColors = getProtectionColor(protectionScore);
   const toolUrl = 'https://calculator.inspireambitions.com/';
 
-  const yearStr = displacementYear ? `AI could automate 50%+ of my tasks by ${displacementYear}.` : '';
+  const yearStr = displacementYear
+    ? `Estimated task-displacement horizon: ~${displacementYear}${displacementRange ? ` (${displacementRange.earliest}-${displacementRange.latest})` : ''}.`
+    : '';
   const shareMessage = `My AI Job Risk Score: ${score}% | Protection Score: ${protectionScore}% for "${formData.jobTitle}". ${yearStr} Check yours:`;
 
   const handleLinkedIn = () => {
@@ -154,8 +157,13 @@ export default function ResultsDisplay({ results, formData, onReset }) {
               Estimated Displacement Horizon
             </p>
             <p className={`text-3xl sm:text-4xl font-extrabold ${urgency.color} mb-1`}>
-              {displacementYear}
+              ~{displacementYear}
             </p>
+            {displacementRange && (
+              <p className={`text-sm font-semibold ${urgency.color} mb-1`}>
+                Range: {displacementRange.earliest}-{displacementRange.latest}
+              </p>
+            )}
             <p className="text-xs text-gray-500">
               Year when AI could automate 50%+ of your current tasks
             </p>
