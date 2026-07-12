@@ -1,4 +1,5 @@
 import './globals.css';
+import Script from 'next/script';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter', weight: '600' });
@@ -40,8 +41,10 @@ export default function RootLayout({ children }) {
             __html: `(function(){try{var t=localStorage.getItem('ia-theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}catch(e){}})();`,
           }}
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY9B70N583" />
-        <script
+        <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-PY9B70N583" />
+        <Script
+          id="google-analytics"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
