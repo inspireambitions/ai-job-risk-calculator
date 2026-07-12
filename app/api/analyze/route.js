@@ -95,6 +95,25 @@ export async function runAnalysis(input, client = anthropic) {
   throw lastError || new Error('No analysis model is configured.');
 }
 
+export function getOrCreateAnalysis(cacheKey, factory, now = Date.now()) {
+  const cached = state.cache.get(cacheKey);
+  if (cached && cached.expiresAt > now) {
+    return { source: 'cache', promise: Promise.resolve(cached.analysis) };
+  }
+
+  let promise = state.inFlight.get(cacheKey);
+  if (!promise) {
+    promise = factory()
+      .then((result) => {
+        state.cache.set(cacheKey, { analysis: result, expiresAt: Date.now() + CACHE_TTL_MS });
+        return result;
+      })
+      .finally(() => state.inFlight.delete(cacheKey));
+    state.inFlight.set(cacheKey, promise);
+  }
+  return { source: 'live', promise };
+}
+
 export async function POST(request) {
   const requestId = randomUUID();
   try {
@@ -115,21 +134,11 @@ export async function POST(request) {
 
     const input = validation.value;
     const cacheKey = hash(JSON.stringify(input));
-    const cached = state.cache.get(cacheKey);
-    if (cached && cached.expiresAt > Date.now()) {
-      return NextResponse.json(cached.analysis, { headers: { 'X-Analysis-Cache': 'HIT', 'X-Request-Id': requestId } });
-    }
-
-    let pending = state.inFlight.get(cacheKey);
-    if (!pending) {
-      pending = runAnalysis(input).finally(() => state.inFlight.delete(cacheKey));
-      state.inFlight.set(cacheKey, pending);
-    }
-    const { analysis, model } = await pending;
-    state.cache.set(cacheKey, { analysis, expiresAt: Date.now() + CACHE_TTL_MS });
+    const pending = getOrCreateAnalysis(cacheKey, () => runAnalysis(input));
+    const { analysis, model } = await pending.promise;
 
     console.info('Analysis completed', { requestId, model, taskCount: input.tasks.length });
-    return NextResponse.json(analysis, { headers: { 'X-Analysis-Cache': 'MISS', 'X-Request-Id': requestId } });
+    return NextResponse.json(analysis, { headers: { 'X-Analysis-Cache': pending.source === 'cache' ? 'HIT' : 'MISS', 'X-Request-Id': requestId } });
   } catch (error) {
     const safe = publicError(error);
     console.error('Analysis failed', { requestId, code: error?.code || error?.name || 'UNKNOWN', status: error?.status || 500, message: error?.message });

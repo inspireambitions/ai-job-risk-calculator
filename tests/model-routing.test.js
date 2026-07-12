@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest';
-import { runAnalysis } from '../app/api/analyze/route';
+import { getOrCreateAnalysis, runAnalysis } from '../app/api/analyze/route';
 
 const validToolResponse = {
   content: [{
@@ -58,5 +58,21 @@ describe('model routing', () => {
     const result = await runAnalysis(input, client);
     expect(calls).toBe(2);
     expect(result.analysis.protectionScore).toBe(70);
+  });
+
+  it('coalesces 50 simultaneous identical analyses into one provider call', async () => {
+    let calls = 0;
+    const cacheKey = `load-test-${Date.now()}`;
+    const factory = async () => {
+      calls += 1;
+      await new Promise((resolve) => setTimeout(resolve, 20));
+      return { analysis: { overallRiskScore: 40 }, model: 'working-model' };
+    };
+
+    const requests = Array.from({ length: 50 }, () => getOrCreateAnalysis(cacheKey, factory).promise);
+    const results = await Promise.all(requests);
+    expect(results).toHaveLength(50);
+    expect(calls).toBe(1);
+    expect(results.every((result) => result.analysis.overallRiskScore === 40)).toBe(true);
   });
 });
