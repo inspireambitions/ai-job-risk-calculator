@@ -24,6 +24,9 @@ jobs:
       - name: Install browser
         run: npx playwright install --with-deps chromium
 
+      - name: Pin Lighthouse to Playwright Chromium
+        run: echo "CHROME_PATH=$(node -e 'process.stdout.write(require(\"playwright\").chromium.executablePath())')" >> "$GITHUB_ENV"
+
       - name: Unit tests
         run: npm test
 
