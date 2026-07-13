@@ -37,6 +37,11 @@ describe('occupation launch gate', () => {
     expect(occupations.filter((occupation) => !occupation.iscoVerified)).toHaveLength(7);
   });
 
+  it('keeps editorial review markers out of public occupation content', () => {
+    const publicPayload = JSON.stringify(occupations);
+    expect(publicPayload).not.toMatch(/KIM REVIEW|kim_review_pending|\(verify\)/i);
+  });
+
   it('keeps pairwise content similarity below the launch threshold', () => {
     let maximum = 0;
     for (let i = 0; i < occupations.length; i += 1) {
