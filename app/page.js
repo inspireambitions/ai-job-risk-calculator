@@ -138,9 +138,7 @@ export default function Home() {
                 <span className="text-gray-300">|</span>
                 <span>Goldman Sachs Research</span>
                 <span className="text-gray-300">|</span>
-                <span>McKinsey Global Institute</span>
-                <span className="text-gray-300">|</span>
-                <span>Oxford University</span>
+                <span>International Labour Organization</span>
               </div>
             </div>
 
@@ -180,6 +178,11 @@ export default function Home() {
               InspireAmbitions.com
             </a>
             {' '}| Your job is made of tasks. AI replaces tasks, not jobs.
+          </p>
+          <p className="mt-2">
+            <a className="text-brand-600 hover:underline" href="/methodology">Methodology</a>
+            {' '}|{' '}
+            <a className="text-brand-600 hover:underline" href="/embed">Embed this calculator</a>
           </p>
         </div>
       </footer>

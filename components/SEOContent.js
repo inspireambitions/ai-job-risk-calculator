@@ -39,13 +39,13 @@ export default function SEOContent() {
             <p className="text-sm text-gray-600 mb-3">
               This calculator is informed by published research, including the{' '}
               <a className="text-brand-700 underline" href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/" target="_blank" rel="noopener noreferrer">World Economic Forum Future of Jobs Report 2025</a>,{' '}
-              <a className="text-brand-700 underline" href="https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent" target="_blank" rel="noopener noreferrer">Goldman Sachs research on generative AI</a> and{' '}
-              <a className="text-brand-700 underline" href="https://www.mckinsey.com/mgi/our-research/generative-ai-and-the-future-of-work-in-america" target="_blank" rel="noopener noreferrer">McKinsey Global Institute workforce research</a>. These organisations do not endorse this tool.
+              <a className="text-brand-700 underline" href="https://www.ilo.org/publications/generative-ai-and-jobs-2025-update" target="_blank" rel="noopener noreferrer">International Labour Organization 2025 task-level exposure index</a> and{' '}
+              <a className="text-brand-700 underline" href="https://www.goldmansachs.com/insights/articles/the-jobs-ai-is-likely-to-boost-and-those-it-may-disrupt" target="_blank" rel="noopener noreferrer">Goldman Sachs research on AI substitution and augmentation</a>. These organisations do not endorse this tool.
             </p>
             <p className="text-sm text-gray-600 mb-4">
-              <a className="text-brand-700 underline" href="https://www.oxfordmartin.ox.ac.uk/publications/the-future-of-employment" target="_blank" rel="noopener noreferrer">Oxford Martin School researchers</a> estimated that 47% of US employment was at high risk of automation, though
-              this figure has been revised downward as experts recognise that most jobs contain a mix of automatable
-              and non-automatable tasks. The consensus view: AI replaces tasks within jobs, not entire jobs.
+              The ILO finds that exposure does not mean a whole job will disappear. Most affected jobs are more likely
+              to change because they still require human input. This calculator therefore scores tasks, then shows
+              both displacement risk and the potential to use AI as leverage.
             </p>
 
             <h3 className="text-lg font-bold text-gray-900 mb-4 mt-8">Frequently Asked Questions</h3>
@@ -99,6 +99,9 @@ export default function SEOContent() {
         >
           {expanded ? 'Show less' : 'Read more: Key statistics and FAQ'}
         </button>
+        <p className="mt-4 text-sm">
+          <a className="font-medium text-brand-700 underline" href="/methodology">Read the full scoring method and limitations</a>
+        </p>
       </div>
     </div>
   );

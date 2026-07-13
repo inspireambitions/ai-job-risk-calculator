@@ -2,6 +2,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { createHash, randomUUID } from 'node:crypto';
 import { NextResponse } from 'next/server';
 import { ANALYSIS_TOOL, buildAnalysisPrompt, normalizeAnalysis, validateAnalysisInput } from '../../../lib/analysis';
+import { applyDeterministicScores } from '../../../lib/scoring';
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
@@ -135,7 +136,8 @@ export async function POST(request) {
     const input = validation.value;
     const cacheKey = hash(JSON.stringify(input));
     const pending = getOrCreateAnalysis(cacheKey, () => runAnalysis(input));
-    const { analysis, model } = await pending.promise;
+    const { analysis: modelAnalysis, model } = await pending.promise;
+    const analysis = applyDeterministicScores(modelAnalysis, input);
 
     console.info('Analysis completed', { requestId, model, taskCount: input.tasks.length });
     return NextResponse.json(analysis, { headers: { 'X-Analysis-Cache': pending.source === 'cache' ? 'HIT' : 'MISS', 'X-Request-Id': requestId } });

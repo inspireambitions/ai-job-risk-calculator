@@ -32,6 +32,15 @@ export function trackToolEvent(eventName, details = {}) {
     });
   }
 
+  if (typeof window.posthog?.capture === 'function') {
+    window.posthog.capture(eventName, {
+      source: payload.source,
+      tool: payload.tool,
+      surface: payload.surface,
+      ...details,
+    });
+  }
+
   if (window.parent && window.parent !== window) {
     window.parent.postMessage(payload, 'https://inspireambitions.com');
   }

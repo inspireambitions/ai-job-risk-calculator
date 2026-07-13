@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { trackToolEvent } from './analytics';
 
 function getRiskColor(score) {
   if (score <= 30) return { bg: 'bg-green-500', text: 'text-green-700', light: 'bg-green-50', border: 'border-green-200' };
@@ -63,6 +64,7 @@ function TaskBar({ task }) {
         />
       </div>
       <p className="text-xs text-gray-500">{task.reasoning}</p>
+      {task.protectionPlan && <div className="mt-2 border-s-2 border-brand-400 ps-3"><p className="text-xs font-semibold text-brand-800">Protection action</p><p className="mt-0.5 text-xs text-gray-600">{task.protectionPlan}</p></div>}
     </div>
   );
 }
@@ -70,8 +72,14 @@ function TaskBar({ task }) {
 export default function ResultsDisplay({ results, formData, onReset }) {
   const resultHeadingRef = useRef(null);
   const [copyText, setCopyText] = useState('');
+  const [shareUrl, setShareUrl] = useState('');
+  const [benchmark, setBenchmark] = useState(null);
+  const [handoffOpen, setHandoffOpen] = useState(false);
+  const [handoffStatus, setHandoffStatus] = useState('idle');
+  const benchmarkRecorded = useRef(false);
   const score = results.overallRiskScore;
   const protectionScore = results.protectionScore || 0;
+  const leverageScore = results.leverageScore || 0;
   const displacementYear = results.displacementYear || null;
   const displacementRange = results.displacementRange || null;
   const researchContext = results.researchContext || [];
@@ -84,43 +92,107 @@ export default function ResultsDisplay({ results, formData, onReset }) {
     : '';
   const shareMessage = `My AI Job Risk Score: ${score}% | Protection Score: ${protectionScore}% for "${formData.jobTitle}". ${yearStr} Check yours:`;
 
-  const handleLinkedIn = () => {
-    const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(toolUrl)}`;
+  const getShareUrl = async () => {
+    if (shareUrl) return shareUrl;
+    try {
+      const response = await fetch('/api/results', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          jobTitle: formData.jobTitle,
+          country: formData.country,
+          overallRiskScore: score,
+          protectionScore,
+          leverageScore,
+          displacementYear,
+          displacementRange,
+          riskLevel: results.riskLevel,
+          libraryVersion: results.libraryVersion,
+        }),
+      });
+      if (!response.ok) return toolUrl;
+      const data = await response.json();
+      const nextUrl = `${window.location.origin}/r/${data.id}`;
+      setShareUrl(nextUrl);
+      return nextUrl;
+    } catch {
+      return toolUrl;
+    }
+  };
+
+  const handleLinkedIn = async () => {
+    const shared = await getShareUrl();
+    trackToolEvent('result_shared', { surface: 'result', channel: 'linkedin' });
+    const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shared)}`;
     window.open(url, '_blank', 'width=600,height=500');
   };
 
-  const handleX = () => {
-    const url = `https://x.com/intent/tweet?text=${encodeURIComponent(shareMessage)}&url=${encodeURIComponent(toolUrl)}`;
+  const handleX = async () => {
+    const shared = await getShareUrl();
+    trackToolEvent('result_shared', { surface: 'result', channel: 'x' });
+    const url = `https://x.com/intent/tweet?text=${encodeURIComponent(shareMessage)}&url=${encodeURIComponent(shared)}`;
     window.open(url, '_blank', 'width=600,height=400');
   };
 
-  const handleWhatsApp = () => {
-    const url = `https://wa.me/?text=${encodeURIComponent(shareMessage + ' ' + toolUrl)}`;
+  const handleWhatsApp = async () => {
+    const shared = await getShareUrl();
+    trackToolEvent('result_shared', { surface: 'result', channel: 'whatsapp' });
+    const url = `https://wa.me/?text=${encodeURIComponent(shareMessage + ' ' + shared)}`;
     window.open(url, '_blank');
   };
 
-  const handleCopy = () => {
-    const text = `${shareMessage} ${toolUrl}`;
+  const handleCopy = async () => {
+    const shared = await getShareUrl();
+    const text = `${shareMessage} ${shared}`;
     navigator.clipboard.writeText(text).then(() => {
       setCopyText('Copied!');
+      trackToolEvent('result_shared', { surface: 'result', channel: 'link' });
       setTimeout(() => setCopyText(''), 3000);
     }).catch(() => {});
   };
 
   const urgency = displacementYear ? getDisplacementUrgency(displacementYear) : null;
 
+  const startCvHandoff = async () => {
+    setHandoffStatus('loading');
+    try {
+      const response = await fetch('/api/handoff/sign', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ role: formData.jobTitle, country: formData.country, tasks: formData.tasks }),
+      });
+      if (!response.ok) throw new Error('handoff unavailable');
+      const { token } = await response.json();
+      trackToolEvent('cv_handoff_clicked', { surface: 'result', score_band: results.riskLevel });
+      window.location.href = `https://cv.inspireambitions.com/?handoff=${encodeURIComponent(token)}`;
+    } catch {
+      setHandoffStatus('error');
+    }
+  };
+
   useEffect(() => {
     resultHeadingRef.current?.focus();
   }, []);
+
+  useEffect(() => {
+    if (benchmarkRecorded.current) return;
+    benchmarkRecorded.current = true;
+    const payload = { occupation: formData.jobTitle, country: formData.country || '', score };
+    fetch('/api/benchmark', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+      .then(() => fetch(`/api/benchmark?occupation=${encodeURIComponent(payload.occupation)}&country=${encodeURIComponent(payload.country)}&score=${score}`))
+      .then((response) => response.ok ? response.json() : null)
+      .then((data) => data && setBenchmark(data))
+      .catch(() => {});
+  }, [formData.country, formData.jobTitle, score]);
 
   return (
     <div className="space-y-6">
       <h2 ref={resultHeadingRef} tabIndex={-1} className="sr-only">
         AI job risk results for {formData.jobTitle}
       </h2>
-      {/* Dual Score Card */}
+      {/* Three-score card */}
       <div className={`bg-white rounded-xl border-2 ${colors.border} p-6 sm:p-8 fade-in-up`}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-6">
           {/* Risk Score */}
           <div className="text-center">
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">
@@ -137,6 +209,16 @@ export default function ResultsDisplay({ results, formData, onReset }) {
             <p className={`text-sm font-bold ${colors.text}`}>
               {getRiskLabel(score)}
             </p>
+          </div>
+
+          <div className="text-center">
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Leverage Score</p>
+            <div className="relative inline-flex items-center justify-center mb-3">
+              <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-full border-8 border-blue-200 flex items-center justify-center" aria-label={`${leverageScore} out of 100 leverage score`}>
+                <div><span className="text-3xl sm:text-4xl font-bold text-blue-700">{leverageScore}</span><span className="text-base text-blue-700">%</span></div>
+              </div>
+            </div>
+            <p className="text-sm font-bold text-blue-700">{leverageScore >= 65 ? 'Highly actionable' : leverageScore >= 35 ? 'Partly actionable' : 'Structural exposure'}</p>
           </div>
 
           {/* Protection Score */}
@@ -165,10 +247,10 @@ export default function ResultsDisplay({ results, formData, onReset }) {
               Estimated Displacement Horizon
             </p>
             <p className={`text-3xl sm:text-4xl font-extrabold ${urgency.color} mb-1`}>
-              ~{displacementYear}{displacementRange ? ` (${displacementRange.earliest}-${displacementRange.latest})` : ''}
+              {displacementRange ? `~${displacementYear} (${displacementRange.earliest}-${displacementRange.latest})` : '10+ years'}
             </p>
             <p className="text-xs text-gray-500">
-              Estimated range for when AI could automate 50%+ of your current tasks. This is a planning signal, not a promised date.
+              {displacementRange ? 'Estimated range for when AI could automate 50%+ of your current tasks. This is a planning signal, not a promised date.' : 'No credible near-term displacement horizon. Keep adapting as tools and tasks change.'}
             </p>
             <span className={`inline-block mt-2 text-xs font-bold px-3 py-1 rounded-full ${urgency.bg} ${urgency.color} border ${urgency.border}`}>
               {urgency.label}
@@ -180,28 +262,26 @@ export default function ResultsDisplay({ results, formData, onReset }) {
           {results.summary}
         </p>
 
+        {benchmark?.available ? (
+          <p className="mb-5 text-center text-sm font-semibold text-brand-800">
+            Your role is safer than {benchmark.percentileSafer}% of comparable {formData.jobTitle} results{benchmark.scope === 'country' && formData.country ? ` in ${formData.country}` : ''}.
+          </p>
+        ) : benchmark?.count > 0 ? (
+          <p className="mb-5 text-center text-xs text-gray-500">Benchmark building: {benchmark.count} of 30 comparable results.</p>
+        ) : null}
+
         {/* Share Buttons */}
         <div className="mb-4">
           <p className="text-xs text-gray-400 mb-2 text-center">Share your score</p>
           <div className="flex justify-center gap-2 flex-wrap">
-            <button
-              onClick={handleLinkedIn}
-              className="px-4 py-2 bg-[#0A66C2] text-white rounded-lg text-sm font-medium hover:bg-[#004182] transition-colors"
-            >
-              LinkedIn
-            </button>
-            <button
-              onClick={handleX}
-              className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
-            >
-              X / Twitter
-            </button>
             <button
               onClick={handleWhatsApp}
               className="px-4 py-2 bg-[#25D366] text-white rounded-lg text-sm font-medium hover:bg-[#1DA851] transition-colors"
             >
               WhatsApp
             </button>
+            <button onClick={handleLinkedIn} className="px-4 py-2 bg-[#0A66C2] text-white rounded-lg text-sm font-medium hover:bg-[#004182] transition-colors">LinkedIn</button>
+            <button onClick={handleX} className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">X / Twitter</button>
             <button
               onClick={handleCopy}
               className="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
@@ -353,11 +433,15 @@ export default function ResultsDisplay({ results, formData, onReset }) {
         <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Methodology</h4>
         <p className="text-xs text-gray-500 leading-relaxed">
           This analysis uses AI to assess each of your tasks against current automation capabilities.
-          Findings are contextualised with published research from the World Economic Forum Future of Jobs Report (2025),
-          Goldman Sachs economic research, McKinsey Global Institute workforce studies, and Oxford University automation probability data.
-          Risk and protection scores are personalised to your task profile, industry, experience, and region.
+          The result is informed by published research from the World Economic Forum, the International Labour
+          Organization and Goldman Sachs. These organisations do not endorse this calculator. The deterministic
+          score uses your task profile, experience, work setting and region. Read the <a className="underline" href="/methodology">full method and limitations</a>.
         </p>
       </div>
+
+      <p className="text-center text-xs text-gray-500">
+        Share links store only an anonymous score snapshot and expire after 90 days. Your email and task text are not included.
+      </p>
 
       {/* CTA */}
       <div className="border border-brand-200 bg-brand-50 p-6 text-center fade-in-up">
@@ -365,13 +449,26 @@ export default function ResultsDisplay({ results, formData, onReset }) {
         <p className="text-sm text-gray-600 mb-4">
           Use the CV builder to turn your experience into evidence-led achievements and tailor it to a real vacancy.
         </p>
-        <a
-          href={`https://cv.inspireambitions.com/?source=ai-risk-calculator&role=${encodeURIComponent(formData.jobTitle || '')}`}
+        <button
+          type="button"
+          onClick={() => setHandoffOpen(true)}
           className="inline-block px-6 py-2.5 bg-brand-600 text-white text-sm font-medium hover:bg-brand-700 transition-colors"
         >
           Build and Tailor My CV
-        </a>
+        </button>
       </div>
+
+      {handoffOpen && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/50 p-4 sm:items-center" role="dialog" aria-modal="true" aria-labelledby="handoff-title">
+          <div className="w-full max-w-lg bg-white p-6 shadow-xl">
+            <h3 id="handoff-title" className="text-xl font-bold text-gray-900">Send these details to the CV builder?</h3>
+            <p className="mt-2 text-sm text-gray-600">You choose what moves. No email or score is included.</p>
+            <dl className="mt-5 space-y-3 text-sm"><div><dt className="font-semibold">Role</dt><dd>{formData.jobTitle}</dd></div><div><dt className="font-semibold">Country</dt><dd>{formData.country || 'Not provided'}</dd></div><div><dt className="font-semibold">Daily tasks</dt><dd>{formData.tasks.length} task{formData.tasks.length === 1 ? '' : 's'}</dd></div></dl>
+            {handoffStatus === 'error' && <p className="mt-4 text-sm text-red-700" role="alert">The secure handoff is not available yet. Your result remains here.</p>}
+            <div className="mt-6 flex justify-end gap-3"><button type="button" onClick={() => setHandoffOpen(false)} className="border border-gray-300 px-4 py-2 text-sm font-semibold">Cancel</button><button type="button" disabled={handoffStatus === 'loading'} onClick={startCvHandoff} className="bg-brand-600 px-4 py-2 text-sm font-semibold text-white disabled:opacity-50">{handoffStatus === 'loading' ? 'Preparing...' : 'Send and open CV builder'}</button></div>
+          </div>
+        </div>
+      )}
 
       {/* General guidance CTA */}
       <div className="bg-gray-900 text-white rounded-xl p-6 text-center fade-in-up">

@@ -257,7 +257,7 @@ export default function JobForm({ onSubmit, initialData }) {
       </button>
 
       <p className="text-xs text-center text-gray-400">
-        Your data is not stored. Analysis is generated in real time and discarded.
+        Your analysis is not stored with your identity. Anonymous score statistics may later power benchmarks and research.
       </p>
     </form>
   );
