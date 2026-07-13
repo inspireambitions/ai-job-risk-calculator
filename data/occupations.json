@@ -53,6 +53,7 @@
       "slug": "site-engineer",
       "title": "Site Engineer",
       "isco": "ISCO-08 2142",
+      "iscoVerified": true,
       "sector": "CONSTRUCTION",
       "outlook": "A site engineer's week splits between the office cabin and the ground. The office half is filling with software. Progress reports write themselves from site data. Take-offs run from digital drawings. Schedules update from feeds. The ground half is a different story. Concrete still gets poured in the wrong place. Subcontractors still promise what they cannot deliver. Safety still depends on a trained eye walking the slab. Over the next five years, expect the reporting workload to shrink sharply while the inspection and coordination workload stays whole. The engineers who feel this as relief, not threat, will do well.",
       "tasks": [
@@ -189,6 +190,7 @@
       "slug": "quantity-surveyor",
       "title": "Quantity Surveyor",
       "isco": "ISCO-08 2149",
+      "iscoVerified": false,
       "sector": "CONSTRUCTION",
       "outlook": "Measurement built this profession, and measurement is leaving it. Software already takes quantities from digital drawings, and AI is finishing the remaining manual work. That sounds like decline. It is actually a sorting event. The QS role divides into a measuring trade that automates and a commercial trade that grows. Variations still need valuing. Claims still need arguing. Final accounts still need closing against someone who does not want to pay. Contract judgement, negotiation and commercial storytelling carry the next decade of this career. The professionals who saw themselves as measurers face a harder road than those who saw themselves as negotiators.",
       "tasks": [
@@ -316,6 +318,7 @@
       "slug": "hotel-receptionist",
       "title": "Hotel Receptionist",
       "isco": "ISCO-08 4224",
+      "iscoVerified": true,
       "sector": "HOSPITALITY",
       "outlook": "The front desk is shrinking and the front-of-house role is growing, and these are not the same thing. Kiosks, mobile keys and AI booking agents now handle the transaction that used to define this job. What hotels cannot buy from a vendor is the person who reads a tired family at midnight, rescues a ruined honeymoon, or leads guests calmly during a fire alarm. In luxury and full-service properties, the human welcome is the product itself. Expect fewer positions doing pure processing and stronger positions built on recovery, upselling and presence. The job title survives. Its centre of gravity moves.",
       "tasks": [
@@ -451,6 +454,7 @@
       "slug": "food-and-beverage-manager",
       "title": "Food and Beverage Manager",
       "isco": "ISCO-08 1412",
+      "iscoVerified": false,
       "sector": "HOSPITALITY",
       "outlook": "F&B management has always been two jobs wearing one badge. The first is the back office: rosters, orders, stock counts, menu costing. The second is the floor: leading a team through a full Friday brunch, rescuing a bad table, holding standards at hour ten. AI is dismantling the first job with real speed. Rostering tools, stock systems and menu-engineering analytics now do in minutes what took evenings. The second job is untouched and becoming the whole role. Managers who built identity on spreadsheets face a squeeze. Managers who built teams and guest experiences are about to get their evenings back.",
       "tasks": [
@@ -595,6 +599,7 @@
       "slug": "housekeeping-supervisor",
       "title": "Housekeeping Supervisor",
       "isco": "ISCO-08 5151",
+      "iscoVerified": true,
       "sector": "HOSPITALITY",
       "outlook": "Housekeeping is physical work managed by human judgement, and that combination protects it. Software now assigns rooms, tracks linen and syncs status boards with the front desk, which removes the clipboard from the supervisor's hands. It does not remove the supervisor. Rooms still need inspecting by someone who can spot a smear a camera misses. Attendants still need training, protecting and motivating through hard physical shifts. The next five years thin the administrative shell of this job and leave its inspection and leadership core intact. Supervisors who embrace the systems will simply have more time to supervise.",
       "tasks": [
@@ -723,6 +728,7 @@
       "slug": "registered-nurse",
       "title": "Registered Nurse",
       "isco": "ISCO-08 2221",
+      "iscoVerified": true,
       "sector": "HEALTHCARE",
       "outlook": "Nursing sits near the safe end of every serious exposure study, and the reason is visible on any ward. The job is hands, eyes and heart applied to unpredictable human bodies. What AI genuinely changes is the paperwork wrapped around care. Documentation assistants draft notes from voice. Handover tools assemble shift summaries. Care plans update from records. Every one of those changes returns minutes to the bedside. Demand pressure runs the other way entirely: ageing populations are expanding care needs worldwide. The realistic future is not fewer nurses. It is nurses with less typing and more patients.",
       "tasks": [
@@ -859,6 +865,7 @@
       "slug": "radiographer",
       "title": "Radiographer",
       "isco": "ISCO-08 3211",
+      "iscoVerified": true,
       "sector": "HEALTHCARE",
       "outlook": "Every year brings a headline about AI reading scans, and every year radiographers get asked if they are finished. The question confuses two professions. Reading images for diagnosis is radiologist territory, and that is where AI exposure debates belong. Radiographers produce the images: positioning patients, operating machines, managing radiation dose, calming the claustrophobic. That work is physical, regulated and patient-facing. The realistic change for radiographers is around the edges: worklists organise themselves, quality checks get automated assistance, urgent findings get flagged earlier. The person guiding a frightened patient into an MRI tunnel remains firmly, physically necessary.",
       "tasks": [
@@ -986,6 +993,7 @@
       "slug": "bank-teller",
       "title": "Bank Teller",
       "isco": "ISCO-08 4211",
+      "iscoVerified": true,
       "sector": "BANKING AND FINANCE",
       "outlook": "Tellers have lived automation longer than almost anyone. Cash machines arrived decades ago, apps took transfers and deposits, and branches thinned. AI now takes the next layer: the routine query, the standard account task, the scripted conversation. What banks keep branches for is what remains: trust moments, complex needs, fraud instincts and customers who want a human before moving their money. The honest outlook is a shrinking transaction role and a growing advisory one, with fewer total seats. Tellers who move toward advice, service leadership or compliance early will ride the change. Those who wait for the counter to defend itself will not.",
       "tasks": [
@@ -1117,6 +1125,7 @@
       "slug": "financial-analyst",
       "title": "Financial Analyst",
       "isco": "ISCO-08 2413",
+      "iscoVerified": true,
       "sector": "BANKING AND FINANCE",
       "outlook": "The junior analyst's traditional apprenticeship, years of gathering data and building models, is being compressed into software. AI drafts a working model in minutes and a reporting pack in seconds. That is not the end of analysis. It is the end of analysis-as-production. What firms still cannot buy is the analyst who challenges an assumption the CFO loves, spots the flattering number that is quietly wrong, and tells a board what the model means. The profession is becoming shorter on typing and heavier on judgement, communication and trust. Analysts should plan their careers around that final mile.",
       "tasks": [
@@ -1247,6 +1256,7 @@
       "slug": "compliance-officer",
       "title": "Compliance Officer",
       "isco": "ISCO-08 2619",
+      "iscoVerified": false,
       "sector": "BANKING AND FINANCE",
       "outlook": "Compliance holds a card most professions lack: the regulator wants a name, not a model. Accountability is the product. That said, the volume layer of compliance is automating rapidly. Screening alerts, KYC files and regulatory-change tracking are structured work, and structured work is what AI does. The profession is therefore concentrating: fewer hours on processing, more on investigation, advice and sign-off. Junior roles built on alert queues face real pressure. Senior roles built on judgement and regulator relationships are strengthening. The career advice writes itself: move from screening to deciding as early as your experience allows.",
       "tasks": [
@@ -1385,6 +1395,7 @@
       "slug": "cabin-crew",
       "title": "Cabin Crew",
       "isco": "ISCO-08 5111",
+      "iscoVerified": true,
       "sector": "AVIATION",
       "outlook": "Cabin crew are safety professionals who also pour coffee, and the law prices the safety part. Minimum crew numbers per aircraft are set by regulation for evacuation and emergency response, not for service. That legal floor makes this one of the most structurally protected customer-facing jobs anywhere. What AI changes is the paperwork and the personalisation: briefing packs, reports and rosters automate, while service becomes more data-informed. What it cannot change is the trained human who manages a medical emergency, a disruptive passenger or an evacuation at altitude. The wings stay human for the foreseeable future.",
       "tasks": [
@@ -1512,6 +1523,7 @@
       "slug": "airport-check-in-agent",
       "title": "Airport Check-in Agent",
       "isco": "ISCO-08 4221",
+      "iscoVerified": false,
       "sector": "AVIATION",
       "outlook": "This role is a preview of automation played at speed. Kiosks arrived, then bag drop, then biometric gates, then home check-in, and each wave shrank the staffed counter. AI agents now handle rebooking chats and routine queries too. What remains staffed is the day the system breaks: the cancelled flight, the missed connection, the passenger whose visa is wrong, the family in tears. Airlines and airports keep humans precisely for the moments machines make worse. The realistic career reading is stark but useful: the routine path is closing, and the exception path is becoming the entire job.",
       "tasks": [
@@ -1639,6 +1651,7 @@
       "slug": "software-developer",
       "title": "Software Developer",
       "isco": "ISCO-08 2512",
+      "iscoVerified": true,
       "sector": "INFORMATION TECHNOLOGY",
       "outlook": "No profession has adopted its own disruptor faster. AI assistants now write a large share of routine code, tests and documentation, and the developers using them ship faster than those who do not. The panic headline says the job is ending. The task data says the job is moving. Typing implementations is automating; deciding what to build, how systems fit together, what trade-offs to accept and who is accountable when production breaks remains stubbornly human. The profession's centre of gravity is shifting from writing code to directing, reviewing and owning it. Developers should read their own task lists the way this calculator does.",
       "tasks": [
@@ -1776,6 +1789,7 @@
       "slug": "it-support-specialist",
       "title": "IT Support Specialist",
       "isco": "ISCO-08 3512",
+      "iscoVerified": true,
       "sector": "INFORMATION TECHNOLOGY",
       "outlook": "First-line support is the textbook AI use case: repeatable questions with documented answers, arriving as text. Chatbots, self-service portals and self-healing systems are absorbing that layer now, and ticket volumes reaching humans are falling in automated organisations. What holds is everything with a physical or human edge: hardware in hands, on-site presence, executives who want a person, incidents too tangled for scripts. The occupation is splitting cleanly. Scripted remote support shrinks hard. Field work, complex escalation and the administration of the support AI itself grow. Specialists should decide early which side of the split they are building toward.",
       "tasks": [
@@ -1905,6 +1919,7 @@
       "slug": "data-analyst",
       "title": "Data Analyst",
       "isco": "ISCO-08 2511",
+      "iscoVerified": false,
       "sector": "INFORMATION TECHNOLOGY",
       "outlook": "Anyone can now ask a database questions in plain English, and that single change moves this profession's centre of gravity. Extraction, cleaning, routine queries and dashboard production, the tasks that filled analyst weeks, are automating quickly. What organisations still cannot generate on demand is the analyst who frames the right question, catches the plausible-but-wrong answer, and convinces a sceptical director to act. The role is becoming a translation layer between data and decisions rather than a production line for reports. Analysts who understand the business behind their numbers will find the machines made them more valuable, not less.",
       "tasks": [
@@ -2034,6 +2049,7 @@
       "slug": "logistics-coordinator",
       "title": "Logistics Coordinator",
       "isco": "ISCO-08 4323",
+      "iscoVerified": false,
       "sector": "LOGISTICS",
       "outlook": "Freight has always run on paperwork, and paperwork is exactly what automates. Booking, tracking, documentation and rate comparison, the tasks that filled a coordinator's screen, now flow through platforms with shrinking human touch. AI extends the trend into the conversations: status updates, standard queries and routine customer messages generate themselves. What survives is the exception economy. Containers get stuck. Customs surprises happen. Customers get angry at exactly the moment the automated update sounds hollow. The coordinator role is compressing into its hardest parts: judgement under disruption, relationships under pressure and the customs knowledge that keeps cargo moving.",
       "tasks": [
@@ -2162,6 +2178,7 @@
       "slug": "warehouse-supervisor",
       "title": "Warehouse Supervisor",
       "isco": "ISCO-08 4321",
+      "iscoVerified": false,
       "sector": "LOGISTICS",
       "outlook": "Automation enters warehouses through the racking, not through the supervisor's office. Robots pick, conveyors sort and systems allocate, and each wave changes what supervisors manage rather than whether they exist. Task allocation and inventory counts are moving into software now. What software does not do is lead a night shift, hold safety standards when the pressure peaks, or manage the human half of a floor increasingly shared with machines. Mixed human-robot operations arguably need more supervision judgement, not less. The role's administrative shell is thinning; its leadership core is holding, and in automated sites, hardening.",
       "tasks": [
@@ -2290,6 +2307,7 @@
       "slug": "operations-manager",
       "title": "Operations Manager",
       "isco": "ISCO-08 1321 (verify, varies by industry)",
+      "iscoVerified": true,
       "sector": "EXECUTIVE AND MANAGEMENT",
       "outlook": "Management is judgement work wrapped in reporting work, and AI strips the wrapper. Dashboards assemble themselves. Status packs generate on schedule. Meeting summaries write their own follow-ups. What remains is the actual job that the reporting always described: decisions under uncertainty, people through difficulty, negotiations, crises and accountability when things fail. Organisations are discovering they need fewer managers who relay information and exactly as many who create decisions. That is a squeeze on reporting-heavy middle layers and a strengthening of genuine operational leadership. Managers should audit their calendars honestly, because the calendar is what the calculator scores.",
       "tasks": [
@@ -2427,6 +2445,7 @@
       "slug": "executive-assistant",
       "title": "Executive Assistant",
       "isco": "ISCO-08 3343",
+      "iscoVerified": true,
       "sector": "OFFICE AND ADMINISTRATION",
       "outlook": "The EA role was always two jobs. The visible one manages calendars, travel, expenses and inboxes, and AI assistants are absorbing it now, quickly and well. The invisible one was always the real job: judgement about access, discretion with sensitive matters, reading the executive and the politics, and quietly making things happen. Trust does not automate; scheduling does. The occupation's future belongs to EAs who formalise the invisible job: running the executive's AI toolkit, gatekeeping with judgement and operating as a genuine extension of their principal. The typing-heavy version of this role is ending. The trusted version is being promoted.",
       "tasks": [
@@ -2555,6 +2574,7 @@
       "slug": "data-entry-clerk",
       "title": "Data Entry Clerk",
       "isco": "ISCO-08 4132",
+      "iscoVerified": true,
       "sector": "OFFICE AND ADMINISTRATION",
       "outlook": "Honesty serves readers better than comfort, so here it is: this is the most exposed occupation in the entire calculator. Document AI now reads, extracts and enters data from forms, invoices and records with minimal human involvement, and the technology is cheap enough that adoption is mainly a matter of time. The realistic plan is not defending this job. It is using it, deliberately and quickly, as a paid bridge toward work the machines feed rather than replace: data quality, records administration, junior analysis. The people best placed to check automated data are the people who used to type it.",
       "tasks": [

@@ -68,6 +68,7 @@ const occupations = headings.map((heading, index) => {
     slug: heading[2],
     title: clean(heading[3]),
     isco: clean(heading[4]).replace(/\s*\(verify\)$/i, ''),
+    iscoVerified: !/\(verify\)$/i.test(heading[4]),
     sector: sectorAt(heading.index),
     outlook,
     tasks,

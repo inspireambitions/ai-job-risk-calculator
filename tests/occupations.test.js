@@ -33,6 +33,10 @@ describe('occupation launch gate', () => {
     }
   });
 
+  it('keeps unverified ISCO mappings out of the public taxonomy', () => {
+    expect(occupations.filter((occupation) => !occupation.iscoVerified)).toHaveLength(7);
+  });
+
   it('keeps pairwise content similarity below the launch threshold', () => {
     let maximum = 0;
     for (let i = 0; i < occupations.length; i += 1) {

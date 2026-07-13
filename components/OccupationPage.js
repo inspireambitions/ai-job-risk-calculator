@@ -42,7 +42,7 @@ export default function OccupationPage({ occupation, region }) {
           <nav aria-label="Breadcrumb" className="mb-5 text-sm text-gray-500">
             <Link href="/jobs" className="hover:underline">Jobs</Link> / <span>{occupation.title}</span>{regionInfo && <> / <span>{regionInfo.name}</span></>}
           </nav>
-          <p className="mb-3 text-sm font-semibold uppercase text-brand-600">{occupation.sector} · {occupation.isco}</p>
+          <p className="mb-3 text-sm font-semibold uppercase text-brand-600">{occupation.sector}{occupation.iscoVerified ? ` · ${occupation.isco}` : ''}</p>
           <h1 className="max-w-3xl text-3xl font-bold text-gray-900 sm:text-4xl">{pageTitle}</h1>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-600"><SourceText>{occupation.outlook}</SourceText></p>
           <div className="mt-8 flex flex-wrap items-end gap-6 border-y border-gray-200 py-6">
