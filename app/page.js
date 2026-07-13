@@ -23,6 +23,15 @@ export default function Home() {
     if (error) errorRef.current?.focus();
   }, [error]);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const role = params.get('role');
+    const tasks = params.get('tasks')?.split('|').map((task) => task.trim()).filter(Boolean).slice(0, 8);
+    if (role && tasks?.length) {
+      setFormData({ jobTitle: role, tasks, country: params.get('country') || '', industry: '', experience: '', workEnvironment: '' });
+    }
+  }, []);
+
   const handleSubmit = useCallback(async (data) => {
     if (submitting) return;
     setFormData(data);
@@ -144,7 +153,7 @@ export default function Home() {
 
             <ExampleResult />
 
-            <JobForm onSubmit={handleSubmit} initialData={formData} />
+            <JobForm key={formData ? `prefill-${formData.jobTitle}-${formData.tasks?.length}` : 'blank'} onSubmit={handleSubmit} initialData={formData} />
             <SEOContent />
           </div>
         )}

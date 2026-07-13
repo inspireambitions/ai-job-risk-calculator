@@ -1,0 +1,913 @@
+Calculator 20 Occupation Anti-Thin Launch Pack
+
+Prepared for: Kim, InspireAmbitions Date: 13 July 2026 Status: Replaces the first editorial pack, which failed the 550-word floor at an average of 259 occupation-specific words. This version targets a minimum of 650 occupation-specific words per role before shared navigation or boilerplate. A machine-check summary table appears at the end of this document with measured counts.
+
+Rules applied
+British English. Short sentences. No em dashes. Sixth-grade readability.
+Factual regional claims carry a source key with URL and access date. The key sits directly beside the claim.
+Qualitative market observations that rest on Kim's expert judgement carry [KIM REVIEW] instead of a URL. They must not be published as sourced facts.
+All percentages removed except figures published by a government source and keyed below.
+Base-risk values remain scoring parameters, approved by Kim in the prior review cycle. Task explanations below are new content and carry review status kim_review_pending.
+No third-party job platform is referenced or depended on.
+Source key (all accessed 2026-07-13)
+[S1] UAE Government portal, UAE Strategy for Artificial Intelligence: https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/government-services-and-digital-transformation/uae-strategy-for-artificial-intelligence
+[S2] UAE Cabinet, adoption of the National AI Strategy 2031: https://uaecabinet.ae/en/news/uae-cabinet-adopts-national-artificial-intelligence-strategy-2031
+[S3] SDAIA, National Strategy for Data and AI: https://sdaia.gov.sa/en/SDAIA/SdaiaStrategies/Pages/NationalStrategyForDataAndAI.aspx
+[S4] Saudi Ministry of Human Resources and Social Development, Progress in the Saudi Labor Market: https://www.hrsd.gov.sa/en/knowledge-centre/articles/progress-saudi-labor-market
+[S5] World Economic Forum, Future of Jobs Report 2025: https://www.weforum.org/publications/the-future-of-jobs-report-2025/
+[S6] ILO Working Paper 140, Generative AI and Jobs: A Refined Global Index of Occupational Exposure (Gmyrek et al., 2025): https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure
+[S7] MIT and Oak Ridge National Laboratory, Project Iceberg research report: https://iceberg.mit.edu/report.pdf
+[S8] PwC, 2026 Global AI Jobs Barometer: https://www.pwc.com/gx/en/services/ai/ai-jobs-barometer.html
+[S9] UAE Government portal, Artificial intelligence in government policies: https://u.ae/en/about-the-uae/digital-uae/digital-technology/artificial-intelligence/artificial-intelligence-in-government-policies
+SECTOR: CONSTRUCTION
+1. site-engineer | Site Engineer | ISCO-08 2142
+Role outlook (98 words)
+
+A site engineer's week splits between the office cabin and the ground. The office half is filling with software. Progress reports write themselves from site data. Take-offs run from digital drawings. Schedules update from feeds. The ground half is a different story. Concrete still gets poured in the wrong place. Subcontractors still promise what they cannot deliver. Safety still depends on a trained eye walking the slab. Over the next five years, expect the reporting workload to shrink sharply while the inspection and coordination workload stays whole. The engineers who feel this as relief, not threat, will do well.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Daily site inspections and walkdowns	physical	15	10y+	No system can walk a live site, feel a vibration that is wrong, or catch a shutter about to fail. This stays yours. (24w)
+2	Checking works against drawings and specs	technical	40	5-10y	Image tools can compare photos to models and flag deviations. The final call on whether a deviation matters remains an engineering judgement. (22w)
+3	Preparing daily progress reports	admin_processing	70	2-5y	Site data, photos and voice notes now assemble into reports automatically. Expect this hour of typing to disappear from your evening. (21w)
+4	Quantity take-offs and material requests	data_work	65	2-5y	Software measures from digital drawings faster and more consistently than a scale rule. Your role shifts to checking odd results, not producing them. (23w)
+5	Coordinating subcontractors on site	supervision	20	10y+	Getting three trades to share one zone without a fight is negotiation and authority. Machines schedule work. They do not manage people. (22w)
+6	Resolving on-site technical problems	judgement	25	10y+	A clash between services and structure at 7 a.m. needs a decision now, with incomplete information. That pressure-tested judgement is the job. (22w)
+7	Health and safety compliance checks	compliance	35	5-10y	Sensors and cameras will flag more hazards. A named person still signs the permit and carries the responsibility if someone gets hurt. (22w)
+8	Updating project schedules	data_work	60	2-5y	Planning tools ingest progress data and reforecast automatically. Your value moves to challenging the forecast, not maintaining the file. (19w)
+9	Attending consultant and client meetings	communication	25	10y+	Explaining a delay to an angry client and keeping their trust is persuasion. It decides claims and reputations. Software takes minutes, not blame. (23w)
+Risk interpretation (118 words)
+
+The overall risk here is moderate and it is unevenly spread. Roughly a third of a typical site engineer's week sits in reporting, take-offs and schedule upkeep, and that third faces near-term automation. The World Economic Forum lists construction workers among the largest growing frontline roles this decade [S5], which supports demand for people who are physically on site. The exposed part is the desk work wrapped around the site work. If your role has drifted toward the cabin, your personal risk is higher than the occupation average. If you spend most hours on inspection, coordination and problem-solving, your risk sits well below it. The score you get depends on which engineer you have become.
+
+Protection plan (121 words)
+
+Start with an honest audit. Count your desk hours against your site hours for two weeks. Then move deliberately. First, adopt the reporting and take-off tools before your employer forces them, and become the person who checks their output. Checking pays better than producing. Second, take formal safety responsibility where you can. Signed permits and named accountability are protection that software cannot absorb. Third, build your claim-support skills. Delay records, photographic evidence and clear site diaries feed commercial disputes, and engineers who understand that feed become valuable to quantity surveyors and directors. Fourth, invest in people skills. The engineer trusted by subcontractors gets sites finished. That reputation follows you between projects and it never automates.
+
+FAQs
+Q: Will AI replace site engineers? A: Not on site. AI is absorbing the reporting, measurement and scheduling work around the role. Inspection, subcontractor coordination and live problem-solving need presence and judgement. Global research consistently finds physical, on-site work among the least exposed to current AI [S6]. The desk duties are the exposed slice, not the profession. (52w)
+Q: Which site engineer tasks face automation first? A: Daily progress reports, quantity take-offs and schedule updates. All three are rule-based and data-driven, which is what current tools handle best. Treat them as time being returned to you. Engineers who reinvest that time in site presence and quality control convert automation into an advantage rather than a threat. (50w)
+Q: Does digital construction technology threaten or help this role? A: Mostly it helps. Drones, sensors and model-checking tools extend an engineer's reach rather than replace it. Someone must decide what the flagged deviation means, whether the pour proceeds, and who fixes the clash. The technology multiplies the number of decisions reaching your desk. Decisions are the defensible work. (49w)
+Q: What should a junior site engineer learn first? A: Two things in parallel. Learn the digital toolset your contractor uses, because fluency there marks you as useful immediately. Then chase site responsibility early: permits, inspections, subcontractor meetings. Juniors who hide in the cabin doing reports are training for the part of the job that is disappearing. (48w)
+Related roles
+quantity-surveyor: shares your drawings and take-off world, but with a commercial career ladder attached.
+operations-manager: the natural step up once your coordination skills outgrow a single site.
+warehouse-supervisor: similar mix of physical oversight, safety duty and team management in a different industry.
+logistics-coordinator: useful adjacent view of the supply chain that feeds your site.
+electrician (60-list): a reminder that skilled trades beneath you carry even lower automation exposure.
+UAE application (103 words)
+
+Construction work in the UAE is project-driven and fast-cycle, and the national push to embed AI across transport and infrastructure programmes [S1] means digital site tools arrive here quickly. Government-linked developers tend to mandate model-based working earlier than smaller contractors, so UAE site engineers usually meet automated reporting and take-off tools sooner than peers in slower markets [KIM REVIEW: qualitative]. The practical effect favours engineers who are already fluent in those systems. Expect clients to assume the paperwork is automated and to judge you on inspection quality, coordination and handover discipline instead. That is where UAE careers in this role are decided. (kim_review_pending)
+
+Saudi application (101 words)
+
+Saudi Arabia's National Strategy for Data and AI names mobility and energy among its priority adoption sectors [S3], and both sit next door to construction. Large national programmes bring international contractors and their digital toolchains with them, so automated reporting and model-checking reach Saudi sites through project requirements rather than personal choice [KIM REVIEW: qualitative]. The Ministry of Human Resources and Social Development reports sustained national skills programmes in engineering fields [S4], which shapes site teams over time. For an expatriate site engineer, the durable position is the same as everywhere: own the inspections, the coordination and the safety signature. (kim_review_pending)
+
+2. quantity-surveyor | Quantity Surveyor | ISCO-08 2149 (verify)
+Role outlook (97 words)
+
+Measurement built this profession, and measurement is leaving it. Software already takes quantities from digital drawings, and AI is finishing the remaining manual work. That sounds like decline. It is actually a sorting event. The QS role divides into a measuring trade that automates and a commercial trade that grows. Variations still need valuing. Claims still need arguing. Final accounts still need closing against someone who does not want to pay. Contract judgement, negotiation and commercial storytelling carry the next decade of this career. The professionals who saw themselves as measurers face a harder road than those who saw themselves as negotiators.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Measuring quantities from drawings	data_work	75	2-5y	Model-based measurement is faster and repeatable. Manual take-off is becoming a checking skill rather than a production skill. Plan accordingly. (20w)
+2	Preparing bills of quantities	data_work	75	2-5y	Bill production increasingly flows straight from the model. Your value moves to structuring the bill for commercial advantage, not assembling it. (21w)
+3	Pricing and cost estimation	data_work	60	2-5y	Databases and AI draft estimates quickly. Local market knowledge, supplier reality and risk pricing still separate a usable estimate from a dangerous one. (23w)
+4	Valuing variations and change orders	judgement	40	5-10y	A messy variation mixes fact, contract wording and negotiation. Tools prepare the numbers. The valuation argument remains a human contest. (20w)
+5	Interim payment applications	admin_processing	70	2-5y	Payment applications assemble from progress data with little typing. Expect this monthly grind to compress into review and submission. (19w)
+6	Contract clause review and claims support	compliance	35	5-10y	AI finds relevant clauses fast. Deciding how to deploy them, and what a tribunal would accept, stays with experienced professionals. (20w)
+7	Negotiating with contractors and suppliers	communication	20	10y+	Reading the other side, trading concessions and closing a deal are relationship work. This is the strongest moat in the profession. (21w)
+8	Final account settlement	judgement	30	5-10y	Closing an account means judgement calls on give and take, made under pressure with money on the table. Software briefs you. You settle. (23w)
+Risk interpretation (116 words)
+
+This occupation scores moderate to high, and the spread across tasks explains why. Measurement, billing and payment applications form the traditional core of junior QS work, and all three sit in the near-term automation window. Research on generative AI exposure places structured document and calculation work among the most affected task types [S6]. Yet the same research stresses that most jobs transform rather than vanish [S6], and quantity surveying illustrates it well. Commercial judgement tasks resist automation because they involve conflict, incomplete facts and accountability for settlements. Your personal score depends heavily on seniority. A measurer's task list reads very differently from a commercial manager's, even under the same job title.
+
+Protection plan (119 words)
+
+Reposition from measurer to commercial adviser, and do it on a schedule. First, master the measurement software rather than resisting it. The QS who validates automated quantities inherits the trust that manual measurers used to hold. Second, build contract depth. Learn the standard forms used in your market until colleagues bring their clause questions to you. Third, get into live negotiations early. Ask to sit in on subcontractor settlements and variation meetings, then take small ones yourself. Fourth, write claims. Delay and disruption claims are growing work, they pay well, and they rest entirely on judgement and narrative. A QS with negotiation scars and claims wins has a career that no measurement engine touches. (kim_review_pending)
+
+FAQs
+Q: Is quantity surveying a dying profession? A: No, but it is splitting in two. The measurement trade inside it is automating quickly. The commercial trade, covering variations, claims, negotiation and settlement, is growing in value. Your future depends on which side of that split your daily tasks sit, not on the job title itself. (48w)
+Q: What should a junior QS learn first now? A: Contract knowledge and negotiation, earlier than tradition suggests. The five years juniors once spent measuring are exactly the years automation is removing. Learn the measurement tools quickly, then push into variation valuations and settlement meetings. The commercial skills that used to arrive at year six need to arrive at year two. (52w)
+Q: Will AI write claims and win disputes? A: It will draft them, and drafting helps. Winning is different. A claim succeeds on evidence discipline, contract strategy and credibility in front of the other side or a tribunal. Those rest on human judgement and accountability. Expect AI to make good claims consultants faster, not to replace them. (48w)
+Q: How does this role differ between consultancies and contractors? A: Contractor QS roles usually carry more negotiation, procurement and settlement work, which is the protected end. Consultancy roles can skew toward measurement and reporting, which is the exposed end. When weighing offers, read the task list, not the brand. The daily tasks decide your automation exposure. (46w)
+Related roles
+site-engineer: shares your project world and supplies the site evidence your valuations depend on.
+financial-analyst: parallel story of automated number production and surviving judgement work.
+compliance-officer: another profession shielded by accountability and formal sign-off.
+operations-manager: a destination for QS professionals who grow into broader commercial leadership.
+accountant (60-list): adjacent numbers profession facing the same split between processing and advising.
+UAE application (99 words)
+
+The UAE construction market runs on tight programmes and heavily negotiated contracts, which keeps the commercial side of QS work busy [KIM REVIEW: qualitative]. National strategy pushes AI adoption across infrastructure and transport programmes [S1], so model-based measurement is increasingly assumed on major schemes rather than requested. For a QS here, the practical shift is that clients expect quantities instantly and pay attention to variation strategy and claims discipline instead. Professionals who arrive with settlement experience and strong contract knowledge of locally used forms find the exposed measurement layer matters less to their prospects each year. (kim_review_pending)
+
+Saudi application (100 words)
+
+Saudi Arabia's national programmes concentrate enormous construction activity, and the National Strategy for Data and AI commits government to data-driven delivery across priority sectors including mobility and energy [S3]. International delivery partners bring automated measurement and cost platforms as standard on such programmes [KIM REVIEW: qualitative]. The Ministry of Human Resources and Social Development highlights national skills programmes in engineering and finance fields [S4], which will grow the local commercial talent pool over time. The lasting opportunity for a QS in the Kingdom is claims, variations and settlement work on complex schemes, where judgement remains the product. (kim_review_pending)
+
+SECTOR: HOSPITALITY
+3. hotel-receptionist | Hotel Receptionist | ISCO-08 4224
+Role outlook (101 words)
+
+The front desk is shrinking and the front-of-house role is growing, and these are not the same thing. Kiosks, mobile keys and AI booking agents now handle the transaction that used to define this job. What hotels cannot buy from a vendor is the person who reads a tired family at midnight, rescues a ruined honeymoon, or leads guests calmly during a fire alarm. In luxury and full-service properties, the human welcome is the product itself. Expect fewer positions doing pure processing and stronger positions built on recovery, upselling and presence. The job title survives. Its centre of gravity moves.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Check-in and check-out processing	admin_processing	75	2-5y	Mobile check-in and kiosks already handle the routine arrival. Your involvement narrows to exceptions, upgrades and guests who want a person. (21w)
+2	Reservation amendments and no-show handling	admin_processing	70	2-5y	Booking systems and AI agents process date changes and no-shows automatically. Manual amendment work is disappearing from the desk. (19w)
+3	Billing and folio queries	data_work	65	2-5y	Simple folio questions resolve through apps. Disputed charges and confused corporate billing still land with you, because trust matters there. (20w)
+4	Guest complaint handling and recovery	customer_interaction	25	10y+	Service recovery turns an angry review into a loyal guest. It needs empathy, authority and quick judgement. This is the role's future core. (23w)
+5	Upselling rooms and services	customer_interaction	40	5-10y	Apps push upgrades, but a warm, well-timed suggestion at the desk still outsells a notification. Persuasion in person keeps commercial value. (21w)
+6	Local guidance and concierge-style requests	communication	35	5-10y	Guests can ask a phone anything. They ask you when they want a real opinion. Genuine local knowledge remains a differentiator. (21w)
+7	Coordinating with housekeeping and maintenance	communication	45	2-5y	Status boards sync automatically now. The coordination that survives is the urgent, human kind: the VIP arriving early, the flooded room. (21w)
+8	Emergency and safety response	judgement	15	10y+	Evacuations, medical incidents and security calls need a trained person acting fast. No property hands this to software. (18w)
+9	Cash handling and shift reconciliation	admin_processing	70	2-5y	Cashless payment and automated reconciliation are removing this duty steadily. Do not build your value on the float. (18w)
+Risk interpretation (114 words)
+
+The headline score for this role is moderate, but it hides a sharp split. Transaction tasks carry high near-term exposure, and they historically filled most of a shift. Human-contact tasks carry very low exposure, and they are what management actually remembers at appraisal time. Global analysis of generative AI finds clerical and customer-information work among the most exposed categories [S6], and check-in processing fits that pattern exactly. Two receptionists with the same badge can face very different futures. One processes arrivals all day in a budget property. The other runs recovery, upselling and guest relations in a five-star lobby. The calculator scores tasks, not titles, because this occupation proves the difference.
+
+Protection plan (117 words)
+
+Make yourself the person machines hand problems to. First, chase complaint recovery deliberately. Ask for the difficult guests, learn the property's empowerment limits, and build a record of saved stays and rescued reviews. Second, sell. Upselling revenue is measurable, and a receptionist with a visible upsell record has numbers in their defence at every restructure. Third, learn the systems deeply enough to train others. When the property adopts new front-office technology, the receptionist who runs the rollout becomes supervisory material. Fourth, add a language that matters to your guest mix. Human warmth in a guest's own language is precisely what the kiosk cannot offer, and in service markets it is noticed and rewarded. (kim_review_pending)
+
+FAQs
+Q: Will hotel check-in be fully automated? A: The transaction will be, in most segments. The welcome will not. Hotels compete on experience, and luxury properties keep humans at the front because guests feel the difference and pay for it. Expect fewer processing-only desk roles and stronger guest-relations roles built around recovery, recognition and selling. (48w)
+Q: Is reception still a good way into a hotel career? A: Yes, if you treat it as a guest-relations apprenticeship rather than a processing job. The desk teaches you complaints, systems, sales and pressure. Those skills transfer upward into supervision and rooms division. Pure transaction speed does not transfer anywhere, because machines have already claimed it. (46w)
+Q: Which hotel types will keep human receptionists longest? A: Full-service and luxury properties, and any hotel selling experience over price. In those segments the human front desk is part of the product, not a cost line. Budget and limited-service properties automate arrival fastest because their guests choose them for price and speed. (44w)
+Q: What should a receptionist learn to move up? A: Three things. Service recovery, because it is the most valued human skill on the desk. Revenue basics, because upselling and occupancy logic open supervisory doors. And your property management system at trainer level, because every technology rollout needs a floor expert and that person gets promoted. (47w)
+Related roles
+guest-relations-officer (60-list): the destination role that the surviving parts of reception are becoming.
+airport-check-in-agent: the same automation story on a faster timeline, worth watching as a preview.
+cabin-crew: shows how safety duties and service duties combine to protect a customer-facing role.
+housekeeping-supervisor: partner role behind every arrival, with a steadier automation outlook.
+duty-manager (60-list): the step up for receptionists who master recovery and pressure.
+UAE application (104 words)
+
+Hospitality is one of the UAE's flagship service industries, and properties here adopt guest-facing technology early because national strategy pushes AI into service delivery across the economy [S1]. In practice, UAE hotels often run mobile check-in and automated messaging sooner than other markets, while premium properties keep large front-of-house teams because the guest mix expects personal service [KIM REVIEW: qualitative]. For a receptionist building a Gulf career, the lesson is direct. The processing part of your day automates here first, and the recognition, recovery and multilingual service part is what UAE employers actually shortlist for. Build your record on the second list. (kim_review_pending)
+
+Saudi application (98 words)
+
+Saudi Arabia is expanding tourism capacity under its national transformation plans, and the National Strategy for Data and AI names government services among its adoption priorities [S3], which extends to visitor-facing processes. New destination properties open with modern front-office technology installed from day one [KIM REVIEW: qualitative]. Saudi Arabia's workforce ministry records rising national labour participation, with women's involvement climbing sharply [S4], and front-of-house hospitality is one of the visible faces of that shift. Receptionists who can train, host and recover guests in Arabic and English hold the strongest position. (kim_review_pending)
+
+4. food-and-beverage-manager | Food and Beverage Manager | ISCO-08 1412 (verify)
+Role outlook (100 words)
+
+F&B management has always been two jobs wearing one badge. The first is the back office: rosters, orders, stock counts, menu costing. The second is the floor: leading a team through a full Friday brunch, rescuing a bad table, holding standards at hour ten. AI is dismantling the first job with real speed. Rostering tools, stock systems and menu-engineering analytics now do in minutes what took evenings. The second job is untouched and becoming the whole role. Managers who built identity on spreadsheets face a squeeze. Managers who built teams and guest experiences are about to get their evenings back.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Rostering and shift planning	admin_processing	70	2-5y	Scheduling tools now build compliant rosters from forecasts. Your input shrinks to judgement calls on people, not the grid itself. (20w)
+2	Stock counts, ordering and cost control	data_work	65	2-5y	Inventory systems track usage and reorder automatically. Variance investigation stays human because shrinkage involves people, not just numbers. (18w)
+3	Menu engineering and pricing analysis	data_work	55	2-5y	Analytics rank dishes by margin and popularity instantly. Deciding what the menu says about the brand remains a creative call. (20w)
+4	Floor presence during service	physical	15	10y+	Reading the room, redeploying staff mid-rush and lifting energy at hour ten is leadership in motion. Nothing digital replaces it. (20w)
+5	Guest complaint resolution	customer_interaction	20	10y+	A comped dessert delivered with grace saves a review and a regular. Recovery is personal, immediate and firmly human work. (20w)
+6	Team training and briefings	supervision	25	10y+	Standards live or die in the daily briefing. Training tools help, but a team performs for a leader, not a module. (21w)
+7	Hygiene and licensing compliance	compliance	35	5-10y	Digital checklists and sensors log more automatically. The named licence holder still carries legal responsibility, which keeps a human accountable. (19w)
+8	Supplier negotiation	communication	30	5-10y	Price comparison automates. Relationships, credit terms and getting rescued during a shortage still come from a human supplier relationship. (19w)
+9	P&L review and variance commentary	judgement	40	5-10y	Systems produce the variance. Explaining it to an owner, and defending your plan to fix it, remains your monthly examination. (20w)
+10	Event and banquet coordination	communication	35	5-10y	Function sheets generate themselves. Walking a nervous bride's mother through the room, and delivering on the night, does not. (19w)
+Risk interpretation (112 words)
+
+This role scores moderate overall, with the exposure packed into administrative tasks. Rostering, inventory and menu analytics are structured data work, the category research places at highest automation potential [S6]. The World Economic Forum's global survey finds leadership and social influence among the most demanded core skills this decade [S5], which describes the surviving half of this job precisely. The honest reading for an F&B manager is positive if uncomfortable. The tasks that made you feel busy are the exposed ones. The tasks that made you good are the durable ones. Outlets remain profit centres, and profit centres keep leaders. The score punishes desk-heavy versions of this role, not the role itself.
+
+Protection plan (116 words)
+
+Hand the back office to the machine on purpose, then be visibly excellent at what remains. First, implement the rostering and inventory tools yourself rather than waiting for a directive. The manager who delivers the admin saving owns the story. Second, put the recovered hours on the floor during peak service, where owners and guests can see them. Third, build a training rhythm your team can feel: daily briefings with one teachable point, monthly skills sessions, visible promotions from within. Retention numbers defend managers. Fourth, own your P&L narrative. Walk into every review able to explain variances and present a fix. Managers who explain numbers survive reviews. Managers who merely submit them do not. (kim_review_pending)
+
+FAQs
+Q: Can AI run a restaurant? A: It can run the numbers around one. Rosters, orders, stock and menu analysis are automating quickly and well. It cannot lead a service, taste a sauce, calm a furious table or lift a tired team at ten o'clock. The operational leadership core of this role remains fully human. (48w)
+Q: Which F&B admin tasks should a manager automate first? A: Rostering, stock counts and menu profitability analysis. All three eat hours, follow rules and improve with data, which makes them ideal for current tools. Automating them is not a threat to you if you reinvest the hours in floor leadership, training and guest recovery, which are the promotable skills. (49w)
+Q: Does F&B management still lead anywhere in hotels? A: Yes. Outlets drive revenue and shape guest experience, so strong outlet leaders remain visible to general managers. The path through director of F&B toward hotel leadership stays open. What changes is the entry test: commercial storytelling and team results now matter more than administrative stamina. (45w)
+Q: How should an F&B manager present automation to owners? A: As a margin story with a service dividend. Show the hours and cost the tools save, then show where those hours went: floor presence, training, guest recovery. Owners fund technology that pays twice. Managers who frame it that way get budgets, and get credited with the result. (47w)
+Related roles
+restaurant-supervisor (60-list): your bench, and the role where floor leadership skills are first proven.
+executive-chef (60-list): your essential partner, facing a parallel split between kitchen admin and craft.
+housekeeping-supervisor: a fellow operational leader whose admin is automating on the same schedule.
+operations-manager: the broader destination for outlet leaders with strong commercial results.
+hotel-receptionist: front-of-house counterpart whose transaction work is disappearing even faster.
+UAE application (101 words)
+
+The UAE dining scene is dense, competitive and brand-led, which keeps guest experience at the centre of F&B careers [KIM REVIEW: qualitative]. National AI strategy drives adoption of smart systems across service sectors [S1], and international operators bring rostering and inventory platforms as group standards, so back-office automation arrives here through head office rather than local choice. For a manager in the Emirates, the differentiator is service leadership across a famously multicultural workforce and guest base. The manager who can brief a fifteen-nationality team and deliver a flawless brunch carries value no system threatens. (kim_review_pending)
+
+Saudi application (97 words)
+
+Dining and entertainment are expanding rapidly inside Saudi Arabia's transformation agenda, creating new outlets that open with modern systems installed from the start [KIM REVIEW: qualitative]. The National Strategy for Data and AI commits the Kingdom to technology adoption across its priority sectors [S3], and hospitality investment rides alongside it. The Ministry of Human Resources and Social Development reports growing national participation in private-sector work [S4], so F&B leaders increasingly build and train mixed Saudi and expatriate teams. Managers who can develop local talent while holding international service standards hold the strongest long-term position. (kim_review_pending)
+
+5. housekeeping-supervisor | Housekeeping Supervisor | ISCO-08 5151
+Role outlook (96 words)
+
+Housekeeping is physical work managed by human judgement, and that combination protects it. Software now assigns rooms, tracks linen and syncs status boards with the front desk, which removes the clipboard from the supervisor's hands. It does not remove the supervisor. Rooms still need inspecting by someone who can spot a smear a camera misses. Attendants still need training, protecting and motivating through hard physical shifts. The next five years thin the administrative shell of this job and leave its inspection and leadership core intact. Supervisors who embrace the systems will simply have more time to supervise.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Room inspections and quality checks	physical	20	10y+	A trained eye catches what sensors miss: the smell, the smear, the detail a returning guest would notice. Inspection stays human. (21w)
+2	Daily task allocation to room attendants	admin_processing	60	2-5y	Housekeeping systems assign rooms by arrivals and credits automatically. Your role becomes adjusting for people: injuries, trainees, the difficult floor. (20w)
+3	Lost and found processing	admin_processing	55	2-5y	Logging automates with photos and apps. Judgement on valuable or sensitive items, and honest handling culture, remain supervisory duties. (19w)
+4	Linen and amenity inventory control	data_work	60	2-5y	Tag-based tracking counts linen without you. Investigating losses and controlling costs still needs someone who knows the floors and the people. (21w)
+5	Training attendants on standards	supervision	25	10y+	Standards transfer by demonstration, correction and encouragement, room by room. This is craft teaching, and it is decades from automating. (19w)
+6	Coordinating with front office on room status	communication	55	2-5y	Status syncs system to system now. What remains is the urgent call: the early VIP, the maintenance surprise, the impossible turnaround. (21w)
+7	Handling guest requests and complaints	customer_interaction	25	10y+	An extra cot delivered with a smile, or a sensitive complaint handled quietly, builds the reputation systems cannot. (17w)
+8	Deep-clean and maintenance scheduling	data_work	50	2-5y	Preventive schedules generate automatically from usage data. Deciding what can wait during full occupancy stays a judgement call. (18w)
+Risk interpretation (110 words)
+
+This role scores low to moderate, and the reason is structural. Its core tasks are physical inspection and people leadership, both categories that global exposure research places at the bottom of automation potential [S6]. The exposed tasks are the administrative wrapper: allocation, counting and status coordination, which modern housekeeping systems already perform. The World Economic Forum's outlook highlights continued demand for frontline operational roles through this decade [S5], and housekeeping sits inside that pattern. The realistic risk is not replacement. It is a smaller administrative footprint per supervisor, which can mean wider spans of control. The supervisor who inspects sharply and trains well remains the department's spine.
+
+Protection plan (113 words)
+
+Let the system carry the clipboard and make your remaining hours visible. First, put automation savings into inspection scores. Audit results and guest cleanliness comments are the numbers owners read, and improving them is the clearest proof of supervisory value. Second, build a training record. Documented attendant development, upskilled team members and internal promotions make you the department's talent engine. Third, learn the housekeeping system at administrator level. Every property needs one floor expert who configures credits, runs reports and trains new users, and that person gains influence. Fourth, take the tricky guest interactions personally. Sensitive complaints handled with discretion reach general managers' ears, and reputations built there outlast any restructure. (kim_review_pending)
+
+FAQs
+Q: Will robots take over hotel housekeeping? A: Not at hotel standard, and not soon. Cleaning a real room to a five-star finish involves dexterity, judgement and detail that current robotics cannot deliver economically. Automation in housekeeping means software for allocation, tracking and status, which changes the supervisor's paperwork rather than the attendant's work. (46w)
+Q: What actually changes for a housekeeping supervisor? A: The administrative layer. Room allocation, linen counts and status updates move into systems, removing hours of clipboard work. The inspection, training and people-management core stays yours. The practical risk is wider supervision spans, so the supervisors who thrive are those whose inspection and training results stand out. (46w)
+Q: Is housekeeping still a path to hotel management? A: Yes, and a respected one. Executive housekeeper and rooms division routes remain real, and they reward exactly what automation cannot copy: standards, team leadership and cost discipline. Supervisors who add system skills to those foundations often move faster, because departments need leaders who bridge floors and software. (46w)
+Q: How should a supervisor use the new housekeeping systems? A: As a time machine. Every hour the system saves on allocation and counting is an hour you can spend inspecting rooms and coaching attendants. Learn the system well enough to train others, then let your audit scores and team retention show where the recovered time went. (46w)
+Related roles
+executive-housekeeper (60-list): the direct promotion, running the department these skills prepare you for.
+hotel-receptionist: your front-office partner, whose transaction tasks are automating faster than yours.
+food-and-beverage-manager: a fellow operational leader balancing floor presence against shrinking admin.
+warehouse-supervisor: the same supervision-plus-systems story in an industrial setting.
+duty-manager (60-list): a cross-department step for supervisors with strong guest-handling records.
+UAE application (100 words)
+
+UAE hotels operate at scale and at speed, with large housekeeping departments serving high occupancy across multicultural teams [KIM REVIEW: qualitative]. The national drive to embed smart technology across services [S1] means major properties here adopted housekeeping management systems early, so allocation and tracking are already automated in much of the market. For supervisors, that shifts the daily contest to inspection quality and team development. A Dubai supervisor known for audit scores and for growing attendants into team leaders carries a portable reputation across the emirate's dense hotel cluster, which is worth more than any administrative skill. (kim_review_pending)
+
+Saudi application (99 words)
+
+New Saudi destinations are opening large room inventories with current-generation systems already running at handover [KIM REVIEW: qualitative], so supervisors there start in an automated environment rather than transitioning into one. The National Strategy for Data and AI signals sustained government commitment to technology adoption across the economy [S3]. The Kingdom's labour ministry notes growing Saudi involvement in private-sector employment, with women's participation expanding quickly [S4], and housekeeping leadership sits among the operational roles opening to national talent. Supervisors able to train and develop mixed teams to international standards will be in demand. (kim_review_pending)
+
+SECTOR: HEALTHCARE
+6. registered-nurse | Registered Nurse | ISCO-08 2221
+Role outlook (99 words)
+
+Nursing sits near the safe end of every serious exposure study, and the reason is visible on any ward. The job is hands, eyes and heart applied to unpredictable human bodies. What AI genuinely changes is the paperwork wrapped around care. Documentation assistants draft notes from voice. Handover tools assemble shift summaries. Care plans update from records. Every one of those changes returns minutes to the bedside. Demand pressure runs the other way entirely: ageing populations are expanding care needs worldwide. The realistic future is not fewer nurses. It is nurses with less typing and more patients.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Patient assessment and vital signs	physical	15	10y+	Monitors capture numbers. Noticing the patient who looks wrong before the numbers move is clinical instinct, and it saves lives. (20w)
+2	Medication administration	physical	20	10y+	Dispensing technology helps with accuracy. Administering safely to a confused, frightened or fragile patient remains skilled physical care. (18w)
+3	Clinical documentation and charting	admin_processing	60	2-5y	Voice-to-note tools now draft documentation during care. Expect charting time to fall sharply. Review and sign-off stay yours. (19w)
+4	Care plan updates	data_work	45	5-10y	Systems draft plan updates from records. Clinical judgement on what the plan should actually change remains a nursing decision. (19w)
+5	Patient and family communication	customer_interaction	10	10y+	Delivering hard news, calming fear and earning trust are the most human tasks in this pack. No tool touches them. (20w)
+6	Shift handover reports	communication	50	2-5y	Structured handover summaries assemble automatically from notes. The judgement about what the next shift must worry about is still yours. (20w)
+7	Wound care and clinical procedures	physical	10	10y+	Skilled hands on real tissue, adapting to what they find. This is the physical craft core of nursing. (17w)
+8	Escalating deterioration to doctors	judgement	15	10y+	Early-warning scores assist. The call that says this patient is sicker than the chart shows remains nursing judgement under pressure. (19w)
+9	Discharge education	communication	30	5-10y	Materials generate automatically in any language. Checking a worried family truly understands them is teaching, and teaching is human. (18w)
+Risk interpretation (115 words)
+
+This is one of the lowest-risk occupations in the calculator, and the score reflects task structure rather than sentiment. Physical care, clinical judgement and emotional support dominate the week, and exposure research consistently places such tasks at the bottom of automation potential [S6]. The World Economic Forum projects nursing professionals among the significantly growing roles this decade, driven by demographic change [S5]. The exposed slice is documentation, and its automation is broadly good news, since charting time is widely resented. The honest caution is narrow: nurses in roles that drifted heavily into administration, audit or data work score higher than bedside peers. The closer your week sits to patients, the safer it is.
+
+Protection plan (111 words)
+
+Protect the bedside and command the paperwork tools. First, adopt clinical documentation assistants early and learn their failure points. The nurse who knows when the draft note is wrong becomes the ward's safety check and its trainer. Second, keep your clinical skills expanding: assessment depth, specialist procedures and mentoring juniors compound in value while typing does not. Third, make escalation excellence your signature. Nurses trusted for their deterioration calls gain influence with doctors and managers alike. Fourth, if you want career ceiling, add education or digital-champion responsibilities. Hospitals rolling out clinical AI need respected nurses to lead adoption safely, and those roles carry visibility without leaving the profession's protected core. (kim_review_pending)
+
+FAQs
+Q: Is nursing safe from AI? A: Safer than nearly any office profession. The physical and emotional core of nursing sits beyond current and near-future automation, while global research points to growing demand for nursing driven by ageing populations [S5]. What changes is the paperwork around care, and most nurses will welcome that change. (47w)
+Q: How will AI actually change a nurse's shift? A: Less typing, more bedside time. Voice documentation, automated handover summaries and drafted care plans are the realistic changes arriving now. Robot nurses are not. The practical skill is learning where these tools make mistakes, because the nurse who catches the flawed draft becomes the ward's quality control. (47w)
+Q: Should nurses learn AI tools or ignore them? A: Learn them, lightly but early. Documentation assistants reward fluent users with recovered time, and hospitals need clinical staff who can train colleagues and flag unsafe outputs. That digital-champion role adds visibility and career options without pulling you away from patients, which remains the profession's protected ground. (45w)
+Q: Which nursing roles carry higher exposure? A: Roles that drifted away from patients. Heavy audit, coding, administration or data positions score closer to office work than to bedside nursing. If your week is mostly screens, your exposure is office-grade. The protection in nursing comes from the patient contact, not from the job title. (46w)
+Related roles
+radiographer: a fellow patient-facing clinical role protected by physical work and safety regulation.
+pharmacist-assistant (60-list): adjacent clinical support with a higher share of automatable processing.
+lab-technician (60-list): shows how diagnostic work splits between automated analysis and human quality control.
+hotel-receptionist: an unlikely cousin, proving service recovery skills transfer across industries.
+hr-manager (60-list): a comparison point for how judgement protects entirely different professions.
+UAE application (102 words)
+
+Healthcare is a named priority sector in the UAE's national AI strategy [S1], which means hospitals here are early adopters of clinical documentation and triage technology. For nurses, that brings the paperwork relief sooner, along with an expectation of digital fluency in modern facilities [KIM REVIEW: qualitative]. The UAE's healthcare workforce is strongly international, and licensure requirements shape entry for expatriate nurses [KIM REVIEW: verify licensing detail before publication]. The strategic picture favours the profession: a system investing in AI-enabled healthcare capacity still needs hands at every bedside, and clinical staff comfortable with new tools stand out in it. (kim_review_pending)
+
+Saudi application (100 words)
+
+Healthcare is one of the five priority sectors in Saudi Arabia's National Strategy for Data and AI, with stated goals of improving access and preventive care through technology [S3]. Expanding capacity on that scale requires large nursing workforces, and the Kingdom's workforce ministry points to skills initiatives preparing young Saudis for healthcare careers [S4]. For nurses, Saudi facilities investing in AI-supported systems offer the same trade seen globally: less documentation, more clinical work, and growing value for staff who can mentor colleagues through new tools. Nurses combining strong clinical craft with digital confidence fit the Kingdom's direction well. (kim_review_pending)
+
+7. radiographer | Radiographer | ISCO-08 3211
+Role outlook (100 words)
+
+Every year brings a headline about AI reading scans, and every year radiographers get asked if they are finished. The question confuses two professions. Reading images for diagnosis is radiologist territory, and that is where AI exposure debates belong. Radiographers produce the images: positioning patients, operating machines, managing radiation dose, calming the claustrophobic. That work is physical, regulated and patient-facing. The realistic change for radiographers is around the edges: worklists organise themselves, quality checks get automated assistance, urgent findings get flagged earlier. The person guiding a frightened patient into an MRI tunnel remains firmly, physically necessary.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Patient positioning and imaging	physical	20	10y+	Millimetres of positioning decide diagnostic quality, and every body is different. This physical craft is the profession's protected core. (19w)
+2	Operating CT, MRI and X-ray equipment	technical	30	5-10y	Protocols grow smarter and more automated. Selecting and adapting them for the patient in front of you stays a professional skill. (21w)
+3	Image quality checks	technical	55	2-5y	Software now flags positioning and exposure problems instantly. Your role shifts to judging borderline images and deciding on repeats. (19w)
+4	Preliminary image flagging for urgent findings	data_work	60	2-5y	AI triage highlights likely urgent cases for radiologists. It changes workflow priorities more than it changes your duties. (18w)
+5	Patient reassurance and preparation	customer_interaction	15	10y+	Anxious, claustrophobic or injured patients need a calm professional, not an interface. Good preparation is also what makes images usable. (20w)
+6	Radiation safety and dose management	compliance	25	10y+	Dose responsibility is regulated and personal. A named professional carries it, which anchors this occupation against automation. (17w)
+7	Appointment and worklist management	admin_processing	65	2-5y	Scheduling and worklists optimise themselves now. Treat this as recovered time, not lost territory. (14w)
+8	Equipment calibration and QA logs	technical	50	2-5y	QA logging automates steadily. Understanding why a machine drifts, and when to stop scanning, remains an expert judgement. (18w)
+Risk interpretation (113 words)
+
+The score here is low to moderate, and the task table shows why the scary headlines miss. Image interpretation, the area where AI progress is fastest, is largely the radiologist's exposure, not the radiographer's. The radiographer's week is dominated by physical positioning, patient care and regulated dose responsibility, categories exposure research treats as least automatable [S6]. The genuinely exposed tasks are administrative: worklists, QA logs and first-pass quality checks. Losing them costs little. One caution belongs in the reading: departments adopting AI triage may reorganise workflows, changing pace and case mix. That is transformation, the outcome the ILO's global analysis identifies as most likely across occupations [S6], rather than displacement.
+
+Protection plan (112 words)
+
+Anchor yourself in the regulated and the advanced. First, deepen modality expertise. Advanced CT, MRI or interventional skills raise your scarcity, and scarce clinical skills are the strongest currency in any restructuring. Second, treat dose responsibility as a career asset. Radiation safety roles carry formal accountability, and accountability keeps humans employed. Third, become the department's AI-quality specialist. Triage and quality tools need clinical staff who understand their errors; the radiographer who audits the machine earns influence over how it is used. Fourth, keep patient care visibly excellent. Complaint-free, calm, efficient patient handling shows up in departmental metrics, and it is the part of your work no technology vendor can sell. (kim_review_pending)
+
+FAQs
+Q: Is AI replacing radiographers or radiologists? A: The image-reading debate mostly concerns radiologists, who interpret scans. Radiographers produce the images through positioning, equipment operation and patient care, which are physical and regulated tasks. Global exposure research places that work among the least automatable [S6]. Radiographers face workflow change, not replacement. (43w)
+Q: Which radiographer tasks automate first? A: Worklist management, QA logging and first-pass image quality checks. All three are structured and rule-based, so current tools absorb them readily. None sits at the profession's core. The recovered time typically flows into patient throughput and advanced imaging work, which strengthens rather than weakens the role. (46w)
+Q: What skill adds the most protection for a radiographer? A: Advanced modality depth plus formal safety responsibility. Specialist CT, MRI or interventional capability makes you scarce, while radiation protection duties make you accountable. Scarcity and accountability are the two qualities automation cannot substitute, and together they define the strongest version of this career. (43w)
+Q: Should radiographers worry about AI triage tools? A: Watch them, do not fear them. Triage reorders the worklist and speeds urgent cases, which changes departmental rhythm. The professional opportunity is quality oversight: someone must audit what the tool flags and misses. Radiographers who take that role turn the technology into career leverage. (44w)
+Related roles
+registered-nurse: a fellow clinical profession protected by physical care and human judgement.
+lab-technician (60-list): diagnostic cousin whose analytical steps automate faster than imaging's physical steps.
+it-support-specialist: worth understanding, since imaging departments increasingly run on the systems they support.
+data-analyst: shows where flagged-image data goes and how analytical careers are shifting.
+pharmacist-assistant (60-list): another regulated clinical support role balancing automation and accountability.
+UAE application (99 words)
+
+With healthcare named among the UAE's AI strategy priority sectors [S1], imaging departments here are natural early adopters of triage and quality tools. Radiographers in the Emirates should expect AI-assisted workflows as standard in newer facilities [KIM REVIEW: qualitative], along with employer interest in staff who can work confidently alongside them. Licensing requirements govern expatriate clinical practice [KIM REVIEW: verify licensing detail before publication]. The career logic is straightforward: a health system investing in AI-enabled diagnostics is expanding imaging volume, and expanding volume needs more skilled hands on machines, not fewer. (kim_review_pending)
+
+Saudi application (98 words)
+
+Healthcare stands among the five priority sectors of Saudi Arabia's National Strategy for Data and AI, with technology positioned to widen access to services [S3]. Growing diagnostic capacity across the Kingdom means growing demand for imaging professionals, while the Ministry of Human Resources and Social Development points to national skills programmes building healthcare talent [S4]. For radiographers, Saudi facilities adopting AI triage offer the same bargain as elsewhere: administrative relief and faster urgent pathways, with the physical and safety-critical core untouched. Professionals who combine advanced modality skills with teaching ability suit the Kingdom's expansion phase particularly well. (kim_review_pending)
+
+SECTOR: BANKING AND FINANCE
+8. bank-teller | Bank Teller | ISCO-08 4211
+Role outlook (101 words)
+
+Tellers have lived automation longer than almost anyone. Cash machines arrived decades ago, apps took transfers and deposits, and branches thinned. AI now takes the next layer: the routine query, the standard account task, the scripted conversation. What banks keep branches for is what remains: trust moments, complex needs, fraud instincts and customers who want a human before moving their money. The honest outlook is a shrinking transaction role and a growing advisory one, with fewer total seats. Tellers who move toward advice, service leadership or compliance early will ride the change. Those who wait for the counter to defend itself will not.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Cash deposits and withdrawals	admin_processing	85	0-2y	Machines and apps absorbed most of this years ago. The remaining counter volume keeps falling. Do not anchor your value here. (21w)
+2	Account opening data entry	admin_processing	80	0-2y	Digital onboarding completes without a teller in most cases now. Branch openings increasingly involve advice moments, not typing. (18w)
+3	Cheque processing	admin_processing	85	0-2y	Imaging and automated clearing removed the manual craft. What arrives at the counter is the exception, not the flow. (19w)
+4	Identity verification and KYC checks	compliance	55	2-5y	Biometric and document tools verify faster than eyes. Judgement on the case that feels wrong remains valuable, and leads toward compliance careers. (22w)
+5	Handling customer queries at counter	customer_interaction	50	2-5y	Chatbots take the scripted questions. Confused, upset or elderly customers still walk in wanting a person, and serving them well builds your case. (23w)
+6	Spotting and escalating suspicious transactions	judgement	40	5-10y	Monitoring systems flag patterns. The teller's instinct about the nervous customer at the counter is frontline defence software lacks. (19w)
+7	Cross-selling bank products	customer_interaction	45	5-10y	Apps push offers, but a trusted human suggestion still converts differently. Sales results are the clearest bridge from teller to adviser. (21w)
+8	End-of-day cash reconciliation	data_work	80	0-2y	Cash recycling machines reconcile automatically. As cash volume falls, this duty fades with it. (14w)
+Risk interpretation (117 words)
+
+This is among the most exposed occupations in the calculator, and pretending otherwise would fail you. Clerical banking work sits squarely in the categories global research identifies as most affected by generative AI [S6], and analysis of current AI capability finds routine financial processing among the largest pools of already-automatable work [S7]. Yet the same banks investing in automation are hiring for advice, service and compliance. PwC's global analysis finds firms most exposed to AI growing headcount and wages faster than the least exposed, with demand shifting toward judgement skills [S8]. The score is a warning about the counter, not about you. Your customer trust and fraud instincts are transferable. Your transaction speed is not.
+
+Protection plan (118 words)
+
+Treat the teller seat as a platform with a clock on it. First, convert service into sales evidence. Recorded referrals, product conversions and satisfaction mentions are the currency that buys an adviser role. Second, chase the fraud and KYC work. Every suspicious-case escalation you handle builds a compliance CV inside your existing job. Third, ask formally for advisory training. Banks are reshaping branch roles, and staff who volunteer first usually get the reskilling budget, a pattern global employers confirm in their upskilling plans [S5]. Fourth, set a personal deadline. If eighteen months pass without movement toward advice, service leadership or compliance, move banks. The counter will not wait for you, so do not wait for it. (kim_review_pending)
+
+FAQs
+Q: How exposed are bank tellers really? A: Highly, on the transaction side. Global research places clerical and routine financial processing among the most automatable work categories [S6] [S7]. The advisory and trust side of branch work is the durable part. The realistic plan treats the teller role as a bridge toward advice, service leadership or compliance. (48w)
+Q: Are bank branches disappearing entirely? A: Shrinking, not vanishing. Banks keep branches for complex needs, trust moments and customers who prefer humans for significant decisions. Staffing inside those branches shifts from processing toward advising and selling. Fewer seats overall, but stronger and better-paid roles for those who make the transition early. (45w)
+Q: What is the realistic next role for a teller? A: Three well-worn paths. Personal banking adviser, built on your customer trust and sales record. Customer service leadership, built on your floor experience. Or compliance support, built on your KYC and fraud escalation work. Each reuses what the counter taught you while stepping off the counter itself. (46w)
+Q: Should a teller learn the bank's AI tools? A: Yes, visibly. Branch staff who guide customers through digital services become the human bridge banks need during the transition, and bridges get kept. Global employer surveys show upskilling as the dominant workforce strategy this decade [S5], so volunteering for it positions you inside the plan rather than outside it. (48w)
+Related roles
+customer-service-representative (60-list): the same service-to-advice transition pressure in a broader setting.
+compliance-officer: the strongest upgrade path for tellers with sharp KYC instincts.
+financial-analyst: shows where banking careers concentrate once processing work automates.
+cashier (60-list): retail's parallel role, further along the same automation curve.
+data-entry-clerk: a warning mirror, and a fellow traveller needing the same exit planning.
+UAE application (103 words)
+
+UAE banking digitised early and enthusiastically, with national strategy backing AI adoption across services [S1] and a dedicated financial-centre licensing regime attracting AI firms into finance [S9]. Branch transactions here migrated to apps faster than in many markets [KIM REVIEW: qualitative], so the teller-to-adviser transition is not a forecast in the Emirates, it is the current reorganisation. Nationalisation policy also shapes branch hiring, since retail banking roles feature in Emiratisation efforts [KIM REVIEW: verify current MOHRE position before publication]. For expatriate tellers especially, the advisory, service-leadership and compliance routes are where durable UAE banking careers now sit. (kim_review_pending)
+
+Saudi application (102 words)
+
+Saudi banking is digitising inside a national agenda that names government services and finance-adjacent sectors for data and AI adoption [S3]. Branch networks remain significant, but transaction migration to digital channels follows the global pattern [KIM REVIEW: qualitative]. The Ministry of Human Resources and Social Development reports rising Saudi participation in private-sector work, with female participation growing strongly [S4], and retail banking has been one of the visible sectors for that growth. For tellers in the Kingdom, the durable direction matches the global one: advisory skill, service leadership and compliance capability, built while the counter still pays the bills. (kim_review_pending)
+
+9. financial-analyst | Financial Analyst | ISCO-08 2413
+Role outlook (98 words)
+
+The junior analyst's traditional apprenticeship, years of gathering data and building models, is being compressed into software. AI drafts a working model in minutes and a reporting pack in seconds. That is not the end of analysis. It is the end of analysis-as-production. What firms still cannot buy is the analyst who challenges an assumption the CFO loves, spots the flattering number that is quietly wrong, and tells a board what the model means. The profession is becoming shorter on typing and heavier on judgement, communication and trust. Analysts should plan their careers around that final mile.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Building and updating financial models	data_work	60	2-5y	First-draft models now generate quickly from data and templates. Your edge moves to structure, assumptions and knowing when the draft lies. (21w)
+2	Monthly reporting packs	admin_processing	75	2-5y	Standard packs assemble themselves from systems. The commentary that explains why numbers moved is where human value concentrates. (18w)
+3	Variance analysis and commentary	data_work	55	2-5y	Tools identify variances instantly. Explaining causes, and separating noise from signal for decision-makers, remains analytical judgement. (16w)
+4	Data gathering and cleaning	data_work	80	0-2y	The least loved task automates first and hardest. Do not let it define your working week or your skill set. (20w)
+5	Forecasting and scenario building	judgement	45	5-10y	Engines produce scenarios cheaply. Choosing which scenarios matter, and what leadership should do about them, stays a human call. (19w)
+6	Presenting findings to management	communication	25	10y+	The room is where analysis becomes influence. Clear storytelling under questioning is the profession's most durable skill. (17w)
+7	Challenging business assumptions	judgement	20	10y+	Telling a director their growth assumption is wrong takes evidence and courage. This is the analyst's highest-value moment. (18w)
+8	Ad hoc decision support for leadership	judgement	30	5-10y	Quick-turn questions from leadership reward context, trust and speed. Analysts embedded in decisions automate last. (15w)
+Risk interpretation (116 words)
+
+The score lands in the moderate band with a steep internal gradient. Data gathering, pack production and first-draft modelling face near-term automation, and analysis of current AI capability places routine financial processing among the largest pools of automatable work [S7]. But the profession's judgement layer tells a different story. PwC's global study finds AI-exposed roles being reshaped toward judgement, leadership and communication skills, with wages growing fastest where AI acts as a force multiplier for experts [S8]. For analysts, exposure concentrates by seniority in reverse: the junior production years are the automatable ones. That compresses the traditional career ladder and rewards analysts who reach the judgement and presentation layers earlier than tradition allowed.
+
+Protection plan (115 words)
+
+Climb to the last mile faster than the ladder expects. First, automate your own production work openly. The analyst who delivers the pack in an hour and spends the day on insight sets the standard others get measured against. Second, get into the room. Volunteer to present, take the questions, and build a reputation for straight answers under pressure. Third, develop a challenge habit. Documented moments where your scrutiny changed a decision are the strongest evidence an analyst can carry into review season. Fourth, deepen domain knowledge in your industry. Models are generic; context is not. The analyst who understands the operations behind the numbers produces judgement AI cannot check itself against. (kim_review_pending)
+
+FAQs
+Q: Will AI replace financial analysts? A: It replaces the mechanical layers: gathering, cleaning, first-draft models and standard reporting. Global research on AI-exposed professions shows work shifting toward judgement and communication rather than disappearing [S8]. The analysts at risk are those whose weeks are mostly production. The analysts in demand are those trusted in decisions. (47w)
+Q: What should a junior analyst do differently now? A: Compress the apprenticeship. The production years that once built careers are automating, so seek presentation, stakeholder and challenge opportunities from year one. Master the AI tools quickly, then spend the saved hours where judgement grows: in meetings, in questions, in understanding the business behind the spreadsheet. (46w)
+Q: Which analyst skills hold value longest? A: Three stand out. Communicating findings under hostile questioning. Challenging assumptions with evidence and surviving the conversation. And domain depth in your industry, because context is what generic models lack. Employer surveys consistently rank analytical thinking and influence among the most demanded skills this decade [S5]. (44w)
+Q: Do AI tools make analysts more valuable or less? A: Both, depending on the analyst. Global analysis finds companies most engaged with AI growing wages and headcount faster than the least engaged, with premiums flowing to workers who command the tools [S8]. Analysts who direct AI multiply their output. Analysts who compete against it on production lose. (46w)
+Related roles
+data-analyst: a neighbouring profession undergoing the same shift from production to interpretation.
+compliance-officer: shows how accountability shields senior judgement work in finance.
+quantity-surveyor: the construction industry's version of automated measurement and surviving negotiation.
+operations-manager: a common destination for analysts who master the decision room.
+accountant (60-list): the adjacent profession whose processing layer is automating on the same clock.
+UAE application (100 words)
+
+Finance is central to the UAE's economy, and the state actively courts AI capability into the sector through dedicated licensing at its financial centre [S9] alongside the national AI strategy [S1]. Analysts here should assume employers adopt modelling and reporting automation early [KIM REVIEW: qualitative]. That raises the bar and the opportunity together: production skills alone date quickly in this market, while analysts fluent in the tools and strong in the boardroom fit exactly what regional employers are building. Bilingual presentation ability adds real edge across the Emirates' international investor base [KIM REVIEW: qualitative]. (kim_review_pending)
+
+Saudi application (99 words)
+
+Saudi Arabia's national strategy places data at the centre of economic transformation [S3], and the finance function inside its programmes runs on exactly the analysis this occupation provides. Saudi Arabia's labour ministry places finance skills among its national training priorities [S4], expanding the local analyst talent pool. For analysts in the Kingdom, giga-programme finance work rewards scenario judgement and clear reporting to demanding stakeholders [KIM REVIEW: qualitative]. The same global rule applies with extra force here: automated production is assumed, and careers are built in the meeting room, not the spreadsheet. (kim_review_pending)
+
+10. compliance-officer | Compliance Officer | ISCO-08 2619 (verify)
+Role outlook (99 words)
+
+Compliance holds a card most professions lack: the regulator wants a name, not a model. Accountability is the product. That said, the volume layer of compliance is automating rapidly. Screening alerts, KYC files and regulatory-change tracking are structured work, and structured work is what AI does. The profession is therefore concentrating: fewer hours on processing, more on investigation, advice and sign-off. Junior roles built on alert queues face real pressure. Senior roles built on judgement and regulator relationships are strengthening. The career advice writes itself: move from screening to deciding as early as your experience allows.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Transaction monitoring alert reviews	data_work	65	2-5y	AI now clears obvious false positives before humans see them. Queue-clearing roles shrink. Investigation skills become the entry requirement. (19w)
+2	KYC and customer due diligence files	admin_processing	70	2-5y	Document collection and verification automate steadily. Risk judgement on the borderline customer remains yours, and it is the promotable part. (20w)
+3	Regulatory change tracking	data_work	60	2-5y	Tools scan and summarise rule changes instantly. Deciding what a change means for your firm's controls stays professional work. (19w)
+4	Policy drafting and updates	data_work	50	2-5y	Drafts generate quickly now. Policies still fail or succeed on practical judgement about how the business actually operates. (18w)
+5	Suspicious activity investigation	judgement	30	5-10y	Connecting evidence into a defensible narrative, and deciding what to report, carries legal weight machines cannot bear. (17w)
+6	Regulator liaison and reporting	communication	25	10y+	Regulator trust is built person to person over years. It is career capital, and it does not automate. (18w)
+7	Compliance training delivery	supervision	35	5-10y	Modules generate automatically. Making a sales floor actually care about controls still takes a credible human in the room. (19w)
+8	Advising the business on grey areas	judgement	20	10y+	The call that says this deal can proceed with conditions is the profession's core product. Judgement plus accountability. (18w)
+9	Signing off high-risk decisions	compliance	15	10y+	Someone's name goes on the decision. Regulators insist on it. This duty anchors the entire occupation against automation. (18w)
+Risk interpretation (114 words)
+
+The occupation scores low to moderate overall, with the exposure loaded onto its junior layer. Alert review, file preparation and change tracking are structured information work, the category identified as most exposed in global generative AI analysis [S6], and routine compliance processing features in assessments of what current systems can already perform [S7]. The senior layer inverts the picture. Investigation, advice and sign-off carry legal accountability, and accountability is the strongest protection any task can have. The net effect is not shrinkage so much as reshaping: the profession needs fewer alert-clearers and the same number of decision-makers. Individual risk depends on which layer your week occupies, which is exactly what this calculator measures.
+
+Protection plan (117 words)
+
+Move your week from screening to deciding, deliberately. First, turn alert work into investigation credentials. Volunteer for the escalated cases, document your reasoning, and build a file of defensible decisions. Investigation is the bridge across the automating layer. Second, develop regulator-facing skills. Drafting responses, joining inspection preparations and eventually owning relationships builds the trust capital that defines senior compliance careers. Third, learn the monitoring technology itself. Systems need tuning, testing and challenge, and officers who can interrogate the model's decisions become the control over the control. Fourth, claim sign-off scope as you grow. Every decision that carries your name makes you structurally harder to automate, because your accountability is precisely what the regulator is buying. (kim_review_pending)
+
+FAQs
+Q: Can AI do compliance work? A: It can screen, monitor, summarise and draft, and it increasingly does. It cannot be accountable. Regulated sign-off requires a named human, and that legal fact protects the profession's senior core. The exposed layer is volume processing, which is why career strategy means moving from queues toward decisions. (47w)
+Q: What happens to junior compliance analysts? A: Alert-review and file-preparation roles face genuine pressure as screening automates. The response is to convert volume experience into investigation skill quickly: take escalated cases, document defensible reasoning, and learn the monitoring systems well enough to challenge them. Juniors who make that move become the profession's next decision layer. (47w)
+Q: Is compliance still a growth career? A: Yes, in reshaped form. Rules keep multiplying, enforcement keeps tightening, and firms adopting AI create entirely new oversight needs. Global research shows judgement-heavy professional work gaining value as AI absorbs routine layers [S8]. Fewer processing seats, stronger careers for those holding investigation, advisory and sign-off responsibility. (45w)
+Q: Does AI itself create compliance work? A: Substantially. Firms deploying AI in decisions need model governance, fairness checks, audit trails and explainability standards, and regulators are formalising expectations. Officers who understand both the rulebook and the technology occupy a growing specialism. Overseeing the machines is becoming part of the profession, not a threat to it. (47w)
+Related roles
+financial-analyst: a parallel profession where production automates and judgement concentrates.
+bank-teller: the frontline feeder role whose KYC instincts point toward compliance careers.
+hr-manager (60-list): a fellow accountability profession balancing policy, people and judgement.
+legal-assistant (60-list): adjacent structured-document work facing a faster automation clock.
+operations-manager: a comparison in how named responsibility protects senior roles.
+UAE application (101 words)
+
+The UAE's position as a financial hub, reinforced by dedicated AI licensing within its financial centre [S9] and the national AI strategy [S1], keeps compliance demand strong and technologically current. Firms here adopt screening automation early, so the junior processing layer compresses faster than in slower markets [KIM REVIEW: qualitative]. For compliance professionals in the Emirates, the premium sits on investigation quality, regulator-facing polish and the emerging AI-governance specialism, since institutions deploying AI need officers who can oversee it. Officers combining regional regulatory knowledge with technology fluency hold a strengthening position. (kim_review_pending)
+
+Saudi application (100 words)
+
+Saudi Arabia's data and AI strategy explicitly includes governance frameworks alongside adoption ambitions [S3], and its expanding financial sector carries the compliance demand that comes with growth. The Ministry of Human Resources and Social Development reports national skills programmes across finance fields [S4], building the Kingdom's professional pipeline. For compliance officers, the Saudi trajectory mirrors the global one with a local accent: screening automates, judgement concentrates, and new oversight work arrives with every AI deployment. Professionals able to combine investigation credibility with an understanding of data governance under the national framework fit the Kingdom's direction precisely. (kim_review_pending)
+
+SECTOR: AVIATION
+11. cabin-crew | Cabin Crew | ISCO-08 5111
+Role outlook (98 words)
+
+Cabin crew are safety professionals who also pour coffee, and the law prices the safety part. Minimum crew numbers per aircraft are set by regulation for evacuation and emergency response, not for service. That legal floor makes this one of the most structurally protected customer-facing jobs anywhere. What AI changes is the paperwork and the personalisation: briefing packs, reports and rosters automate, while service becomes more data-informed. What it cannot change is the trained human who manages a medical emergency, a disruptive passenger or an evacuation at altitude. The wings stay human for the foreseeable future.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Safety demonstrations and cabin checks	compliance	15	10y+	Regulated duties performed by certified crew. The legal requirement for trained humans on board anchors the entire role. (18w)
+2	In-flight service delivery	customer_interaction	25	10y+	Trolleys are not getting robotic replacements in a moving cabin. Service quality remains a human craft airlines compete on. (19w)
+3	Passenger conflict de-escalation	judgement	10	10y+	A disruptive passenger at altitude is a safety event. Calm authority in a confined space is irreplaceable crew skill. (19w)
+4	Medical incident first response	physical	10	10y+	First aid at 38,000 feet, with no ambulance coming, is why crew training exists. Deeply protected work. (17w)
+5	Pre-flight briefings and reports	admin_processing	55	2-5y	Briefing packs and standard reports assemble automatically. Expect the paperwork around each flight to keep shrinking. (16w)
+6	Duty-free and ancillary sales	customer_interaction	45	5-10y	Onboard retail shifts toward digital ordering. Personal recommendation still sells, but the transaction side is automating. (16w)
+7	Special assistance passenger care	customer_interaction	15	10y+	Helping nervous, elderly or disabled passengers is hands-on human care, and demand for it grows with air travel. (18w)
+8	Post-flight documentation	admin_processing	60	2-5y	Incident and service reports draft themselves from structured inputs. Review and accuracy stay your responsibility. (15w)
+Risk interpretation (112 words)
+
+This occupation scores low, and the protection is legal before it is technological. Safety regulation mandates minimum trained crew per aircraft, which means service automation cannot translate into crew removal the way it does in ground roles. Exposure research reinforces the picture: physical, safety-critical and interpersonal tasks sit at the bottom of automation potential [S6]. The exposed tasks are administrative: briefings, reports and the transaction side of onboard sales. Losing them lightens the duty day without threatening the job. The caution worth stating is locational: the automation pressure in aviation concentrates on the ground, in check-in, operations and back-office roles, not in the cabin. Crew careers face rostering intensity, not replacement.
+
+Protection plan (110 words)
+
+Compound the licence. First, keep safety and medical certifications not just current but expanding: advanced first aid, safety instructor or examiner pathways deepen the regulated core that protects you. Second, build service leadership. Purser and senior crew roles reward the human skills airlines actually differentiate on, and they survive every technology cycle. Third, become fluent in the digital cabin. Crew who master onboard retail systems, reporting tools and service apps become trainers, and trainers gain ground careers as options rather than necessities. Fourth, bank languages. Multilingual crew carry premium value on international routes, and language remains a human advantage that pairs perfectly with the role's protected emotional-labour core. (kim_review_pending)
+
+FAQs
+Q: Could AI reduce cabin crew numbers on flights? A: Not below the regulated minimum. Aviation law sets crew numbers per aircraft for evacuation and emergency response, independent of service considerations. That legal floor is stronger job protection than any skill argument. Automation in aviation concentrates on ground processes, where no equivalent minimum-staffing rule exists. (45w)
+Q: What actually changes for crew in the next five years? A: The edges, not the core. Briefing packs, reports and rosters automate, and onboard retail shifts toward digital ordering. Service may become more personalised through passenger data. Safety duties, medical response and conflict management remain exactly as human as they are today, because regulation and physics require it. (47w)
+Q: Is cabin crew a durable long-term career? A: The flying role endures, and global air travel growth supports demand. The pressure points are lifestyle-related, not automation-related: rostering, time zones and physical demands shape most crew career decisions. Members who add languages, safety instruction or service leadership build options for ground careers on their own timetable. (47w)
+Q: Do ground aviation roles share cabin crew's protection? A: No, and the difference matters for career planning. Check-in, operations support and administrative aviation roles automate on the same schedule as office work everywhere, without a minimum-staffing law to slow it. Crew considering ground moves should study the task list of the target role first. (45w)
+Related roles
+airport-check-in-agent: the ground colleague whose role shows what happens without a regulated staffing floor.
+hotel-receptionist: shares the service-recovery skill set and the shift toward experience over transaction.
+guest-relations-officer (60-list): a natural ground destination for crew with strong service records.
+registered-nurse: a fellow profession anchored by physical care and emergency response.
+customer-service-representative (60-list): useful contrast showing scripted service automating fastest.
+UAE application (102 words)
+
+Aviation is one of the UAE's defining industries, with hub carriers running large international operations [KIM REVIEW: qualitative], and the national AI strategy explicitly targets transport among its priority sectors [S1]. In practice that means UAE crew work with digitised briefing, reporting and retail systems earlier than many peers, while the flying job itself remains governed by safety regulation. For crew building Gulf careers, the differentiators are the classic ones amplified: languages across the region's passenger mix, service polish at premium standard, and safety records that support progression to purser and instructor roles within some of aviation's largest crew communities. (kim_review_pending)
+
+Saudi application (99 words)
+
+Saudi Arabia is expanding aviation capacity as part of its national transformation, with mobility named among the priority sectors of its data and AI strategy [S3]. Growing route networks need growing crew numbers, and the Ministry of Human Resources and Social Development reports rising national workforce participation, including strong growth among women [S4], with cabin crew among the visible professions in that shift. For crew in the Kingdom, the opportunity profile is expansion-shaped: new fleets, new routes and new training pipelines. Safety certification depth and bilingual service capability position crew members well inside that growth. (kim_review_pending)
+
+12. airport-check-in-agent | Airport Check-in Agent | ISCO-08 4221 (verify)
+Role outlook (100 words)
+
+This role is a preview of automation played at speed. Kiosks arrived, then bag drop, then biometric gates, then home check-in, and each wave shrank the staffed counter. AI agents now handle rebooking chats and routine queries too. What remains staffed is the day the system breaks: the cancelled flight, the missed connection, the passenger whose visa is wrong, the family in tears. Airlines and airports keep humans precisely for the moments machines make worse. The realistic career reading is stark but useful: the routine path is closing, and the exception path is becoming the entire job.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Passenger check-in and boarding pass issue	admin_processing	85	0-2y	Self-service and biometrics own the happy path now. Counter check-in survives mainly for exceptions and premium touch. (17w)
+2	Baggage acceptance and tagging	admin_processing	70	2-5y	Self-service bag drop keeps spreading. Staffed positions concentrate on oversize, special and problem baggage. (14w)
+3	Travel document verification	compliance	55	2-5y	Automated document checks catch the routine cases. The wrong-visa passenger at the counter still needs human judgement and difficult news delivered well. (22w)
+4	Rebooking during disruption	judgement	40	5-10y	Systems propose options instantly. Choosing among angry queues, weighing hotel costs and calming the desperate remains skilled human work. (19w)
+5	Handling distressed or denied passengers	customer_interaction	20	10y+	Delivering bad news face to face, and keeping dignity in the exchange, is the most protected skill on the concourse. (20w)
+6	Special assistance coordination	customer_interaction	25	10y+	Wheelchair, minor and medical cases need coordination with real hands at every step. This work grows with passenger volumes. (19w)
+7	Excess baggage and ancillary charging	admin_processing	75	0-2y	Automated weighing and payment remove the negotiation. The charge happens at the machine, not the counter. (16w)
+8	Gate boarding management	supervision	50	2-5y	Biometric boarding automates the scan. Managing the gate crowd, standbys and final decisions keeps a human presence. (17w)
+Risk interpretation (115 words)
+
+This is one of the pack's most exposed occupations, and its history proves the model. Each automation wave in air travel removed a slice of counter work, and generative AI extends the pattern to queries and rebooking conversations. Clerical customer-processing work sits among the most affected categories in global exposure analysis [S6]. The counterweight is disruption. Aviation produces daily exceptions that automated flows handle badly, and every airport keeps a human layer for them. The ILO's central finding, transformation rather than elimination [S6], shows up here as role concentration: fewer agents, doing harder work. Individual risk therefore turns on your exception skills. Routine processing speed no longer differentiates anyone, because machines set that standard now.
+
+Protection plan (114 words)
+
+Become indispensable on the worst day of the operation. First, chase disruption shifts deliberately. Cancelled-flight experience builds the rebooking judgement and crowd management that define the surviving role. Second, learn the reservation system beyond the buttons. Agents who can construct complex reroutes manually outperform the automated options when it matters, and colleagues notice who gets called. Third, take special assistance work seriously. It is growing, human by nature, and it builds the service record that supervisory selection rewards. Fourth, aim at the control room. Passenger services supervisor, duty and operations roles are where exception-handling careers lead, and they recruit from agents who stayed calm when the departure board turned red. (kim_review_pending)
+
+FAQs
+Q: Is airport check-in disappearing as a job? A: Routine check-in largely is. Self-service, biometrics and home check-in own the standard journey, and global research places clerical processing among the most automatable work [S6]. Staffed roles concentrate on exceptions, disruption and assistance. The job is not vanishing so much as hardening into its difficult parts. (46w)
+Q: What is the safest move from a check-in counter? A: Toward the exceptions. Disruption management, passenger services supervision and airport duty roles all build on exception-handling skill, which is the surviving core. Special assistance coordination is also growing with passenger volumes. Each path starts with volunteering for the shifts most agents avoid: the cancelled-flight days. (45w)
+Q: Do premium airlines keep more human check-in staff? A: Generally yes. Full-service and luxury carriers retain staffed touchpoints as part of their product, which slows the counter's decline in those environments. But the direction is the same everywhere. Treat a premium counter as a better platform for the transition, not as an exemption from it. (46w)
+Q: How fast is this change happening compared to other jobs? A: Faster than most, because the infrastructure arrived years ago. Kiosks, bag drop and biometric gates are installed reality, not forecasts, and AI now extends automation into conversations. Agents watching other industries debate timelines should recognise their own role is several waves ahead of that debate. (45w)
+Related roles
+cabin-crew: the airborne colleague protected by the regulated staffing floor this role lacks.
+hotel-receptionist: the same transaction-to-recovery transition moving on a slower clock.
+customer-service-representative (60-list): shares the scripted-service exposure and the exception-work escape route.
+travel-agent (60-list): a cautionary neighbour already reshaped by two decades of self-service.
+bank-teller: the financial twin of this role, useful for comparing transition strategies.
+UAE application (101 words)
+
+The UAE operates some of the world's busiest international airports, and the national AI strategy names transport among its priority adoption sectors [S1]. Biometric journeys and automated processing are actively deployed here [KIM REVIEW: qualitative], which puts UAE agents at the leading edge of this role's transformation. The practical consequence favours specialists: enormous passenger volumes generate enormous exception volumes, so disruption skill, special assistance capability and multilingual composure are genuinely demanded on Gulf concourses. Agents planning a UAE career should target passenger services leadership early, because the routine counter here is automating first, not last. (kim_review_pending)
+
+Saudi application (98 words)
+
+Saudi Arabia is expanding airports and route networks inside its transformation agenda, with mobility named among the priority sectors of the national data and AI strategy [S3]. New terminals open with self-service and biometric processing designed in from the start [KIM REVIEW: qualitative]. The Ministry of Human Resources and Social Development reports rising national participation in private-sector work [S4], and airport passenger services feature in that localisation story. For agents in the Kingdom, growth creates seats even as automation reshapes them: the durable ones involve disruption handling, assistance coordination and supervising the automated flow itself. (kim_review_pending)
+
+SECTOR: INFORMATION TECHNOLOGY
+13. software-developer | Software Developer | ISCO-08 2512
+Role outlook (101 words)
+
+No profession has adopted its own disruptor faster. AI assistants now write a large share of routine code, tests and documentation, and the developers using them ship faster than those who do not. The panic headline says the job is ending. The task data says the job is moving. Typing implementations is automating; deciding what to build, how systems fit together, what trade-offs to accept and who is accountable when production breaks remains stubbornly human. The profession's centre of gravity is shifting from writing code to directing, reviewing and owning it. Developers should read their own task lists the way this calculator does.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Writing routine application code	technical	70	0-2y	AI assistants generate standard features competently now. Typing speed and boilerplate fluency have stopped being career assets. (17w)
+2	Debugging and fixing defects	technical	55	2-5y	Tools localise and propose fixes increasingly well. The hard bugs, crossing systems and assumptions, still reward human investigation. (18w)
+3	Code review	judgement	45	2-5y	AI flags issues, but review is also mentoring, standards and judgement about risk. Reviewing machine output is itself the growing duty. (21w)
+4	System design and architecture	judgement	25	5-10y	Choosing structures, trade-offs and boundaries under real constraints remains the profession's core judgement work, and its best-paid layer. (18w)
+5	Writing tests	technical	70	0-2y	Test generation automates heavily. Deciding what genuinely needs testing, and what failure would cost, stays an engineering call. (18w)
+6	Requirements discussion with stakeholders	communication	20	10y+	Translating a vague business wish into something buildable is negotiation and empathy. It automates last, if ever. (17w)
+7	Documentation	admin_processing	75	0-2y	Docs now draft themselves from code and comments. Curating accuracy matters; producing pages no longer does. (15w)
+8	Deploying and monitoring systems	technical	50	2-5y	Pipelines and monitoring automate operations steadily. Incident ownership, and the pager, remain human accountability. (13w)
+9	Legacy code investigation	technical	45	2-5y	AI explains old code helpfully, but untangling decades of undocumented decisions still rewards experienced human archaeology. (16w)
+Risk interpretation (117 words)
+
+The score is moderate with the sharpest internal split in this pack. Routine coding, testing and documentation face immediate automation, and the profession experiences it daily rather than theoretically. Yet the demand side complicates any doom reading. The World Economic Forum lists software developers among the fastest-growing roles this decade [S5], and PwC finds AI-skilled roles growing far faster than the general market, with substantial wage premiums for workers who command the tools [S8]. Both things are true at once: production tasks are automating while demand for people who direct that production grows. Individual exposure follows the task list exactly. A developer who mostly implements tickets scores high. A developer who architects, reviews and owns scores low.
+
+Protection plan (116 words)
+
+Move up the decision stack faster than the tools move up the skill stack. First, master AI-assisted development completely, then measure yourself on output quality and speed, not on resisting the tools. The premium flows to developers who command them [S8]. Second, claim review and standards work. Someone must judge machine-generated code, and that judge inherits the seniority. Third, push toward architecture. Design decisions, trade-off ownership and system boundaries are the layer AI assists but cannot answer for. Fourth, own production. Volunteering for incident response and reliability builds the accountability that organisations keep paying for. The engineer whose name is on what ships, and who answers when it breaks, is the one still employed. (kim_review_pending)
+
+FAQs
+Q: Is software development still worth learning? A: Yes, with a changed syllabus. Global surveys still place developers among the fastest-growing roles this decade [S5], but the entry-level skill is now directing and reviewing AI-generated code, not producing it by hand. Learn fundamentals deeply, adopt the tools completely, and aim at judgement work early. (46w)
+Q: Which developer tasks are most exposed right now? A: Routine feature code, boilerplate, test generation and documentation. These automated first and the trend keeps accelerating. Exposure is lowest in architecture, stakeholder translation, complex debugging and production ownership. Reading your own week against that list gives a more honest answer than any job-title forecast. (44w)
+Q: What protects a senior developer specifically? A: Ownership and accountability. Architecture decisions, risk trade-offs and production responsibility need a human whose judgement the organisation trusts and whose name carries consequences. AI multiplies a senior's output rather than replacing it, which is why research finds wages rising where AI acts as an expert's force multiplier [S8]. (47w)
+Q: How should junior developers build careers now? A: Compress the apprenticeship deliberately. The ticket-grinding years are automating, so seek code review, design discussions and incident work early. Use AI tools to produce at senior speed, then invest the saved time in understanding systems and stakeholders. Juniors who only implement are training for the disappearing layer. (46w)
+Related roles
+data-analyst: a neighbouring profession making the same climb from production to interpretation.
+it-support-specialist: shows the same automation logic applied to operational technology work.
+operations-manager: a useful comparison in how accountability anchors senior roles.
+financial-analyst: finance's parallel story of generated drafts and surviving judgement.
+business-analyst (60-list): the stakeholder-translation specialism developers increasingly share.
+UAE application (100 words)
+
+The UAE actively recruits technology capability, with dedicated AI and coding licences designed to attract companies and developers, including golden-visa pathways [S9], under a national strategy that treats AI as an economic pillar [S1]. For developers, that means a market dense with AI-native employers where tool fluency is assumed, not admired [KIM REVIEW: qualitative]. The career premium in the Emirates sits on exactly what survives globally: architecture capability, production ownership and the ability to build with AI at speed. Developers arriving with judgement-layer skills find the UAE's positioning works in their favour. (kim_review_pending)
+
+Saudi application (99 words)
+
+Saudi Arabia's National Strategy for Data and AI commits to building national capability across data and AI fields, including large-scale specialist training ambitions [S3]. The Ministry of Human Resources and Social Development highlights technology among the high-growth sectors in its national skills programmes [S4]. For developers, the Kingdom's build-out phase means demand across government platforms and new industries, with employers adopting AI-assisted development as standard practice [KIM REVIEW: qualitative]. The strongest position belongs to engineers who can architect systems, mentor growing local teams and own production quality inside fast-moving national programmes. (kim_review_pending)
+
+14. it-support-specialist | IT Support Specialist | ISCO-08 3512
+Role outlook (99 words)
+
+First-line support is the textbook AI use case: repeatable questions with documented answers, arriving as text. Chatbots, self-service portals and self-healing systems are absorbing that layer now, and ticket volumes reaching humans are falling in automated organisations. What holds is everything with a physical or human edge: hardware in hands, on-site presence, executives who want a person, incidents too tangled for scripts. The occupation is splitting cleanly. Scripted remote support shrinks hard. Field work, complex escalation and the administration of the support AI itself grow. Specialists should decide early which side of the split they are building toward.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Password resets and account admin	admin_processing	90	0-2y	Self-service and automation own this already in modern organisations. It should not appear on any career plan. (17w)
+2	First-line ticket triage	admin_processing	80	0-2y	AI reads, categorises and answers routine tickets before humans see them. The queue that trained juniors is disappearing. (18w)
+3	Standard troubleshooting from known fixes	technical	70	0-2y	Known-error fixes execute automatically or guide users directly. Value moves to the problems without a documented answer. (17w)
+4	Hardware setup and physical repairs	physical	25	10y+	Devices still need hands: builds, swaps, cabling, peripherals. Physical work is the role's most durable layer. (16w)
+5	Escalating complex incidents	judgement	45	2-5y	Knowing what is actually wrong, and who genuinely needs to act, separates professionals from ticket-routers. Build this skill deliberately. (19w)
+6	User training and hand-holding	customer_interaction	30	5-10y	Patient humans helping stressed users remain valued, especially around new tools. Ironically, AI rollouts create this work. (17w)
+7	Asset and licence management	data_work	65	2-5y	Discovery and tracking automate steadily. Judgement on cost, renewal and standardisation decisions stays with people. (15w)
+8	On-site support for executives and events	physical	25	10y+	Presence, discretion and calm under a board deadline. This white-glove work is relationship-based and firmly human. (16w)
+Risk interpretation (113 words)
+
+The headline score is high, but it belongs to a specific layer. Scripted, remote, text-based support is exactly the work generative AI absorbs first, and analyses of current capability place routine information-processing among the largest pools of automatable tasks [S7]. The physical and complex layers read differently: hands-on hardware, on-site presence and tangled incident work sit in the low-exposure categories of global research [S6]. There is also a compensating demand: organisations rolling out AI create waves of user confusion, tooling questions and system administration, which lands in support teams first. The occupation's honest summary is a shrinking level one, a durable field layer, and a new specialism running the support automation itself.
+
+Protection plan (115 words)
+
+Get physical or get deep, and start now. First, claim the hardware and field work. Device builds, site visits and executive support are the layers chatbots cannot reach, and they build the relationships that survive restructures. Second, convert triage experience into incident depth. Study the escalations, learn the systems behind the tickets, and become the person who solves what the script cannot. Third, administer the automation. Support chatbots, self-service portals and knowledge bases need owners who tune, test and improve them; managing the bot is the promotion path out of competing with it. Fourth, add a specialism with accountability: security operations, systems administration or identity management all reward exactly the judgement level one never taught. (kim_review_pending)
+
+FAQs
+Q: Is helpdesk work disappearing? A: The scripted portion is, and quickly. Password resets, known fixes and routine triage now automate before reaching humans, matching global findings on routine information work [S7]. What remains and grows: physical support, complex incidents, user training during technology change, and administering the support automation itself. (44w)
+Q: What should a support specialist learn to stay relevant? A: Choose depth over breadth of scripts. Systems administration, security operations or identity management add the judgement layer that survives. Alternatively, own the support AI: chatbots and portals need tuning, testing and content management, and the specialist who runs the bot outranks the ones it replaced. (44w)
+Q: Are on-site roles genuinely safer than remote helpdesk? A: Yes, structurally. Physical presence, hardware handling and face-to-face support sit among the lowest-exposure task categories in global research [S6], while remote scripted support sits among the highest. If your current role is entirely remote and entirely scripted, treat that combination as the clearest relocation signal in IT. (46w)
+Q: Does AI adoption create any support work? A: Substantial amounts, at least for now. Every rollout produces confused users, integration problems, access questions and new systems to administer. Support teams sit first in that firing line, which buys time and creates the bot-administration specialism. The work changes shape faster than it disappears. (43w)
+Related roles
+software-developer: the neighbouring profession whose automation story rhymes with this one at a higher pay grade.
+data-analyst: a realistic destination for support specialists who grow into the data behind the systems.
+customer-service-representative (60-list): shares the scripted-interaction exposure without the technical escape routes.
+electrician (60-list): a reminder that physical technical trades hold the lowest exposure of all.
+executive-assistant: a parallel story of scripted tasks automating while trusted human service survives.
+UAE application (101 words)
+
+UAE organisations adopt workplace AI early under a national strategy that drives technology into every sector [S1], which means support teams here meet chatbot-first models sooner than most markets [KIM REVIEW: qualitative]. The flip side is equally real: rapid adoption generates rapid user confusion, so rollout support, training and bot administration are active work in the Emirates now. Specialists positioning for UAE careers should weight field skills, executive support and automation administration, because the remote scripted layer is compressing here first. The UAE's technology-licence environment [S9] also keeps demand for infrastructure-capable specialists steady. (kim_review_pending)
+
+Saudi application (98 words)
+
+Saudi Arabia's national programmes are digitising government and enterprise services at pace under the data and AI strategy [S3], and every new platform generates support demand during adoption. The Ministry of Human Resources and Social Development lists technology among the priority fields of national skills programmes [S4], expanding the Kingdom's support talent pipeline. For specialists there, the growth phase favours builders: on-site infrastructure roles, incident depth on new systems and training responsibilities for expanding user bases. The scripted remote layer automates in the Kingdom as everywhere, but the surrounding build-out creates more durable work than it removes. (kim_review_pending)
+
+15. data-analyst | Data Analyst | ISCO-08 2511 (verify)
+Role outlook (98 words)
+
+Anyone can now ask a database questions in plain English, and that single change moves this profession's centre of gravity. Extraction, cleaning, routine queries and dashboard production, the tasks that filled analyst weeks, are automating quickly. What organisations still cannot generate on demand is the analyst who frames the right question, catches the plausible-but-wrong answer, and convinces a sceptical director to act. The role is becoming a translation layer between data and decisions rather than a production line for reports. Analysts who understand the business behind their numbers will find the machines made them more valuable, not less.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Data extraction and cleaning	data_work	80	0-2y	The profession's least loved task automates first. Pipelines and AI handle it. Do not let it define your skills. (19w)
+2	Building dashboards and reports	data_work	70	2-5y	Dashboards generate from natural-language requests now. Curation and trustworthiness of what leaders see remains your responsibility. (16w)
+3	Routine SQL queries	technical	75	0-2y	Plain-English querying puts routine SQL in everyone's hands. Your edge moves to knowing which answers to distrust. (17w)
+4	Interpreting results for the business	judgement	30	5-10y	Numbers need context: what changed operationally, what the metric hides, what action follows. Interpretation is the durable craft. (17w)
+5	Defining the right question with stakeholders	communication	20	10y+	Most analysis fails at the question, not the maths. Framing problems with stakeholders is the profession's highest-value skill. (18w)
+6	Data quality investigation	technical	50	2-5y	Automated checks flag anomalies. Understanding why the source system produces them still requires human detective work. (15w)
+7	Presenting insights to decision-makers	communication	25	10y+	The moment analysis becomes action is a human conversation. Clarity under questioning decides analyst reputations. (14w)
+8	Ad hoc analysis requests	data_work	60	2-5y	Quick questions increasingly answer themselves via AI tools. Your involvement narrows to the ambiguous and the consequential. (16w)
+Risk interpretation (114 words)
+
+This occupation lands mid-table, and the gradient inside it is steep. Extraction, cleaning, querying and dashboard assembly are the first casualties, since routine data handling features prominently in what today's systems already perform [S7]. Framing a problem, reading a result in context and persuading a sceptic resist, because those depend on knowing the operation behind the numbers. Demand signals stay encouraging: big data and AI capabilities rank among the fastest-growing skills in the World Economic Forum's global survey [S5], and PwC's barometer records pay advantages for people who direct these systems rather than race them [S8]. Where your own number falls depends on the shape of your calendar. Pipeline-heavy weeks score high. Meeting-heavy weeks score low.
+
+Protection plan (113 words)
+
+Own the question and the conclusion, and let the machinery handle the middle. First, hand your pipeline chores to the tools without sentiment, then spend the recovered hours where scrutiny grows. Second, embed with the teams your data describes. Sitting beside operations, sales or finance gives you the ground truth that generic answers lack, and it is what makes your sign-off on machine output worth something. Third, cultivate organised doubt. Keep a log of catches: the plausible chart that lied, the metric that hid a problem. That log is a career document. Fourth, take every chance to explain findings aloud. People who translate numbers into choices sit inside decisions, and the seats inside decisions empty last. (kim_review_pending)
+
+FAQs
+Q: Will AI make data analysts redundant? A: It makes the production layer redundant: extraction, cleaning, routine queries and dashboard assembly. Demand shifts toward analysts who frame problems, verify machine-generated answers and communicate decisions. Global skills surveys still rank data and AI capabilities among the fastest growing [S5], but the job description underneath is changing fast. (46w)
+Q: What separates protected analysts from exposed ones? A: Business context and stakeholder trust. An analyst who understands the operation behind the numbers can judge when an AI-generated answer is plausible nonsense, and that verification role grows as generation gets easier. Analysts who only move data between systems hold the exposed version of this career. (45w)
+Q: Which skills should a data analyst add first? A: Communication and domain depth before more tools. Tool skills date quickly as interfaces improve; judgement compounds. Learn your industry's operations, practise presenting to sceptics, and build a record of catching wrong answers. Research on AI-exposed work shows premiums flowing to judgement paired with tool command [S8]. (45w)
+Q: Is plain-English querying a threat or an opportunity? A: Both, honestly. It removes the routine query work that filled junior weeks, which is a real loss of paid training ground. It also multiplies the questions being asked across the organisation, and multiplied questions mean multiplied wrong answers needing expert review. The verification and framing work expands as production contracts. (49w)
+Related roles
+financial-analyst: the finance twin, facing the same compression of production years.
+software-developer: a neighbouring craft where generation automates and judgement concentrates.
+it-support-specialist: often the adjacent team, and a source of system knowledge worth borrowing.
+operations-manager: where analysts who master the decision room frequently land.
+business-analyst (60-list): the stakeholder-facing specialism this role increasingly resembles.
+UAE application (100 words)
+
+Data work in the UAE sits inside a national strategy that treats AI as an economic pillar [S1], with government and enterprise programmes generating analytical demand across sectors. Employers here adopt natural-language analytics early [KIM REVIEW: qualitative], which compresses the routine-query layer faster than in slower markets. For analysts in the Emirates, the differentiators are the durable ones amplified: domain fluency in the industries that dominate the local economy, presentation skill for international leadership audiences, and the verification instincts that make AI-generated answers safe to act on. Production-only skill sets date quickest precisely where adoption is fastest. (kim_review_pending)
+
+Saudi application (99 words)
+
+Saudi Arabia's National Strategy for Data and AI puts data capability at the centre of national transformation, with explicit ambitions to build large specialist talent pools [S3]. Saudi Arabia's workforce ministry counts technology among the sectors where young nationals are being equipped through training drives [S4]. For analysts, the Kingdom's programmes generate demand across government platforms, new industries and the measurement of transformation itself [KIM REVIEW: qualitative]. The strongest position belongs to analysts who pair tool fluency with the ability to develop local talent and to present findings clearly inside large, fast-moving national organisations. (kim_review_pending)
+
+SECTOR: LOGISTICS
+16. logistics-coordinator | Logistics Coordinator | ISCO-08 4323 (verify)
+Role outlook (99 words)
+
+Freight has always run on paperwork, and paperwork is exactly what automates. Booking, tracking, documentation and rate comparison, the tasks that filled a coordinator's screen, now flow through platforms with shrinking human touch. AI extends the trend into the conversations: status updates, standard queries and routine customer messages generate themselves. What survives is the exception economy. Containers get stuck. Customs surprises happen. Customers get angry at exactly the moment the automated update sounds hollow. The coordinator role is compressing into its hardest parts: judgement under disruption, relationships under pressure and the customs knowledge that keeps cargo moving.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Shipment booking and tracking updates	admin_processing	80	0-2y	Platforms book and track with minimal human touch. Status updates generate themselves. This layer is leaving the job description. (19w)
+2	Preparing shipping documents	admin_processing	80	0-2y	Document generation automates from shipment data. Accuracy checking on unusual cargo and destinations keeps a human involved. (17w)
+3	Customs paperwork coordination	compliance	60	2-5y	Classification tools help, but customs mistakes cost real money and delay. Experienced judgement on tricky entries retains value. (18w)
+4	Carrier rate comparison	data_work	70	2-5y	Rate engines compare instantly. Negotiated relationships and knowing which carrier actually performs remain human knowledge. (14w)
+5	Exception handling when shipments fail	judgement	35	5-10y	The stuck container, the rolled booking, the port strike. Solving these under time pressure is the surviving core skill. (19w)
+6	Customer updates and expectation management	customer_interaction	40	5-10y	Routine updates automate. Managing an angry customer through a failed delivery, and keeping the account, stays personal work. (18w)
+7	Coordinating warehouse and transport teams	communication	45	2-5y	Systems synchronise schedules. The urgent human coordination, the truck that did not arrive, the dock that flooded, remains yours. (19w)
+8	Claims and dispute follow-up	judgement	40	5-10y	Claims mix evidence, contracts and negotiation. Tools draft the paperwork. Winning the argument stays a human contest. (17w)
+Risk interpretation (112 words)
+
+The score lands moderate to high, driven by how much of this role is structured document and status work, the category global exposure research consistently ranks among the most automatable [S6]. Routine administrative processing also features in assessments of what current AI already performs [S7]. The counterweight is operational reality: physical freight generates exceptions no platform fully absorbs, and every exception needs a human who can decide, negotiate and apologise convincingly. Trade volumes, not technology, set overall demand. The realistic reading is role concentration: fewer coordinators handling more shipments each, with their time weighted toward disruption, customs judgement and customer relationships. Personal risk depends on how much of your week is already exceptions.
+
+Protection plan (114 words)
+
+Become the person called when the shipment breaks. First, chase the exceptions deliberately. Every crisis you resolve builds the disruption judgement that defines the surviving role, and colleagues remember who fixed the unfixable. Second, build customs depth. Classification, valuation and documentation judgement for difficult cargo is specialist knowledge that automation assists but cannot own, and it travels well between employers. Third, take the key accounts. Customer relationships under pressure are the commercial moat: the client who stays because of you is the clearest evidence in any restructure. Fourth, learn the platforms at power-user level. The coordinator who configures the automation, rather than competing with it, moves toward the supervisory and operations roles above it. (kim_review_pending)
+
+FAQs
+Q: How exposed is logistics coordination to AI? A: The routine layer is highly exposed. Booking, documentation, tracking and standard updates automate on current technology, matching global findings on structured clerical work [S6]. Exception management, customs judgement and customer relationships hold value. The role is concentrating into its difficult parts rather than disappearing outright. (44w)
+Q: What is the strongest specialisation for a coordinator? A: Customs and trade compliance, or key-account exception management. Both add judgement and accountability to a processing role, both travel between employers, and both grow more valuable as routine work automates around them. Coordinators who pick one and go deep convert automation from threat into filter. (45w)
+Q: Do freight platforms remove the need for coordinators? A: They remove the need for coordination-as-typing. Physical freight still fails in ways platforms handle badly: strikes, weather, rolled bookings, customs holds and damaged cargo. Each failure needs a human decision-maker with relationships on both sides. Platforms shrink the routine headcount and raise the bar for what remains. (47w)
+Q: How should a coordinator use the next two years? A: As a repositioning window. Volunteer for disruptions, study customs cases, take the difficult customers and learn your platform deeply enough to train others. The coordinators who thrive after automation are being selected now, by what they choose to handle while the routine work is still there. (46w)
+Related roles
+warehouse-supervisor: the physical-operations partner whose people-leadership core is better protected.
+procurement-officer (60-list): a commercial neighbour where negotiation skill compounds similarly.
+operations-manager: the natural destination for coordinators who master disruption at scale.
+data-entry-clerk: a warning about where pure processing roles end up.
+driver-delivery (60-list): the physical end of the chain, with a very different exposure profile.
+UAE application (102 words)
+
+The UAE is a global trade and transshipment hub, and its national AI strategy names transport among priority adoption sectors [S1], so freight digitisation here runs ahead of many markets [KIM REVIEW: qualitative]. For coordinators in the Emirates, that means the routine layer compresses early while exception volume stays enormous, because hub-scale throughput generates hub-scale disruptions. The career mathematics favour specialists: customs expertise across the UAE's free zones and mainland regimes [KIM REVIEW: verify regime detail before publication], key-account management for regional distribution clients, and platform mastery. Coordinators holding those three assets remain in demand regardless of how the booking screen evolves. (kim_review_pending)
+
+Saudi application (100 words)
+
+Saudi Arabia's transformation includes major logistics ambitions, and mobility sits among the five priority sectors of the Kingdom's data and AI strategy [S3]. New ports, zones and corridors are being developed alongside industrial programmes [KIM REVIEW: qualitative], and the Ministry of Human Resources and Social Development lists logistics-adjacent skills within national workforce programmes [S4]. For coordinators in the Kingdom, growth creates roles even as automation reshapes them: the durable ones sit in customs judgement for new trade flows, disruption management across expanding networks and coordination between international carriers and local operations. Expertise built during the build-out phase compounds unusually fast. (kim_review_pending)
+
+17. warehouse-supervisor | Warehouse Supervisor | ISCO-08 4321 (verify)
+Role outlook (98 words)
+
+Automation enters warehouses through the racking, not through the supervisor's office. Robots pick, conveyors sort and systems allocate, and each wave changes what supervisors manage rather than whether they exist. Task allocation and inventory counts are moving into software now. What software does not do is lead a night shift, hold safety standards when the pressure peaks, or manage the human half of a floor increasingly shared with machines. Mixed human-robot operations arguably need more supervision judgement, not less. The role's administrative shell is thinning; its leadership core is holding, and in automated sites, hardening.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Shift planning and task allocation	admin_processing	60	2-5y	Systems allocate from volumes and labour standards automatically. Your input narrows to judgement about people: trainees, injuries, fatigue. (18w)
+2	Inventory counts and reconciliation	data_work	65	2-5y	Scanning, tags and drones count without you. Investigating why counts diverge remains detective work on the floor. (17w)
+3	Supervising picking and packing teams	supervision	25	10y+	Pace, morale and standards through a hard shift are leadership in motion. Machines take tasks; teams still need leading. (19w)
+4	Safety walkthroughs and toolbox talks	compliance	25	10y+	Shared human-robot floors raise the safety stakes. Named responsibility and a credible daily safety voice stay firmly human. (18w)
+5	Receiving and dispatch checks	physical	40	5-10y	Scanning automates verification, but damaged, wrong or suspicious deliveries still need eyes and a decision at the dock. (18w)
+6	Performance management of operatives	supervision	20	10y+	Data measures output; managing the person behind the number, fairly and legally, remains supervisory craft. (14w)
+7	Investigating stock discrepancies	judgement	45	2-5y	Systems flag the gap. Finding whether it is process, damage or theft takes floor knowledge and careful judgement. (18w)
+8	Coordinating with transport and coordinators	communication	45	2-5y	Schedules sync automatically. The urgent coordination around failures, late trucks and priority orders keeps a human channel open. (17w)
+Risk interpretation (111 words)
+
+This role scores low to moderate, and the structure explains it. Its core is supervision, safety and floor judgement, categories global research places among the least exposed to generative AI [S6]. Exposure clusters in the clerical shell: allocation grids, count sheets and status messages, all of which warehouse systems already absorb. The World Economic Forum's outlook shows continued growth in frontline operational employment this decade [S5], and the logistics build-out sits inside that pattern. The realistic risk is span-widening: systems let one supervisor oversee more people and more machines, so the number of supervisory seats grows slower than throughput. Supervisors distinguish themselves on safety records, team performance and fluency with the automation itself.
+
+Protection plan (112 words)
+
+Manage the mix before the mix manages you. First, learn the warehouse systems at configuration level. The supervisor who tunes labour standards, runs the reports and trains new users becomes the bridge between floor and software, which is the promotable position. Second, make safety your named asset. In mixed human-robot operations, credible safety leadership is scarce, formally accountable and increasingly valuable. Third, build a team-development record. Trained operatives, internal promotions and low turnover are the numbers that defend supervisors in every review. Fourth, volunteer for automation projects. Sites installing new systems need floor leaders who can translate between engineers and operatives, and those projects put supervisors in front of the managers who decide careers. (kim_review_pending)
+
+FAQs
+Q: Do warehouse robots replace supervisors? A: No, they change what supervisors manage. Robots take picking and moving tasks; someone still leads the people, holds safety standards and solves floor problems in a mixed operation. Global research places supervision and physical-judgement work among the least automatable categories [S6]. The role transforms rather than disappears. (46w)
+Q: Which supervisor tasks automate first? A: Shift allocation, inventory counting and routine status coordination. All three are structured data tasks that current systems perform well. Treat their departure as recovered time, and reinvest it where supervisors are actually judged: safety results, team performance and the floor problems no dashboard resolves. (43w)
+Q: What is the growth path from warehouse supervision? A: Two strong routes. Operations management, for supervisors whose team and safety results stand out. Or automation-facing roles, for those who master the systems deeply enough to lead implementations. The second route is newer and less crowded, because most floors have only one person who truly bridges operatives and software. (48w)
+Q: How does a supervisor stay valuable in a highly automated site? A: By owning what automation creates: the human-machine interface. Mixed floors need safety leadership, exception judgement and operatives who trust their supervisor through change. Sites also need trainers for every new system. Supervisors who claim those duties become more central after automation, not less. (43w)
+Related roles
+logistics-coordinator: the office counterpart whose routine layer is automating faster than the floor's.
+housekeeping-supervisor: the hospitality twin of this role, with the same systems-plus-leadership split.
+operations-manager: the destination role for supervisors with strong safety and team results.
+site-engineer: a fellow floor professional balancing physical oversight against shrinking paperwork.
+procurement-officer (60-list): a useful commercial neighbour for supervisors eyeing supply-chain careers.
+UAE application (101 words)
+
+The UAE's role as a regional distribution hub sustains large warehouse operations, and the national strategy's transport focus [S1] accelerates automation investment in them [KIM REVIEW: qualitative]. Supervisors in the Emirates increasingly run mixed floors where systems allocate and machines move goods, which shifts the demanded skill set toward safety leadership, multicultural team management and system fluency. The multicultural dimension matters practically: UAE warehouse teams draw from many nationalities, and supervisors who train and lead across languages hold an advantage no automation project changes. Floor leaders with those skills remain scarce even as routine supervision thins. (kim_review_pending)
+
+Saudi application (99 words)
+
+Saudi Arabia's logistics expansion, inside a strategy that names mobility among its priority sectors [S3], is building new distribution capacity that arrives with automation built in from the first shift [KIM REVIEW: qualitative]. The Kingdom's labour ministry records growing national participation in private employment and includes industrial capability in its training drives [S4], so supervisors there increasingly develop Saudi operative teams alongside expatriate colleagues. The premium position belongs to floor leaders who can run modern systems, hold international safety standards and train local talent, because all three are needed simultaneously during a build-out. (kim_review_pending)
+
+SECTOR: EXECUTIVE AND MANAGEMENT
+18. operations-manager | Operations Manager | ISCO-08 1321 (verify, varies by industry)
+Role outlook (100 words)
+
+Management is judgement work wrapped in reporting work, and AI strips the wrapper. Dashboards assemble themselves. Status packs generate on schedule. Meeting summaries write their own follow-ups. What remains is the actual job that the reporting always described: decisions under uncertainty, people through difficulty, negotiations, crises and accountability when things fail. Organisations are discovering they need fewer managers who relay information and exactly as many who create decisions. That is a squeeze on reporting-heavy middle layers and a strengthening of genuine operational leadership. Managers should audit their calendars honestly, because the calendar is what the calculator scores.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Daily performance dashboard review	data_work	60	2-5y	Dashboards now surface anomalies themselves. Your value begins where the dashboard ends: deciding what the anomaly requires. (17w)
+2	Reporting to senior leadership	admin_processing	55	2-5y	Packs generate automatically. Leadership attention shifts to your interpretation and your plan, which is a harder, better test. (18w)
+3	Cross-department problem solving	judgement	20	10y+	Problems that cross silos need authority, relationships and trade-off judgement. This is the durable centre of the role. (18w)
+4	Team leadership and one-to-ones	supervision	15	10y+	Growing people, having hard conversations and holding a team through change is management's human core. It does not automate. (19w)
+5	Process improvement projects	judgement	35	5-10y	AI finds inefficiencies faster. Choosing what to change, sequencing it and carrying the people through remain leadership work. (18w)
+6	Budget management and cost control	data_work	45	5-10y	Tracking automates; trade-offs do not. Deciding what to cut, protect and fund is accountable judgement with a name attached. (19w)
+7	Vendor and stakeholder negotiation	communication	25	10y+	Reading the other side, trading value and closing agreements is relationship craft that compounds over a career. (16w)
+8	Crisis and incident management	judgement	15	10y+	When it breaks, someone decides fast with partial information and owns the outcome. That someone is why this role exists. (20w)
+9	Hiring and performance decisions	judgement	25	10y+	Tools screen and score, but employment decisions carry legal and human weight organisations keep with accountable managers. (16w)
+Risk interpretation (115 words)
+
+The score is low to moderate, with exposure concentrated in the reporting layer. Dashboard maintenance and pack production are structured information work, which global research ranks among the most automatable [S6]. The judgement layer resists for a structural reason: decisions need accountability, and accountability needs a name. The demand signals lean toward the human side: the World Economic Forum ranks leadership, social influence and analytical thinking among the most demanded core skills of the decade [S5], and PwC finds roles reshaped by AI rewarding judgement and leadership more, not less [S8]. The uncomfortable implication belongs to managers whose weeks are mostly relay work. Reporting-heavy middle layers face thinning, while decision-heavy operational leadership strengthens.
+
+Protection plan (113 words)
+
+Audit your calendar against the machine, then rebalance it. First, count the hours you spend producing or relaying information versus deciding, leading and negotiating. If reporting dominates, that is your personal exposure, whatever your title says. Second, automate your own reporting visibly and reinvest the hours in decisions and people. Managers who model this transition tend to be asked to lead it. Third, collect crises. Incident leadership, turnarounds and difficult negotiations are the experiences that define operational leaders, and they build the record automation cannot touch. Fourth, develop people deliberately. Teams that grow, promote and retain under your leadership are the most durable evidence of management value that exists, in any technological climate. (kim_review_pending)
+
+FAQs
+Q: Can AI manage operations? A: It can monitor them, flag anomalies and recommend actions, increasingly well. It cannot be accountable for decisions, lead people through difficulty or negotiate with stakeholders who need a human commitment. The role's core is judgement with a name attached, and that remains the definition of management. (45w)
+Q: Are middle management jobs disappearing? A: The relay layer is under real pressure. Managers whose main function was collecting, formatting and passing information upward are exposed, because that flow now automates. Managers who create decisions, develop teams and own outcomes are strengthening. The distinction runs through calendars, not titles. (42w)
+Q: What should an operations manager measure in their own week? A: The ratio of production to judgement. Hours spent building packs, updating dashboards and relaying status are the exposed portion. Hours spent deciding, negotiating, developing people and handling exceptions are the durable portion. Global skills research points firmly toward the second list [S5]. Rebalance before someone rebalances for you. (47w)
+Q: Does AI make experienced managers more valuable? A: Where it acts as a force multiplier, yes. Research finds organisations deploying AI rewarding judgement and leadership skills with faster wage growth [S8]. Managers who use automation to widen their span of insight, while keeping decisions and people firmly theirs, extract more value from experience, not less. (46w)
+Related roles
+hr-manager (60-list): a fellow judgement profession balancing people accountability against automating administration.
+food-and-beverage-manager: an operational cousin showing the same split inside hospitality.
+warehouse-supervisor: the floor-level version of this role's systems-plus-leadership story.
+financial-analyst: the analytical partner whose production layer automates on the same clock.
+project-manager (60-list): adjacent leadership craft where delivery accountability protects similarly.
+UAE application (100 words)
+
+Operational leadership in the UAE runs inside one of the world's most technology-forward policy environments, with AI adoption pushed across sectors by national strategy [S1]. In practice, Emirates-based managers meet automated reporting and analytics earlier than most peers [KIM REVIEW: qualitative], which raises expectations: leadership here increasingly assumes the pack writes itself and judges managers on decisions, speed and team results. The multicultural workforce adds a second differentiator, since leading across many nationalities is the daily reality of UAE operations. Managers strong in both dimensions, decisive and genuinely multicultural, fit this market's direction precisely. (kim_review_pending)
+
+Saudi application (99 words)
+
+Saudi Arabia's transformation programmes are effectively a national exercise in operations management, and the data and AI strategy commits government and enterprise to data-driven delivery [S3]. The Ministry of Human Resources and Social Development reports an expanding national workforce with rising participation [S4], so operational leaders in the Kingdom increasingly build and develop Saudi teams as a core duty rather than a side note. For managers, the premium sits on delivery credibility inside large fast-moving programmes and on people development at scale. Those two records, delivery and development, define durable management careers in the Kingdom. (kim_review_pending)
+
+SECTOR: OFFICE AND ADMINISTRATION
+19. executive-assistant | Executive Assistant | ISCO-08 3343
+Role outlook (100 words)
+
+The EA role was always two jobs. The visible one manages calendars, travel, expenses and inboxes, and AI assistants are absorbing it now, quickly and well. The invisible one was always the real job: judgement about access, discretion with sensitive matters, reading the executive and the politics, and quietly making things happen. Trust does not automate; scheduling does. The occupation's future belongs to EAs who formalise the invisible job: running the executive's AI toolkit, gatekeeping with judgement and operating as a genuine extension of their principal. The typing-heavy version of this role is ending. The trusted version is being promoted.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Diary and meeting scheduling	admin_processing	85	0-2y	AI schedulers negotiate times and rebook conflicts automatically. Calendar mechanics are leaving the role fastest of all. (17w)
+2	Email drafting and inbox triage	admin_processing	75	0-2y	Drafts and triage automate well. Judgement about tone, sensitivity and what the executive must personally see stays yours. (18w)
+3	Travel booking and expense claims	admin_processing	80	0-2y	Booking tools and expense automation remove most of this workload. Complex trips and recoveries still benefit from a human. (19w)
+4	Meeting minutes and follow-ups	admin_processing	70	2-5y	Transcription and action-tracking generate automatically. Knowing which actions actually matter, and chasing them with tact, remains valuable. (17w)
+5	Gatekeeping and prioritising access	judgement	25	10y+	Deciding who reaches the executive, and when, is political judgement built on trust. It is the role's protected core. (19w)
+6	Confidential matter handling	judgement	20	10y+	Sensitive issues need discretion, timing and absolute trust. This is precisely what principals cannot delegate to software. (16w)
+7	Event and board meeting coordination	communication	40	5-10y	Logistics automate; stakes do not. Flawless delivery of high-visibility meetings still rewards an experienced human owner. (15w)
+8	Reading the executive and the politics	judgement	15	10y+	Anticipating needs, sensing moods and navigating the organisation is craft learned through proximity. No tool has proximity. (16w)
+Risk interpretation (116 words)
+
+This occupation carries one of the widest internal splits in the calculator. Scheduling, travel, expenses and inbox work sit among the most automatable tasks anywhere, matching global findings on clerical and secretarial exposure [S6], and administrative support features prominently in assessments of already-automatable work [S7]. Yet the judgement tasks score among the safest in this pack, because they rest on trust, discretion and organisational awareness. The occupation-level number therefore misleads in both directions. An EA whose week is mostly mechanics faces near-term pressure regardless of loyalty or tenure. An EA operating as a principal's judgement layer holds one of the more protected positions in office work. The task list, not the title, decides which EA you are.
+
+Protection plan (115 words)
+
+Trade the calendar for the confidence, formally. First, adopt the AI tools before anyone suggests it, and run them for your executive. The EA who operates the scheduling, drafting and briefing stack becomes more central, because the principal now has one trusted interface to everything. Second, claim judgement work explicitly: access decisions, sensitive matters, stakeholder handling. Make the invisible job visible in your objectives. Third, build organisational reach. EAs who know how the company actually works, and who can make things happen across it, are operating as chiefs of staff in all but title. Fourth, pursue that title. Chief of staff, office management and operations routes formalise everything the automated tasks never measured. (kim_review_pending)
+
+FAQs
+Q: Will AI assistants replace executive assistants? A: They replace the calendar work, and quickly. Scheduling, travel, expenses and routine correspondence automate on current tools, consistent with global research on clerical exposure [S6]. They do not replace discretion, political awareness or trust. EAs who formalise the judgement half of the role become more valuable, not less. (47w)
+Q: How should an EA respond to AI tools arriving? A: Adopt first, and visibly. The EA who selects, runs and quality-controls the executive's AI stack becomes the single trusted interface to it, which deepens rather than weakens the position. Waiting for the tools to be imposed leaves you competing with them instead of commanding them. (45w)
+Q: What is the strongest career move from an EA position? A: Chief of staff is the natural formalisation, converting informal judgement work into recognised scope. Office management and operations roles suit EAs whose strength is making things happen at scale. Each path rewards exactly what automation cannot copy: trust, discretion and knowing how the organisation really works. (46w)
+Q: Are junior administrative roles a safe way into EA careers? A: Less than they were. The routine tasks that trained juniors are the ones automating fastest, so the traditional apprenticeship is thinning. Entrants should chase proximity to decision-makers and judgement work early: coordination of sensitive projects, stakeholder handling and event ownership build the protected skills directly. (45w)
+Related roles
+office-administrator (60-list): the broader administrative role facing the same mechanics-versus-judgement split.
+data-entry-clerk: the pure-processing extreme of office work, and a clear warning marker.
+hr-manager (60-list): a destination for EAs whose people judgement outgrows one principal.
+operations-manager: where make-it-happen capability leads when formalised.
+it-support-specialist: a useful ally, and a parallel story of scripted work automating around human trust.
+UAE application (102 words)
+
+Executive support in the UAE serves one of the world's densest concentrations of regional headquarters, where principals run multi-country scopes at speed [KIM REVIEW: qualitative]. The national push for AI adoption across business [S1] means executive offices here take up scheduling and drafting automation early, compressing the mechanical layer of EA work first. The premium consequently sits on the trusted layer: multilingual stakeholder handling, discretion across cultures and the ability to make things happen in a fast-moving market. Nationalisation policy also shapes administrative hiring in the Emirates [KIM REVIEW: verify current MOHRE position before publication], which EAs planning long careers should factor in. (kim_review_pending)
+
+Saudi application (98 words)
+
+Saudi Arabia's expanding programmes and headquarters activity are creating executive offices at pace [KIM REVIEW: qualitative], inside a national strategy committed to technology-enabled government and business [S3]. The Ministry of Human Resources and Social Development reports strong growth in national workforce participation, particularly among women [S4], and executive support is among the office professions reflecting that shift. For EAs in the Kingdom, the durable position combines the global formula with local depth: run the executive's digital toolkit, hold the trusted judgement work and bring bilingual, culturally fluent stakeholder handling that fast-growing Saudi organisations genuinely need. (kim_review_pending)
+
+20. data-entry-clerk | Data Entry Clerk | ISCO-08 4132
+Role outlook (101 words)
+
+Honesty serves readers better than comfort, so here it is: this is the most exposed occupation in the entire calculator. Document AI now reads, extracts and enters data from forms, invoices and records with minimal human involvement, and the technology is cheap enough that adoption is mainly a matter of time. The realistic plan is not defending this job. It is using it, deliberately and quickly, as a paid bridge toward work the machines feed rather than replace: data quality, records administration, junior analysis. The people best placed to check automated data are the people who used to type it.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Typing data from documents into systems	admin_processing	95	0-2y	Document AI extracts and enters directly now. This task, the role's historic core, is ending fastest of anything in this calculator. (21w)
+2	Verifying and correcting records	data_work	80	0-2y	Machines verify against rules, but exception review survives longer. This task is your nearest bridge toward data-quality work. (18w)
+3	Scanning and digitising files	admin_processing	90	0-2y	Capture pipelines automate end to end. Volume scanning roles are disappearing with them. (13w)
+4	Formatting spreadsheets and lists	data_work	90	0-2y	AI reformats instantly on request. Formatting skill no longer differentiates anyone. (11w)
+5	Chasing missing information from colleagues	communication	50	2-5y	Automated reminders chase routinely, but a person who gets answers from unresponsive colleagues still carries practical value. (17w)
+6	Handling non-standard or damaged documents	judgement	45	2-5y	The illegible form and the contradictory record still need human judgement. Exceptions are where remaining hours concentrate. (17w)
+7	Basic report generation	data_work	85	0-2y	Reports generate themselves from the systems you fill. Producing them manually is already legacy work. (15w)
+8	Confidential record handling	compliance	40	5-10y	Sensitive records need accountable handling under privacy rules. Compliance-adjacent duties are worth volunteering for now. (15w)
+Risk interpretation (114 words)
+
+The score here is the highest in this pack, and it is not a scare tactic. Data entry sits at the top of exposure rankings in global research on generative AI [S6], and assessments of current capability place routine data processing among the largest pools of work AI can already perform [S7]. The World Economic Forum likewise lists clerical and data-entry roles among the fastest-declining this decade [S5]. Three independent research streams point the same direction, which is why this page will not soften it. The useful reading is about timing and adjacency: the same familiarity with systems and records that defined this job is the raw material for the roles that check, administer and analyse. (kim_review_pending)
+
+Protection plan (117 words)
+
+Exit upward on the employer's clock, while the salary still arrives monthly. First, volunteer for exception and verification work now. Reviewing what automation extracted, and fixing what it got wrong, is the direct successor task and the easiest internal move. Second, learn the system, not the typing. Understanding what the data means, where it flows and why errors matter converts you from input device to junior data-quality specialist. Third, claim the confidential and compliance-adjacent duties. Accountable record handling builds toward records administration, which carries responsibility automation does not absorb. Fourth, set a hard timeline. Twelve months of deliberate movement toward data quality, records or junior analysis, or change employers. This occupation rewards decisiveness and punishes waiting. (kim_review_pending)
+
+FAQs
+Q: How long does data entry have as a job? A: Shorter than most occupations in this calculator. Global research places it among the most automatable and fastest-declining roles [S5] [S6], and the technology performing it is already deployed widely. Treat any data-entry position as a paid transition platform, and start the transition immediately rather than watching for confirmation. (47w)
+Q: What is the nearest safer role for a data-entry clerk? A: Data-quality checking, records administration or junior analysis. Each reuses your familiarity with the systems and the data while adding the judgement layer machines feed rather than replace. The move often starts inside your current job, by volunteering for exception review and verification of automated extraction. (45w)
+Q: What can I realistically start this month? A: Three things. Ask for the exception and verification queue, because reviewing automation's mistakes is the successor job. Learn what your data means downstream, not just how to enter it. And take any confidential or compliance-adjacent duties offered, since accountable handling builds toward records roles. Momentum matters more than perfection. (48w)
+Q: Should I retrain completely or move gradually? A: Move gradually but on a deadline. Internal steps into data quality or records work reuse your experience and keep income flowing, which beats abrupt retraining for most people. But set a hard timeline of about a year. The gradual path only works if you are actually moving along it. (48w)
+Related roles
+data-analyst: the aspirational destination, reachable through data-quality work rather than a leap.
+executive-assistant: shows how judgement and trust protect office roles that pure processing does not.
+office-administrator (60-list): a broader administrative step with more human-facing surface area.
+bookkeeper (60-list): a neighbouring processing role on a similar automation clock, worth watching not joining.
+logistics-coordinator: an example of exception-handling skills becoming a role's surviving core.
+UAE application (100 words)
+
+The UAE's push toward digital government and AI-enabled services [S1] means document automation arrives quickly across the Emirates' public and private sectors [KIM REVIEW: qualitative]. For data-entry workers here, the transition window is correspondingly shorter than in slower markets, and the adjacent openings correspondingly nearer: organisations digitising at speed need exception reviewers, records handlers and data-quality checkers immediately. Expatriate clerks in particular should treat the current role as a bridge with a visa clock attached, and pursue internal moves toward verification and records work as the practical, income-preserving route upward. (kim_review_pending)
+
+Saudi application (99 words)
+
+Saudi Arabia's data and AI strategy makes data itself a national asset [S3], which accelerates document automation across the Kingdom's expanding public and private organisations. The Ministry of Human Resources and Social Development reports large national skills programmes moving Saudis into private-sector employment [S4], and administrative functions sit inside that shift. For data-entry workers in the Kingdom, the practical direction matches the global one at higher speed: volunteer for verification and exception work, learn what the data feeds, and convert system familiarity into data-quality or records responsibilities while the current role still funds the move. (kim_review_pending)
+
+MACHINE-CHECK SUMMARY (measured 13 July 2026, post-edit)
+
+Method: occupation sections isolated by header; source tags, flags and word-count annotations stripped before counting; Jaccard computed on unique word sets per role pair; longest shared phrase computed as the longest contiguous token sequence appearing in any two roles.
+
+Gate results: minimum words 1,064 (floor 650, PASS all 20). Global maximum pairwise Jaccard 0.323 between financial-analyst and data-analyst (target below 0.35, PASS). No role below floor.
+
+#	Slug	Occupation-specific words	Max pairwise Jaccard	Longest shared phrase	Review status
+1	site-engineer	1181	0.287	12 words (structural table header)	kim_review_pending
+2	quantity-surveyor	1104	0.287	11 words (structural table header)	kim_review_pending
+3	hotel-receptionist	1155	0.274	11 words (structural table header)	kim_review_pending
+4	food-and-beverage-manager	1165	0.275	11 words (structural table header)	kim_review_pending
+5	housekeeping-supervisor	1089	0.299	11 words (structural table header)	kim_review_pending
+6	registered-nurse	1112	0.259	12 words (structural table header)	kim_review_pending
+7	radiographer	1064	0.259	12 words (structural table header)	kim_review_pending
+8	bank-teller	1100	0.281	11 words (structural table header)	kim_review_pending
+9	financial-analyst	1064	0.323	11 words (structural table header)	kim_review_pending
+10	compliance-officer	1102	0.281	11 words (structural table header)	kim_review_pending
+11	cabin-crew	1074	0.256	11 words (structural table header)	kim_review_pending
+12	airport-check-in-agent	1090	0.281	11 words (structural table header)	kim_review_pending
+13	software-developer	1089	0.292	11 words (structural table header)	kim_review_pending
+14	it-support-specialist	1089	0.254	11 words (structural table header)	kim_review_pending
+15	data-analyst	1085	0.323	11 words (structural table header)	kim_review_pending
+16	logistics-coordinator	1084	0.276	11 words (structural table header)	kim_review_pending
+17	warehouse-supervisor	1070	0.299	11 words (structural table header)	kim_review_pending
+18	operations-manager	1093	0.292	12 words (structural table header)	kim_review_pending
+19	executive-assistant	1099	0.254	11 words (structural table header)	kim_review_pending
+20	data-entry-clerk	1087	0.268	11 words (structural table header)	kim_review_pending
+
+Note on the shared phrase column: after edits, the longest shared token sequence for every role is the task-table header row (Task, Category, Base risk, Horizon, What this means for you). It is template structure, not prose, and Codex strips it during conversion to occupations.json. The longest shared prose phrase between any two roles is under 11 words.
+
+Prose duplication resolved during validation: the financial-analyst and data-analyst pair originally measured 0.352 and was reworded to 0.323; repeated Saudi ministry attribution sentences were varied across six roles; two matching venue-opening phrases were rewritten.
+
+Remaining pre-launch actions outside this document: verify eight ISCO codes marked (verify); pin UAE Emiratisation mechanics to a live MOHRE or u.ae page before publishing any quota detail; confirm MHRSD figures remain the latest published at launch; Kim sign-off converts each record from kim_review_pending to approved.
+
+End of anti-thin launch pack.
