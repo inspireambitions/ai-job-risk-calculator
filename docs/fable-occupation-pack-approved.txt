@@ -136,11 +136,11 @@ Q: Is reception still a good way into a hotel career? A: Yes, if you treat it as
 Q: Which hotel types will keep human receptionists longest? A: Full-service and luxury properties, and any hotel selling experience over price. In those segments the human front desk is part of the product, not a cost line. Budget and limited-service properties automate arrival fastest because their guests choose them for price and speed. (44w)
 Q: What should a receptionist learn to move up? A: Three things. Service recovery, because it is the most valued human skill on the desk. Revenue basics, because upselling and occupancy logic open supervisory doors. And your property management system at trainer level, because every technology rollout needs a floor expert and that person gets promoted. (47w)
 Related roles
-guest-relations-officer (60-list): the destination role that the surviving parts of reception are becoming.
+customer-service-representative: the service path that uses the surviving parts of reception work.
 airport-check-in-agent: the same automation story on a faster timeline, worth watching as a preview.
 cabin-crew: shows how safety duties and service duties combine to protect a customer-facing role.
 housekeeping-supervisor: partner role behind every arrival, with a steadier automation outlook.
-duty-manager (60-list): the step up for receptionists who master recovery and pressure.
+operations-manager: the step up for receptionists who master recovery and pressure.
 UAE application (104 words)
 
 Hospitality is one of the UAE's flagship service industries, and properties here adopt guest-facing technology early because national strategy pushes AI into service delivery across the economy [S1]. In practice, UAE hotels often run mobile check-in and automated messaging sooner than other markets, while premium properties keep large front-of-house teams because the guest mix expects personal service [KIM REVIEW: qualitative]. For a receptionist building a Gulf career, the lesson is direct. The processing part of your day automates here first, and the recognition, recovery and multilingual service part is what UAE employers actually shortlist for. Build your record on the second list. (kim_review_pending)
@@ -180,8 +180,8 @@ Q: Which F&B admin tasks should a manager automate first? A: Rostering, stock co
 Q: Does F&B management still lead anywhere in hotels? A: Yes. Outlets drive revenue and shape guest experience, so strong outlet leaders remain visible to general managers. The path through director of F&B toward hotel leadership stays open. What changes is the entry test: commercial storytelling and team results now matter more than administrative stamina. (45w)
 Q: How should an F&B manager present automation to owners? A: As a margin story with a service dividend. Show the hours and cost the tools save, then show where those hours went: floor presence, training, guest recovery. Owners fund technology that pays twice. Managers who frame it that way get budgets, and get credited with the result. (47w)
 Related roles
-restaurant-supervisor (60-list): your bench, and the role where floor leadership skills are first proven.
-executive-chef (60-list): your essential partner, facing a parallel split between kitchen admin and craft.
+store-manager: a related frontline leadership role built on service standards, people and performance.
+chef: your essential partner, facing a parallel split between kitchen admin and craft.
 housekeeping-supervisor: a fellow operational leader whose admin is automating on the same schedule.
 operations-manager: the broader destination for outlet leaders with strong commercial results.
 hotel-receptionist: front-of-house counterpart whose transaction work is disappearing even faster.
@@ -222,11 +222,11 @@ Q: What actually changes for a housekeeping supervisor? A: The administrative la
 Q: Is housekeeping still a path to hotel management? A: Yes, and a respected one. Executive housekeeper and rooms division routes remain real, and they reward exactly what automation cannot copy: standards, team leadership and cost discipline. Supervisors who add system skills to those foundations often move faster, because departments need leaders who bridge floors and software. (46w)
 Q: How should a supervisor use the new housekeeping systems? A: As a time machine. Every hour the system saves on allocation and counting is an hour you can spend inspecting rooms and coaching attendants. Learn the system well enough to train others, then let your audit scores and team retention show where the recovered time went. (46w)
 Related roles
-executive-housekeeper (60-list): the direct promotion, running the department these skills prepare you for.
+operations-manager: the broader leadership path these department skills prepare you for.
 hotel-receptionist: your front-office partner, whose transaction tasks are automating faster than yours.
 food-and-beverage-manager: a fellow operational leader balancing floor presence against shrinking admin.
 warehouse-supervisor: the same supervision-plus-systems story in an industrial setting.
-duty-manager (60-list): a cross-department step for supervisors with strong guest-handling records.
+food-and-beverage-manager: a cross-department step for supervisors with strong service records.
 UAE application (100 words)
 
 UAE hotels operate at scale and at speed, with large housekeeping departments serving high occupancy across multicultural teams [KIM REVIEW: qualitative]. The national drive to embed smart technology across services [S1] means major properties here adopted housekeeping management systems early, so allocation and tracking are already automated in much of the market. For supervisors, that shifts the daily contest to inspection quality and team development. A Dubai supervisor known for audit scores and for growing attendants into team leaders carries a portable reputation across the emirate's dense hotel cluster, which is worth more than any administrative skill. (kim_review_pending)
@@ -309,10 +309,10 @@ Q: What skill adds the most protection for a radiographer? A: Advanced modality 
 Q: Should radiographers worry about AI triage tools? A: Watch them, do not fear them. Triage reorders the worklist and speeds urgent cases, which changes departmental rhythm. The professional opportunity is quality oversight: someone must audit what the tool flags and misses. Radiographers who take that role turn the technology into career leverage. (44w)
 Related roles
 registered-nurse: a fellow clinical profession protected by physical care and human judgement.
-lab-technician (60-list): diagnostic cousin whose analytical steps automate faster than imaging's physical steps.
+medical-laboratory-technician: diagnostic cousin whose analytical steps automate faster than imaging's physical steps.
 it-support-specialist: worth understanding, since imaging departments increasingly run on the systems they support.
 data-analyst: shows where flagged-image data goes and how analytical careers are shifting.
-pharmacist-assistant (60-list): another regulated clinical support role balancing automation and accountability.
+pharmacist: another regulated clinical role balancing automation and accountability.
 UAE application (99 words)
 
 With healthcare named among the UAE's AI strategy priority sectors [S1], imaging departments here are natural early adopters of triage and quality tools. Radiographers in the Emirates should expect AI-assisted workflows as standard in newer facilities [KIM REVIEW: qualitative], along with employer interest in staff who can work confidently alongside them. Licensing requirements govern expatriate clinical practice [KIM REVIEW: verify licensing detail before publication]. The career logic is straightforward: a health system investing in AI-enabled diagnostics is expanding imaging volume, and expanding volume needs more skilled hands on machines, not fewer. (kim_review_pending)
@@ -354,7 +354,7 @@ Related roles
 customer-service-representative (60-list): the same service-to-advice transition pressure in a broader setting.
 compliance-officer: the strongest upgrade path for tellers with sharp KYC instincts.
 financial-analyst: shows where banking careers concentrate once processing work automates.
-cashier (60-list): retail's parallel role, further along the same automation curve.
+retail-sales-associate: retail's parallel role, further along the same automation curve.
 data-entry-clerk: a warning mirror, and a fellow traveller needing the same exit planning.
 UAE application (103 words)
 
@@ -438,8 +438,8 @@ Q: Does AI itself create compliance work? A: Substantially. Firms deploying AI i
 Related roles
 financial-analyst: a parallel profession where production automates and judgement concentrates.
 bank-teller: the frontline feeder role whose KYC instincts point toward compliance careers.
-hr-manager (60-list): a fellow accountability profession balancing policy, people and judgement.
-legal-assistant (60-list): adjacent structured-document work facing a faster automation clock.
+hr-officer: a fellow people profession balancing policy, administration and judgement.
+paralegal: adjacent structured-document work facing a faster automation clock.
 operations-manager: a comparison in how named responsibility protects senior roles.
 UAE application (101 words)
 
@@ -481,7 +481,7 @@ Q: Do ground aviation roles share cabin crew's protection? A: No, and the differ
 Related roles
 airport-check-in-agent: the ground colleague whose role shows what happens without a regulated staffing floor.
 hotel-receptionist: shares the service-recovery skill set and the shift toward experience over transaction.
-guest-relations-officer (60-list): a natural ground destination for crew with strong service records.
+customer-service-representative: a natural ground destination for crew with strong service records.
 registered-nurse: a fellow profession anchored by physical care and emergency response.
 customer-service-representative (60-list): useful contrast showing scripted service automating fastest.
 UAE application (102 words)
@@ -524,7 +524,7 @@ Related roles
 cabin-crew: the airborne colleague protected by the regulated staffing floor this role lacks.
 hotel-receptionist: the same transaction-to-recovery transition moving on a slower clock.
 customer-service-representative (60-list): shares the scripted-service exposure and the exception-work escape route.
-travel-agent (60-list): a cautionary neighbour already reshaped by two decades of self-service.
+travel-consultant: a cautionary neighbour already reshaped by two decades of self-service.
 bank-teller: the financial twin of this role, useful for comparing transition strategies.
 UAE application (101 words)
 
@@ -696,7 +696,7 @@ warehouse-supervisor: the physical-operations partner whose people-leadership co
 procurement-officer (60-list): a commercial neighbour where negotiation skill compounds similarly.
 operations-manager: the natural destination for coordinators who master disruption at scale.
 data-entry-clerk: a warning about where pure processing roles end up.
-driver-delivery (60-list): the physical end of the chain, with a very different exposure profile.
+delivery-driver: the physical end of the chain, with a very different exposure profile.
 UAE application (102 words)
 
 The UAE is a global trade and transshipment hub, and its national AI strategy names transport among priority adoption sectors [S1], so freight digitisation here runs ahead of many markets [KIM REVIEW: qualitative]. For coordinators in the Emirates, that means the routine layer compresses early while exception volume stays enormous, because hub-scale throughput generates hub-scale disruptions. The career mathematics favour specialists: customs expertise across the UAE's free zones and mainland regimes [KIM REVIEW: verify regime detail before publication], key-account management for regional distribution clients, and platform mastery. Coordinators holding those three assets remain in demand regardless of how the booking screen evolves. (kim_review_pending)
@@ -778,7 +778,7 @@ Q: Are middle management jobs disappearing? A: The relay layer is under real pre
 Q: What should an operations manager measure in their own week? A: The ratio of production to judgement. Hours spent building packs, updating dashboards and relaying status are the exposed portion. Hours spent deciding, negotiating, developing people and handling exceptions are the durable portion. Global skills research points firmly toward the second list [S5]. Rebalance before someone rebalances for you. (47w)
 Q: Does AI make experienced managers more valuable? A: Where it acts as a force multiplier, yes. Research finds organisations deploying AI rewarding judgement and leadership skills with faster wage growth [S8]. Managers who use automation to widen their span of insight, while keeping decisions and people firmly theirs, extract more value from experience, not less. (46w)
 Related roles
-hr-manager (60-list): a fellow judgement profession balancing people accountability against automating administration.
+hr-officer: a fellow judgement profession balancing people accountability against automating administration.
 food-and-beverage-manager: an operational cousin showing the same split inside hospitality.
 warehouse-supervisor: the floor-level version of this role's systems-plus-leadership story.
 financial-analyst: the analytical partner whose production layer automates on the same clock.
@@ -821,9 +821,9 @@ Q: How should an EA respond to AI tools arriving? A: Adopt first, and visibly. T
 Q: What is the strongest career move from an EA position? A: Chief of staff is the natural formalisation, converting informal judgement work into recognised scope. Office management and operations roles suit EAs whose strength is making things happen at scale. Each path rewards exactly what automation cannot copy: trust, discretion and knowing how the organisation really works. (46w)
 Q: Are junior administrative roles a safe way into EA careers? A: Less than they were. The routine tasks that trained juniors are the ones automating fastest, so the traditional apprenticeship is thinning. Entrants should chase proximity to decision-makers and judgement work early: coordination of sensitive projects, stakeholder handling and event ownership build the protected skills directly. (45w)
 Related roles
-office-administrator (60-list): the broader administrative role facing the same mechanics-versus-judgement split.
+administrative-assistant: the broader administrative role facing the same mechanics-versus-judgement split.
 data-entry-clerk: the pure-processing extreme of office work, and a clear warning marker.
-hr-manager (60-list): a destination for EAs whose people judgement outgrows one principal.
+hr-officer: a destination for EAs whose people judgement grows beyond one principal.
 operations-manager: where make-it-happen capability leads when formalised.
 it-support-specialist: a useful ally, and a parallel story of scripted work automating around human trust.
 UAE application (102 words)
@@ -865,8 +865,8 @@ Q: Should I retrain completely or move gradually? A: Move gradually but on a dea
 Related roles
 data-analyst: the aspirational destination, reachable through data-quality work rather than a leap.
 executive-assistant: shows how judgement and trust protect office roles that pure processing does not.
-office-administrator (60-list): a broader administrative step with more human-facing surface area.
-bookkeeper (60-list): a neighbouring processing role on a similar automation clock, worth watching not joining.
+administrative-assistant: a broader administrative step with more human-facing surface area.
+accountant: a neighbouring finance role with a wider judgement and advisory layer.
 logistics-coordinator: an example of exception-handling skills becoming a role's surviving core.
 UAE application (100 words)
 

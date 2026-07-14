@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { occupations, regions } from '../lib/occupations';
+import { occupationSources, occupations, regions } from '../lib/occupations';
 
 const words = (occupation) => [
   occupation.outlook,
@@ -18,9 +18,9 @@ const jaccard = (left, right) => {
 };
 
 describe('occupation launch gate', () => {
-  it('ships the approved 40-role, 120-page tranche', () => {
-    expect(occupations).toHaveLength(40);
-    expect(occupations.length * (1 + Object.keys(regions).length)).toBe(120);
+  it('ships the approved 60-role, 180-page tranche', () => {
+    expect(occupations).toHaveLength(60);
+    expect(occupations.length * (1 + Object.keys(regions).length)).toBe(180);
   });
 
   it('has no thin or incomplete occupation records', () => {
@@ -34,7 +34,23 @@ describe('occupation launch gate', () => {
   });
 
   it('keeps unverified ISCO mappings out of the public taxonomy', () => {
-    expect(occupations.filter((occupation) => !occupation.iscoVerified)).toHaveLength(11);
+    expect(occupations.filter((occupation) => !occupation.iscoVerified)).toHaveLength(21);
+  });
+
+  it('keeps source numbering and task vocabularies consistent', () => {
+    expect(occupationSources.S3.label).toBe('SDAIA, National Strategy for Data and AI');
+    expect(occupationSources.S8.label).toBe('PwC, 2026 Global AI Jobs Barometer');
+    expect(new Set(Object.values(occupationSources).map((source) => source.url)).size).toBe(14);
+
+    const categories = new Set(['admin_processing', 'communication', 'compliance', 'customer_interaction', 'data_work', 'judgement', 'physical', 'supervision', 'technical']);
+    const horizons = new Set(['0-2y', '2-5y', '5-10y', '10y+']);
+    for (const occupation of occupations) {
+      expect(occupation.regions['saudi-arabia'], occupation.slug).not.toMatch(/https?:\/\//);
+      for (const task of occupation.tasks) {
+        expect(categories.has(task.category), `${occupation.slug}: ${task.category}`).toBe(true);
+        expect(horizons.has(task.horizon), `${occupation.slug}: ${task.horizon}`).toBe(true);
+      }
+    }
   });
 
   it('keeps editorial review markers out of public occupation content', () => {
@@ -47,6 +63,7 @@ describe('occupation launch gate', () => {
     for (const occupation of occupations) {
       const liveRelated = occupation.related.filter((item) => slugs.has(item.slug));
       expect(liveRelated.length, occupation.slug).toBeGreaterThanOrEqual(3);
+      expect(liveRelated, occupation.slug).toHaveLength(occupation.related.length);
     }
   });
 

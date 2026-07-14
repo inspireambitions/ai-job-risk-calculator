@@ -8,6 +8,10 @@ const inputPaths = [
   path.join(root, 'docs', 'pack2-batch2-fable.txt'),
   path.join(root, 'docs', 'pack2-batch3-fable.txt'),
   path.join(root, 'docs', 'pack2-batch4-fable.txt'),
+  path.join(root, 'docs', 'pack3-batch1-fable.txt'),
+  path.join(root, 'docs', 'pack3-batch2-fable.txt'),
+  path.join(root, 'docs', 'pack3-batch3-fable.txt'),
+  path.join(root, 'docs', 'pack3-batch4-fable.txt'),
 ];
 const outputPath = path.join(root, 'data', 'occupations.json');
 
@@ -27,10 +31,10 @@ function normalisePack2Sources(text) {
 }
 
 const inputs = [];
-for (const [index, inputPath] of inputPaths.entries()) {
+for (const inputPath of inputPaths) {
   try {
-    const text = await readFile(inputPath, 'utf8');
-    inputs.push(index === 0 ? text : normalisePack2Sources(text));
+    const text = (await readFile(inputPath, 'utf8')).replace(/\\t/g, '\t');
+    inputs.push(path.basename(inputPath).startsWith('pack2-') ? normalisePack2Sources(text) : text);
   } catch (error) {
     if (error.code !== 'ENOENT') throw error;
   }
@@ -57,8 +61,51 @@ const headings = [...input.matchAll(headingPattern)];
 const sectorMatches = [...input.matchAll(/^SECTOR:\s+(.+)$/gm)];
 
 function extractBetween(section, start, end) {
-  const match = section.match(new RegExp(`${start}\\s*\\n\\n([\\s\\S]*?)\\n\\n${end}`));
+  const match = section.match(new RegExp(`${start}[ \\t]*\\r?\\n+([\\s\\S]*?)\\r?\\n+${end}`));
   return clean(match?.[1]);
+}
+
+function parseRisk(value) {
+  const numeric = Number(value);
+  if (Number.isFinite(numeric)) return numeric;
+  return { low: 25, medium: 50, high: 75 }[clean(value).toLowerCase()] ?? 50;
+}
+
+function normaliseCategory(value) {
+  const key = clean(value).toLowerCase().replace(/[- ]+/g, '_');
+  return {
+    planning: 'judgement',
+    documentation: 'admin_processing',
+    coordination: 'communication',
+    analysis: 'data_work',
+    design: 'technical',
+    monitoring: 'supervision',
+    automatable: 'admin_processing',
+    augmented: 'technical',
+    human_led: 'judgement',
+    automate: 'data_work',
+    augment: 'technical',
+    human_edge: 'judgement',
+    cognitive_routine: 'data_work',
+    cognitive_non_routine: 'judgement',
+    manual: 'physical',
+    interpersonal: 'communication',
+  }[key] || key;
+}
+
+function normaliseHorizon(value, risk) {
+  if (risk <= 25) return '10y+';
+  return {
+    now: '0-2y',
+    '1-3_years': '2-5y',
+    '3-5_years': '5-10y',
+    '5+_years': '10y+',
+  }[clean(value).toLowerCase().replace(/\s+/g, '_')] || clean(value);
+}
+
+function normaliseIsco(value) {
+  const code = clean(value).replace(/\s*\(verify[^)]*\)$/i, '');
+  return /^\d{4}$/.test(code) ? `ISCO-08 ${code}` : code;
 }
 
 function sectorAt(index) {
@@ -77,7 +124,8 @@ const occupations = headings.map((heading, index) => {
   const tasksBlock = section.match(/Tasks\s*\n#\tTask\tCategory\tBase risk\tHorizon\tWhat this means for you\s*\n([\s\S]*?)\nRisk interpretation/)?.[1] || '';
   const tasks = tasksBlock.split(/\r?\n/).filter((line) => /^\d+\t/.test(line)).map((line) => {
     const [order, task, category, baseRisk, horizon, ...explanation] = line.split('\t');
-    return { order: Number(order), task: clean(task), category: clean(category), baseRisk: Number(baseRisk), horizon: clean(horizon), explanation: clean(explanation.join(' ')) };
+    const risk = parseRisk(baseRisk);
+    return { order: Number(order), task: clean(task), category: normaliseCategory(category), baseRisk: risk, horizon: normaliseHorizon(horizon, risk), explanation: clean(explanation.join(' ')) };
   });
   const faqBlock = section.match(/FAQs\s*\n([\s\S]*?)\nRelated roles/)?.[1] || '';
   const faqs = faqBlock.split(/\r?\n/).filter((line) => /^Q:/.test(line)).map((line) => {
@@ -87,20 +135,20 @@ const occupations = headings.map((heading, index) => {
   const relatedBlock = section.match(/Related roles\s*\n([\s\S]*?)\nUAE application/)?.[1] || '';
   const related = relatedBlock.split(/\r?\n/).filter((line) => line.includes(':')).map((line) => {
     const separator = line.indexOf(':');
-    return { slug: clean(line.slice(0, separator)).replace(/\s*\(60-list\)$/i, ''), reason: clean(line.slice(separator + 1)) };
+    return { slug: clean(line.slice(0, separator)).replace(/\s*\(60-list\)$/i, ''), reason: clean(line.slice(separator + 1)).replace(/^./, (character) => character.toLowerCase()) };
   });
-  const outlook = extractBetween(section, 'Role outlook \\(\\d+ words\\)', 'Tasks');
-  const riskInterpretation = extractBetween(section, 'Risk interpretation \\(\\d+ words\\)', 'Protection plan');
-  const protectionPlan = extractBetween(section, 'Protection plan \\(\\d+ words\\)', 'FAQs');
-  const uae = extractBetween(section, 'UAE application \\(\\d+ words\\)', 'Saudi application');
-  const saudi = clean(section.match(/Saudi application \(\d+ words\)\s*\n\n([\s\S]*?)(?:\n\nSECTOR:|\n\nMACHINE-CHECK SUMMARY|$)/)?.[1]);
+  const outlook = extractBetween(section, 'Role outlook \\([\\d-]+ words\\)', 'Tasks');
+  const riskInterpretation = extractBetween(section, 'Risk interpretation \\([\\d-]+ words\\)', 'Protection plan');
+  const protectionPlan = extractBetween(section, 'Protection plan \\([\\d-]+ words\\)', 'FAQs');
+  const uae = extractBetween(section, 'UAE application \\([\\d-]+ words\\)', 'Saudi application');
+  const saudi = clean(section.match(/Saudi application \([\d-]+ words\)[ \t]*\r?\n+([\s\S]*?)(?:\r?\n+\[S\d+\]|\r?\n+SECTOR:|\r?\n+MACHINE-CHECK SUMMARY|$)/)?.[1]);
   const allText = [outlook, ...tasks.map((task) => task.explanation), riskInterpretation, protectionPlan, ...faqs.flatMap((faq) => [faq.question, faq.answer]), ...related.map((item) => item.reason), uae, saudi].join(' ');
   return {
     order: Number(heading[1]),
     slug: heading[2],
     title: clean(heading[3]),
-    isco: clean(heading[4]).replace(/\s*\(verify\)$/i, ''),
-    iscoVerified: !/\(verify\)$/i.test(heading[4]),
+    isco: normaliseIsco(heading[4]),
+    iscoVerified: !/\(verify\b/i.test(heading[4]),
     sector: sectorAt(heading.index),
     outlook,
     tasks,
