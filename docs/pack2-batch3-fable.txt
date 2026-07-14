@@ -1,0 +1,212 @@
+SECTOR: MARKETING AND CREATIVE
+11. marketing-executive | Marketing Executive | ISCO-08 2431
+Role outlook (0 words)
+
+The marketing executive sits between ideas and execution: campaign briefs, content, media bookings, budgets and reports. Generative tools have moved into the execution half quickly. They draft copy, build audience lists, produce advert variations and assemble performance dashboards on demand. That work filled much of a junior marketer's week, and it is going. What remains is harder to automate. Choosing what the brand should say in this market. Timing campaigns around Ramadan, back to school and national days. Briefing agencies well and holding them to the brief. Defending a budget with evidence. Over the next five years the production layer of marketing thins out, and the planning layer becomes the whole job.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Drafting campaign copy, emails and advert variations	communication	80	2-5y	Generative tools produce dozens of on-brief variations in minutes. Choosing the message worth testing is the part still worth paying for.
+2	Building audience segments and campaign lists	data_work	70	2-5y	Platforms now assemble and refine target segments automatically. Your judgement about which audience fits this market remains the human input.
+3	Compiling campaign performance reports	data_work	80	2-5y	Dashboards pull results across channels without help. The meeting where you explain what to change next quarter is your real deliverable.
+4	Booking and trafficking digital advertising	admin_processing	65	2-5y	Advertising platforms increasingly place, test and optimise spend themselves. Setting the objective and the guardrails is what stays with you.
+5	Timing campaigns around Ramadan, summer and national days	judgement	30	10y+	The Gulf marketing calendar is cultural, not mechanical. Knowing what lands in Ramadan and what must wait needs local sense.
+6	Briefing agencies and creative teams	communication	30	10y+	A sharp brief still decides campaign quality. Writing one takes market knowledge, taste and the authority to reject weak work.
+7	Managing budgets, approvals and supplier invoices	judgement	40	5-10y	Systems track spend automatically. Deciding where the next dirham or riyal goes, and defending that call, stays a human argument.
+8	Adapting global campaigns for Arabic and English audiences	judgement	35	5-10y	Translation tools move words. Deciding what a global campaign must change to respect Gulf audiences is judgement clients notice.
+9	Organising events, exhibitions and mall activations	customer_interaction	25	10y+	Physical marketing still runs on logistics, relationships and presence on the day. No tool stands at the stand for you.
+Risk interpretation (0 words)
+
+The score lands mid-range because the role splits cleanly. Content production, segmentation and reporting sit high on exposure scales, consistent with research placing structured text and data tasks among the most affected by generative AI [S5]. Strategy, cultural adaptation and stakeholder work sit low. The World Economic Forum expects creative thinking to keep rising in value this decade even as clerical work declines [S4], and marketing rewards exactly that mix. PwC's analysis adds a sharper point: workers in exposed occupations who use AI well command a premium rather than losing ground [S7]. So the question to ask is not whether marketing survives. It is whether your own week is production or judgement, because only one of those is safe.
+
+Protection plan (0 words)
+
+Move upstream deliberately. Learn the generative and analytics tools first, because the executive who runs them sets the pace for everyone else. Then shift your hours into the work the tools feed: campaign strategy, brand positioning and the annual plan. Build a Gulf marketing calendar in your head until Ramadan, Eid, back to school and national day campaigns are second nature, including what each season forbids as well as invites. Practise briefing until agencies deliver right the first time. Learn enough performance data to challenge a report, not just present one. And keep a results file: campaigns shipped, targets hit, budgets defended. Marketers who own outcomes move up. Marketers who own production queues get automated out of them.
+
+FAQs
+Q: Which marketing tasks is AI taking first? A: The production layer. Copy drafting, advert variations, audience segmentation and performance reporting are automating now, in line with research that places structured text and data work at the top of the exposure range [S5]. Strategy, budgets, cultural judgement and agency management are moving the other way, toward more human attention.
+Q: Do marketing executives still need writing skills? A: Yes, but the skill changes shape. You will write fewer first drafts and edit far more machine ones. What matters is judging tone, catching claims that could embarrass the brand, and knowing when English copy needs proper Arabic transcreation rather than translation. Taste and editing now beat typing speed.
+Q: Is digital marketing still a good Gulf career? A: Demand is holding, but the entry level is changing. Employers here adopt marketing automation quickly, so junior production roles are shrinking. Growth sits in roles that combine tool fluency with local judgement: campaign planning, performance strategy and bilingual brand work. Enter through the tools, then climb into the decisions.
+Q: How do I show AI skills to a marketing employer? A: Show outcomes, not tool lists. Bring one campaign where automation cut production time and you spent the saved hours on strategy or testing, with the results. Employers want evidence you direct the tools and measure what they produce. A portfolio of prompts impresses nobody. A lifted conversion rate does.
+Related roles
+social-media-manager: the channel specialism inside marketing where daily production automates fastest.
+content-writer: the writing craft this role commissions, edits and increasingly generates.
+graphic-designer: the visual partner on every campaign, facing the same generative wave.
+sales-executive: the commercial neighbour who turns your campaigns into revenue conversations.
+UAE application (0 words)
+
+The UAE is the region's marketing hub, and adoption of AI in business and government is policy here, not fashion [S1] [S8]. Agencies and in-house teams across Dubai and Abu Dhabi already generate copy, visuals and reports with the tools, so production skill alone buys nothing. What the market pays for is judgement across one of the world's most mixed consumer audiences: campaigns that work for Emiratis, long-term residents and tourists at once, in Arabic and English. Marketing executives who pair tool fluency with that cultural range, and who can defend spend with clean numbers, stay in demand.
+
+Saudi application (0 words)
+
+Saudi Arabia is the region's largest consumer market, and its entertainment, tourism and retail sectors are spending on marketing at a scale the Gulf has not seen before. The national data and AI strategy pushes those organisations toward automated, data-driven campaigns [S2]. Arabic-first work is the centre of gravity. Campaigns are judged on how well they speak to Saudi audiences, not on how well they translate. Executives who understand Saudi culture, plan around its calendar and read its platforms hold an advantage no tool erodes. Pair that with disciplined performance reporting and the Kingdom offers the strongest marketing career in the region.
+
+12. social-media-manager | Social Media Manager | ISCO-08 2431 (verify)
+Role outlook (0 words)
+
+Social media management grew up as a production job: posts, captions, replies and monthly reports. Generative tools now handle much of that production. They draft captions in both languages, schedule content, answer common questions and compile engagement reports in minutes. What they cannot do is carry a brand through a public mistake, judge which trend a company should touch, or build a real relationship with a creator. In the Gulf, where conversations move between Arabic and English and between public feeds and WhatsApp, that judgement is the job's protected core. The manager of the next five years posts less and decides more: strategy, tone, crisis calls and partnerships.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Writing and scheduling daily posts and captions	communication	80	2-5y	Caption drafting and scheduling are solved problems for current tools. Volume posting is no longer a skill an employer needs to buy.
+2	Compiling engagement and follower reports	data_work	80	2-5y	Platform dashboards assemble the monthly numbers themselves. Explaining why engagement moved, and what to do about it, is your remaining report.
+3	Replying to routine comments and direct messages	customer_interaction	60	2-5y	Automated replies now cover opening hours, prices and delivery questions. The sensitive or angry message still needs a human hand quickly.
+4	Moderating Arabic and English comment sections	judgement	40	5-10y	Filters catch obvious abuse. Judging sarcasm, dialect and cultural offence across the Gulf's mix of audiences still defeats them.
+5	Handling complaints that turn public	judgement	20	10y+	A complaint with an audience is a reputation event. Deciding when to apologise, escalate or take it private is senior human work.
+6	Managing influencer and creator partnerships	communication	25	10y+	Creator deals run on trust, negotiation and taste. Matching the right face to the brand is a relationship, not a search result.
+7	Running paid boosts and promoted posts	admin_processing	60	2-5y	Platforms increasingly optimise budgets and placements themselves. Your call is which content deserves money and which should die quietly.
+8	Producing short video and story content	communication	50	5-10y	Generative video is improving fast, but authentic local footage still outperforms it. Phones, access and an eye for a moment stay valuable.
+9	Setting channel strategy and content calendars	judgement	30	10y+	Deciding where the brand lives, what it never posts and how Ramadan changes the calendar is the strategy layer that survives.
+Risk interpretation (0 words)
+
+The average is moderate, but this role's exposure arrives from two directions at once. The production tasks, captions, scheduling, reporting and routine replies, sit at the top of the exposure range, consistent with analyses of generative AI and structured text work [S5]. And the platforms themselves keep absorbing the job from below, building automated content and reply features into their own products. What holds is judgement in public: moderation, crisis handling, creator relationships and strategy. Global forecasts show the same pattern across occupations, with clerical output declining while human skills gain weight [S4]. A social media manager whose week is mostly production is heavily exposed. One trusted with the brand's voice in a bad week is not.
+
+Protection plan (0 words)
+
+Become the person accountable for the account, not the person who posts to it. Take ownership of tone guidelines, escalation rules and the crisis playbook, because that authority is the part employers cannot automate. Build real Arabic-English range: dialect awareness, register, and the sense of when a joke travels and when it offends. Invest in creator relationships that follow you between jobs, since a trusted network of local influencers is a personal asset. Learn paid media well enough to argue with the platform's automation. Keep receipts: campaigns grown, crises contained, communities kept civil. And push toward strategy titles early. The posting layer of this career has perhaps two good years left. The judgement layer is growing.
+
+FAQs
+Q: Can AI run a brand's social media on its own? A: It can fill a feed. Tools draft, schedule and reply well enough for routine content, which is why production-only roles are shrinking [S5]. What it cannot do is carry accountability: judging a risky trend, calming a public complaint or standing behind a post that misfires. Brands still need a responsible human.
+Q: What social media skills will employers pay for in five years? A: Strategy, moderation judgement, crisis handling and creator management. Add paid media skill, because budgets follow attention, and genuine bilingual range, because Gulf audiences move between Arabic and English mid-thread. Production speed will not appear on that list. The tools have already claimed it.
+Q: How does Ramadan change social media work in the Gulf? A: It resets the calendar. Posting times shift toward evening, tone turns from selling toward generosity and family, and food, charity and gathering content comes forward. Brands that automate their way through Ramadan with generic scheduling stand out badly. This seasonal judgement is a genuinely local skill the tools do not carry.
+Q: Should I specialise in one platform or stay broad? A: Stay broad on strategy and deep on wherever your audience actually is. Platforms rise, fall and change their rules without warning, so a single-platform career is fragile. The durable skills, meaning tone, moderation, creators and paid media, transfer across platforms. Chase the audience, not the app.
+Related roles
+content-writer: supplies the words this role schedules, edits and increasingly generates.
+marketing-executive: the broader campaign role this specialism reports into and grows toward.
+graphic-designer: the visual production partner for every feed and campaign.
+customer-service-representative: shares the public-facing complaint handling that automation makes more valuable.
+UAE application (0 words)
+
+Social media is a primary business channel in the UAE, and brands here were early adopters of automated posting and reply tools, in step with a national agenda that normalises AI across services [S1]. That makes production skills cheap and judgement scarce. The market's audiences span dozens of nationalities, and its influencer economy is large and professionalised, with advertising disclosure expectations that managers are assumed to know. The strongest position is bilingual, strategy-led and commercially literate: someone who directs the tools, manages creators properly and protects the brand in public. Pure content schedulers are already being consolidated out.
+
+Saudi application (0 words)
+
+Saudi Arabia has one of the world's most active social media audiences, and reaching it well is a serious commercial skill. The national data and AI strategy accelerates automation of routine digital work [S2], while the Kingdom's growing entertainment and tourism sectors pour content into the same feeds. Arabic comes first here, and dialect and cultural register matter more than polish. Managers who understand Saudi humour, seasons and sensitivities, and who can build relationships with local creators, hold ground no imported tool or template reaches. Treat production automation as a given, and build a Saudi-specific judgement that travels with you.
+
+13. graphic-designer | Graphic Designer | ISCO-08 2166
+Role outlook (0 words)
+
+Image generators changed the mood of this profession almost overnight. Clients have seen software produce a poster in seconds, and some now question every design invoice. The honest position sits between panic and denial. Production design, meaning social graphics, banner sets and endless resizes, is automating quickly. Design judgement is not. Brands still need identities that hold together across every format, Arabic and Latin type set with equal care, files that print correctly and a person who can hear a vague client and return the right idea. In the Gulf's bilingual market those skills are scarcer than the tools. The designer who directs machines will replace several who only executed.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Producing social media graphics and banner sets	communication	80	2-5y	Template and generative tools turn out campaign graphics in bulk. Production volume no longer distinguishes one designer from another.
+2	Resizing and versioning artwork across formats	admin_processing	90	2-5y	Automated versioning handles the fifty sizes every campaign needs. This was always labour, not design, and it goes first.
+3	Designing logos and brand identities	judgement	40	5-10y	Generators sketch marks quickly, but an identity must survive years, formats and lawyers. Reducing a brand to its right form stays a craft.
+4	Setting Arabic typography and right-to-left layouts	judgement	25	10y+	Generative tools still mangle Arabic letterforms and mirrored layouts. Bilingual typographic skill is among the safest design work in the region.
+5	Retouching and preparing photography	admin_processing	70	2-5y	One-click tools now do most cleanup and background work. The remaining craft is taste: knowing when an image is actually right.
+6	Preparing print-ready files for production	admin_processing	55	5-10y	Software checks bleed and colour automatically, but print mistakes are expensive and physical. Printers still want a human who owns the file.
+7	Presenting concepts and interpreting client feedback	communication	20	10y+	Hearing that a design should feel more premium, and returning the right work, is translation between humans. It anchors the profession.
+8	Art directing photo shoots and campaigns	judgement	25	10y+	Someone must decide what the brand should look like before any tool renders it. Direction grows as execution automates.
+9	Maintaining brand guidelines across teams and suppliers	judgement	35	5-10y	As more non-designers generate artwork, policing consistency becomes harder and more valuable. The guideline keeper becomes the brand's quality gate.
+Risk interpretation (0 words)
+
+The score is moderate and unusually polarised. Production tasks sit near the top of the range, because image generation and automated layout land directly on them, in line with exposure research on generative AI [S5]. Direction, identity and typographic judgement sit near the bottom. Two regional facts tilt the balance. First, Arabic remains a weak point for generative tools, so bilingual design carries a durable premium here. Second, the volume of machine-generated material is exploding, which makes coherent brands rarer and quality control more valuable, a pattern consistent with findings that AI raises the premium on skilled judgement rather than removing it [S7]. Exposed hours, protected craft: your risk depends on which fills your timesheet.
+
+Protection plan (0 words)
+
+Split your development in two. On the tool side, master generation, automated versioning and retouching so your production cost drops faster than your market rate. On the craft side, invest where the tools fail: Arabic typography, bilingual layout systems, identity design and print production. Move from making assets to owning systems, because a designer who builds and polices a brand's visual language cannot be swapped for a prompt. Practise presenting until clients buy ideas from you, not files. Keep a portfolio organised around problems solved rather than deliverables shipped. And choose employers carefully. A studio selling volume production is standing where the flood is rising. A team selling brand judgement is standing on higher ground.
+
+FAQs
+Q: Are image generators taking graphic design jobs? A: They are taking production tasks first: social graphics, banners, resizes and routine retouching, the work exposure research flags as most automatable [S5]. Identity design, art direction and bilingual typography resist, because they need judgement that survives client scrutiny. Fewer pure production seats, stronger senior craft seats is the realistic path.
+Q: Is it acceptable to use AI images in client work? A: Only with the client's knowledge and within their rights requirements. Generated images carry questions about licensing, originality and brand safety that a professional must answer before publishing, not after. Designers who set clear rules for the tools protect their clients and their own reputation. Quiet shortcuts damage both.
+Q: Why is Arabic typography such an advantage? A: Because it is hard and the tools are bad at it. Arabic letterforms connect, change shape by position and read right to left, and bilingual layouts must balance both scripts with equal dignity. Gulf brands need this daily. A designer who does it properly competes in a much smaller field.
+Q: What should a junior designer build first? A: Foundations the tools assume: type, grids, colour and hierarchy, because you cannot direct what you do not understand. Then tool fluency, so production never bottlenecks you. Then one defensible specialism, such as Arabic-English brand systems or motion design. Juniors who skip foundations for prompts have no ladder to climb.
+Related roles
+marketing-executive: the campaign owner who commissions design and judges it commercially.
+social-media-manager: the fastest consumer of production graphics, and the first to automate them.
+content-writer: the verbal half of the same brief, facing the same generative pressure.
+translator: shares the bilingual craft premium that protects careful Arabic-English work.
+UAE application (0 words)
+
+The UAE concentrates the region's agencies, brands and events, and its design market moves at commercial speed. Generative tools are already standard in Dubai studios, encouraged by a national strategy that embeds AI across industries [S1]. Rate pressure on production design is real and growing. The defensible work is bilingual and brand-led: identities that hold in Arabic and English, campaign systems for a multicultural audience, and event and retail design that must exist physically. Designers who combine tool-speed production with genuine typographic and brand craft find the UAE rewarding. Those selling resizes are competing with software priced near zero.
+
+Saudi application (0 words)
+
+Saudi Arabia is commissioning design at remarkable scale: new brands, destinations, events and institutions, all needing visual identities rooted in Saudi culture. The national data and AI strategy speeds up adoption of generative tools [S2], but the brief itself is deeply local. Arabic-first identity work, calligraphy-informed typography and design that treats Saudi heritage with fluency rather than cliché are scarce skills the tools cannot fake. Designers who understand the Kingdom's regions, audiences and ambitions, and who deliver bilingual systems cleanly, are building careers on the region's largest creative spend. Production-only designers face the same automation squeeze as everywhere.
+
+SECTOR: EDUCATION
+14. school-teacher | School Teacher (Primary and Secondary) | ISCO-08 2341 (verify)
+Role outlook (0 words)
+
+Teaching is one of the most protected occupations in this calculator, and the research is unusually clear about why. Global forecasts expect education jobs to grow this decade, not shrink [S4], and exposure studies place classroom work among the least automatable [S5]. What changes is the work around the classroom. Lesson planning, worksheet production, objective marking and report drafting are automating now, and in Gulf schools much of this arrives through learning platforms and parent apps. Handled well, that returns hours to actual teaching. The risk in this profession is not replacement. It is that teachers who ignore the tools inherit the paperwork anyway, while their students quietly use the same tools to hollow out homework.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Planning lessons and preparing worksheets	admin_processing	55	2-5y	Generative tools draft lesson plans and differentiated worksheets in minutes. Curating and adapting them to your actual class is the surviving skill.
+2	Marking objective tests and homework	data_work	70	2-5y	Auto-marking already handles quizzes and structured questions. Judging extended writing, and spotting the student who is struggling, remains yours.
+3	Writing term reports and student comments	admin_processing	60	2-5y	Report tools draft comments from attainment data. Parents can tell a template from a teacher, so the personal layer still matters.
+4	Teaching lessons and managing behaviour	judgement	10	10y+	Thirty children, one room and a fire drill. Classroom presence, authority and warmth are the profession's core and they do not automate.
+5	Differentiating for mixed abilities and languages	judgement	30	10y+	Gulf classrooms mix first languages and prior schooling widely. Adapting a lesson live for that mix is expert human work.
+6	Communicating with parents through school apps	communication	40	5-10y	Apps handle notices and bookings, and translation helps. The difficult conversation about a child's progress still needs a trusted teacher.
+7	Preparing evidence for school inspections	compliance	45	5-10y	Inspection frameworks demand documented planning, assessment and progress data. Systems compile it, but accountability in the interview room is yours.
+8	Tracking attainment data across the year	data_work	60	2-5y	Platforms chart progress automatically. Deciding which intervention a falling student needs, and making it happen, is the teacher's judgement.
+9	Leading pastoral care and safeguarding duties	judgement	10	10y+	Noticing the withdrawn child, and acting correctly on a concern, is a duty of trust. No school will hand it to software.
+Risk interpretation (0 words)
+
+This is among the lowest scores in the pack, and the shape behind it matters. The classroom core, meaning teaching, behaviour, pastoral care and live differentiation, sits at the resistant floor of every serious analysis, and global forecasts list teaching among the growing professions of the decade [S4]. The exposed slice is administrative: planning documents, objective marking, report drafting and data entry, tasks that exposure research ranks high because they are structured text and data work [S5]. In Gulf schools, inspection and reporting demands make that slice a real part of the week, so automation lands on hours teachers actually feel. The likely future is steady teacher demand with changed weeks: more classroom and pastoral time, less evening paperwork, higher expectations of both.
+
+Protection plan (0 words)
+
+Protect the craft and automate the paperwork, in that order. Use planning and marking tools openly, then spend the reclaimed hours where your value is unarguable: feedback conversations, stretch for the strongest students and rescue for the weakest. Learn how your students actually use AI, because assessment now has to be designed around it, and teachers who understand the tools set better tasks than teachers who ban them blindly. Build your data story for inspections: clean records of progress and intervention that take minutes, not weekends, to evidence. Volunteer early for the school's digital learning lead role, since that seat is being created everywhere. And keep growing the human skills, because they are now the whole moat: classroom presence, parent trust and pastoral judgement.
+
+FAQs
+Q: Will AI tutors replace classroom teachers? A: No serious forecast says so. Education roles are projected to grow this decade [S4], and classroom teaching sits among the least exposed work in AI research [S5]. Tutoring tools help with practice and revision. They do not manage a class, safeguard a child or hold a parent's trust. Expect assistance, not replacement.
+Q: How should teachers handle students using AI for homework? A: Assume they already do, and redesign around it. Move weight toward supervised writing, oral questioning and process marks that show thinking. Teach proper use openly, since students will need the judgement anyway. Teachers who set AI-resistant tasks keep assessment meaningful. Blanket bans mostly reward the students who hide it best.
+Q: Which teaching tasks should I automate first? A: The evening ones. Lesson plan drafts, differentiated worksheets, quiz marking and first drafts of report comments all automate safely because you review the output anyway. Keep judgement tasks manual: extended marking, feedback and anything pastoral. The goal is simple. Give the machine the paperwork and give the children the hours back.
+Q: Are Gulf teaching jobs a growth market? A: Yes. School sectors across the region are expanding, and national strategies in both countries treat education and skills as central to their transformation plans [S1] [S2]. Schools compete for teachers who deliver strong classroom outcomes and handle inspection frameworks confidently. Security in this profession follows performance and adaptability.
+Related roles
+registered-nurse: another trust profession where human presence anchors the role against automation.
+hr-officer: the corporate path teachers often take, built on the same people judgement.
+translator: bilingual classrooms reward the same Arabic-English fluency this role trades on.
+data-analyst: attainment tracking builds data skills that schools and employers increasingly value.
+UAE application (0 words)
+
+The UAE's school sector is large, varied and closely inspected, and its government has pushed AI into education policy earlier than most countries [S1] [S8]. Teachers here should expect learning platforms, auto-marking and machine-assisted planning to become normal parts of the job, and inspection conversations to ask how classrooms use them. The teachers who thrive will show strong classroom outcomes, confident use of the school's platforms and clear evidence of student progress. Multicultural classrooms are the UAE's defining condition. Teachers who differentiate well across languages and cultures, and communicate warmly with parents from everywhere, remain the sector's scarcest resource.
+
+Saudi application (0 words)
+
+Education sits at the centre of Saudi Arabia's transformation, with sustained investment in schools, teacher development and learning technology under the national strategy [S2], and a labour market that is expanding professional opportunities for Saudi teachers [S3]. Classrooms are digitising quickly, and planning, marking and reporting tools will follow. The durable value is the same as everywhere: classroom skill, pastoral trust and the ability to lift real attainment. For Saudi teachers, the profession offers a growing, respected career with clear national purpose. For expatriate specialists, demand continues where skills are scarce. In both cases, the classroom, not the paperwork, is the career.
+
+SECTOR: LEGAL SERVICES
+15. legal-secretary | Legal Secretary | ISCO-08 3342
+Role outlook (0 words)
+
+The legal secretary's traditional stock in trade, meaning fast accurate typing, formatted pleadings and careful transcription, is exactly what current AI does well. Document tools produce clean first versions in seconds, dictation transcribes itself and court portals accept e-filings that once required a trip. Global forecasts list secretarial roles among the fastest declining [S4]. Yet law firms in the Gulf still run on people who make the machinery work: bilingual correspondence that must be right in both languages, court deadlines that cannot slip, notarisation and attestation errands that remain stubbornly physical, and absolute discretion with client papers. The typing is going. The trusted procedural backbone of a firm is not.
+
+Tasks
+#	Task	Category	Base risk	Horizon	What this means for you
+1	Typing and formatting pleadings and legal documents	admin_processing	80	2-5y	Drafting tools produce formatted legal documents from instructions or precedents. Typing speed has stopped being a hiring criterion.
+2	Transcribing dictation and attendance notes	data_work	85	2-5y	Speech tools transcribe accurately in English and increasingly in Arabic. Reviewing the text for legal accuracy is the sliver that remains.
+3	Preparing bilingual Arabic-English legal correspondence	communication	40	5-10y	Machine translation drafts fast, but a legal letter must be exact in both languages. Bilingual review before anything leaves the firm stays human.
+4	Managing court deadlines and hearing diaries	judgement	35	5-10y	Systems calculate and remind, but a missed limitation date can end a case and a career. Firms keep a named human accountable.
+5	Filing cases through court e-filing portals	compliance	50	5-10y	Gulf courts keep expanding e-filing, which simplifies steps but concentrates responsibility. Knowing each portal's quirks makes you hard to spare.
+6	Organising case files and hearing bundles	data_work	70	2-5y	Document systems index and assemble bundles increasingly well. Knowing what the lawyer will actually reach for in a hearing is your edit.
+7	Arranging notarisation, attestation and certified translations	admin_processing	45	5-10y	Stamps, certifications and attestation chains are still physical, sequential and unforgiving. Someone reliable must walk documents through them.
+8	Recording lawyer time and preparing client invoices	data_work	65	2-5y	Time capture and billing automate steadily. Chasing the lawyer who never fills a timesheet remains, unfortunately, human work.
+9	Guarding confidential client information	compliance	25	10y+	A firm's business is secrets. The discretion of the person nearest the files is a hiring criterion no software satisfies.
+Risk interpretation (0 words)
+
+The score is high, and it sits alongside other secretarial work at the exposed end of the calculator. Typing, transcription, file assembly and billing are structured, repetitive text and data tasks, exactly what exposure research places at the top of its range [S5], and forecasts already list secretarial occupations among the fastest declining worldwide [S4]. Three things anchor what remains. Deadlines carry consequences that keep a named human accountable. Bilingual legal correspondence needs review that translation tools cannot certify. And the Gulf's procedural layer, including notarisation, attestation and evolving court portals, rewards someone who knows how things actually get done. The realistic outlook is fewer secretaries per firm, each running more process and typing far less.
+
+Protection plan (0 words)
+
+Trade typing for procedure. Learn every court portal, filing rule and document chain your firm touches until lawyers route their filings through you by choice, because procedural mastery is the durable half of this role. Build your bilingual drafting to the standard where partners sign your Arabic and English letters unchanged. Take formal ownership of the deadline diary, in writing, since accountability is what firms will keep paying for. Learn the document management and billing systems as an administrator rather than a user. Then choose your growth path early. Paralegal is the natural step, and strong legal secretaries make excellent ones. A secretary who runs process, deadlines and bilingual correspondence is a firm asset. One who mainly types is already replaceable.
+
+FAQs
+Q: Are law firms replacing legal secretaries with AI? A: They are replacing the typing, transcription and formatting inside the role, which forecasts already show declining across secretarial work [S4]. Most firms are consolidating rather than cutting outright: fewer secretaries, each supporting more lawyers with more systems. The survivors own procedure, deadlines and bilingual correspondence rather than keyboards.
+Q: What is the difference between a legal secretary and a paralegal? A: A legal secretary runs the administrative machinery: documents, diaries, filings and billing. A paralegal does supervised legal work: research, substantive drafting and case preparation. Automation is pushing the two together, because as secretarial typing shrinks, the surviving work climbs toward paralegal territory. Moving that way is the natural career response.
+Q: How valuable is Arabic-English skill in legal support work? A: It may be the single strongest protection in this role. Gulf legal practice runs in both languages, court documents are commonly Arabic, and clients correspond in either. Machine translation drafts but cannot take responsibility. A secretary whose bilingual legal drafting partners trust without checking holds a scarce and durable position.
+Q: Which systems should a legal secretary learn now? A: Three layers. The court e-filing portals your firm uses, deeply enough to handle their exceptions. The document management system, at administrator level, including templates and access rights. And the time and billing platform. System ownership converts you from a typing cost into the person who keeps the firm's machinery running.
+Related roles
+paralegal: the substantive next step this role naturally grows into as typing automates.
+executive-assistant: shares the diary, correspondence and discretion core in a corporate setting.
+administrative-assistant: the broader office sibling facing the same document automation wave.
+translator: bilingual legal correspondence draws on the same careful Arabic-English craft.
+UAE application (0 words)
+
+The UAE's legal market is busy and procedurally layered, with onshore courts working largely in Arabic and international work running in English alongside. Court systems and government services keep digitising under the national AI agenda [S1] [S8], so filings, translations and document flows are moving online steadily. That removes queueing, not responsibility. Firms need support staff who navigate the portals confidently, keep bilingual correspondence exact and manage deadlines across jurisdictions without slips. Legal secretaries who master this procedural landscape, and pair it with the discretion partners rely on, remain genuinely hard to replace in the Emirates. Pure document producers are being consolidated already.
+
+Saudi application (0 words)
+
+Saudi Arabia has digitised court and government procedures rapidly as part of its national transformation, with data and AI adoption promoted across the economy [S2], while the legal market grows alongside it. Arabic is the language of the Kingdom's courts, so precise Arabic legal drafting sits at the centre of every firm's support work, with English needed for international matters. National programmes are also bringing more Saudi professionals into legal careers [S3]. The strong position is procedural and bilingual: e-filing fluency, deadline ownership and drafting in both languages to signing standard. Build toward paralegal work as the typing layer thins.

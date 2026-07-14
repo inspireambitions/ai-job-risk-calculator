@@ -2,14 +2,45 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 
 const root = process.cwd();
-const inputPath = path.join(root, 'docs', 'fable-occupation-pack-approved.txt');
+const inputPaths = [
+  path.join(root, 'docs', 'fable-occupation-pack-approved.txt'),
+  path.join(root, 'docs', 'pack2-batch1-fable.txt'),
+  path.join(root, 'docs', 'pack2-batch2-fable.txt'),
+  path.join(root, 'docs', 'pack2-batch3-fable.txt'),
+  path.join(root, 'docs', 'pack2-batch4-fable.txt'),
+];
 const outputPath = path.join(root, 'data', 'occupations.json');
-const input = await readFile(inputPath, 'utf8');
+
+const pack2SourceMap = {
+  S1: 'S1',
+  S2: 'S3',
+  S3: 'S4',
+  S4: 'S5',
+  S5: 'S6',
+  S6: 'S7',
+  S7: 'S8',
+  S8: 'S9',
+};
+
+function normalisePack2Sources(text) {
+  return text.replace(/\[(S\d+)\]/g, (match, key) => `[${pack2SourceMap[key] || key}]`);
+}
+
+const inputs = [];
+for (const [index, inputPath] of inputPaths.entries()) {
+  try {
+    const text = await readFile(inputPath, 'utf8');
+    inputs.push(index === 0 ? text : normalisePack2Sources(text));
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+  }
+}
+const input = inputs.join('\n\n');
 
 const clean = (value = '') => value
   .replace(/\s*\(kim_review_pending\)/gi, '')
-  .replace(/\s*\[KIM REVIEW:\s*qualitative\]/gi, '')
-  .replace(/\s*\(KIM REVIEW:\s*qualitative\)/gi, '')
+  .replace(/\s*\[KIM REVIEW:[^\]]+\]/gi, '')
+  .replace(/\s*\(KIM REVIEW:[^)]+\)/gi, '')
   .replace(/\s*\(\d+w\)\s*$/gi, '')
   .replace(/\s+/g, ' ')
   .trim();
@@ -40,7 +71,8 @@ function referencedSources(text) {
 
 const occupations = headings.map((heading, index) => {
   const start = heading.index + heading[0].length;
-  const end = headings[index + 1]?.index ?? input.indexOf('MACHINE-CHECK SUMMARY');
+  const summaryIndex = input.indexOf('MACHINE-CHECK SUMMARY', start);
+  const end = headings[index + 1]?.index ?? (summaryIndex === -1 ? input.length : summaryIndex);
   const section = input.slice(start, end);
   const tasksBlock = section.match(/Tasks\s*\n#\tTask\tCategory\tBase risk\tHorizon\tWhat this means for you\s*\n([\s\S]*?)\nRisk interpretation/)?.[1] || '';
   const tasks = tasksBlock.split(/\r?\n/).filter((line) => /^\d+\t/.test(line)).map((line) => {
@@ -61,7 +93,7 @@ const occupations = headings.map((heading, index) => {
   const riskInterpretation = extractBetween(section, 'Risk interpretation \\(\\d+ words\\)', 'Protection plan');
   const protectionPlan = extractBetween(section, 'Protection plan \\(\\d+ words\\)', 'FAQs');
   const uae = extractBetween(section, 'UAE application \\(\\d+ words\\)', 'Saudi application');
-  const saudi = clean(section.match(/Saudi application \(\d+ words\)\s*\n\n([\s\S]*?)(?:\n\nSECTOR:|$)/)?.[1]);
+  const saudi = clean(section.match(/Saudi application \(\d+ words\)\s*\n\n([\s\S]*?)(?:\n\nSECTOR:|\n\nMACHINE-CHECK SUMMARY|$)/)?.[1]);
   const allText = [outlook, ...tasks.map((task) => task.explanation), riskInterpretation, protectionPlan, ...faqs.flatMap((faq) => [faq.question, faq.answer]), ...related.map((item) => item.reason), uae, saudi].join(' ');
   return {
     order: Number(heading[1]),
@@ -92,6 +124,6 @@ for (const occupation of occupations) {
 }
 
 await mkdir(path.dirname(outputPath), { recursive: true });
-await writeFile(outputPath, `${JSON.stringify({ generatedAt: '2026-07-13', sources, occupations }, null, 2)}\n`, 'utf8');
+await writeFile(outputPath, `${JSON.stringify({ generatedAt: '2026-07-14', sources, occupations }, null, 2)}\n`, 'utf8');
 console.log(`Wrote ${occupations.length} occupations and ${occupations.length * 3} indexable pages to ${outputPath}.`);
 console.log(`Word-count range: ${Math.min(...occupations.map((item) => item.wordCount))}-${Math.max(...occupations.map((item) => item.wordCount))}.`);

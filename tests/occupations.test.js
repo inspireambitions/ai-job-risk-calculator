@@ -18,14 +18,14 @@ const jaccard = (left, right) => {
 };
 
 describe('occupation launch gate', () => {
-  it('ships the approved 20-role, 60-page tranche', () => {
-    expect(occupations).toHaveLength(20);
-    expect(occupations.length * (1 + Object.keys(regions).length)).toBe(60);
+  it('ships the approved 40-role, 120-page tranche', () => {
+    expect(occupations).toHaveLength(40);
+    expect(occupations.length * (1 + Object.keys(regions).length)).toBe(120);
   });
 
   it('has no thin or incomplete occupation records', () => {
     for (const occupation of occupations) {
-      expect(occupation.wordCount, occupation.slug).toBeGreaterThanOrEqual(650);
+      expect(occupation.wordCount, occupation.slug).toBeGreaterThanOrEqual(900);
       expect(occupation.tasks.length, occupation.slug).toBeGreaterThanOrEqual(8);
       expect(occupation.faqs, occupation.slug).toHaveLength(4);
       expect(occupation.regions.uae, occupation.slug).toBeTruthy();
@@ -34,12 +34,20 @@ describe('occupation launch gate', () => {
   });
 
   it('keeps unverified ISCO mappings out of the public taxonomy', () => {
-    expect(occupations.filter((occupation) => !occupation.iscoVerified)).toHaveLength(7);
+    expect(occupations.filter((occupation) => !occupation.iscoVerified)).toHaveLength(11);
   });
 
   it('keeps editorial review markers out of public occupation content', () => {
     const publicPayload = JSON.stringify(occupations);
-    expect(publicPayload).not.toMatch(/KIM REVIEW|kim_review_pending|\(verify\)/i);
+    expect(publicPayload).not.toMatch(/KIM REVIEW|kim_review_pending|\(verify\)|MACHINE-CHECK/i);
+  });
+
+  it('keeps enough live related occupation links on every page', () => {
+    const slugs = new Set(occupations.map((occupation) => occupation.slug));
+    for (const occupation of occupations) {
+      const liveRelated = occupation.related.filter((item) => slugs.has(item.slug));
+      expect(liveRelated.length, occupation.slug).toBeGreaterThanOrEqual(3);
+    }
   });
 
   it('keeps pairwise content similarity below the launch threshold', () => {

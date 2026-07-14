@@ -267,10 +267,10 @@ Q: Should nurses learn AI tools or ignore them? A: Learn them, lightly but early
 Q: Which nursing roles carry higher exposure? A: Roles that drifted away from patients. Heavy audit, coding, administration or data positions score closer to office work than to bedside nursing. If your week is mostly screens, your exposure is office-grade. The protection in nursing comes from the patient contact, not from the job title. (46w)
 Related roles
 radiographer: a fellow patient-facing clinical role protected by physical work and safety regulation.
-pharmacist-assistant (60-list): adjacent clinical support with a higher share of automatable processing.
-lab-technician (60-list): shows how diagnostic work splits between automated analysis and human quality control.
+compliance-officer: useful contrast for regulated work where documentation exposure is higher than bedside care.
+data-analyst: shows how health data work can be more automatable than patient-facing clinical judgement.
 hotel-receptionist: an unlikely cousin, proving service recovery skills transfer across industries.
-hr-manager (60-list): a comparison point for how judgement protects entirely different professions.
+hr-officer: a comparison point for how human judgement protects entirely different professions.
 UAE application (102 words)
 
 Healthcare is a named priority sector in the UAE's national AI strategy [S1], which means hospitals here are early adopters of clinical documentation and triage technology. For nurses, that brings the paperwork relief sooner, along with an expectation of digital fluency in modern facilities [KIM REVIEW: qualitative]. The UAE's healthcare workforce is strongly international, and licensure requirements shape entry for expatriate nurses [KIM REVIEW: verify licensing detail before publication]. The strategic picture favours the profession: a system investing in AI-enabled healthcare capacity still needs hands at every bedside, and clinical staff comfortable with new tools stand out in it. (kim_review_pending)
@@ -300,7 +300,7 @@ The score here is low to moderate, and the task table shows why the scary headli
 
 Protection plan (112 words)
 
-Anchor yourself in the regulated and the advanced. First, deepen modality expertise. Advanced CT, MRI or interventional skills raise your scarcity, and scarce clinical skills are the strongest currency in any restructuring. Second, treat dose responsibility as a career asset. Radiation safety roles carry formal accountability, and accountability keeps humans employed. Third, become the department's AI-quality specialist. Triage and quality tools need clinical staff who understand their errors; the radiographer who audits the machine earns influence over how it is used. Fourth, keep patient care visibly excellent. Complaint-free, calm, efficient patient handling shows up in departmental metrics, and it is the part of your work no technology vendor can sell. (kim_review_pending)
+Anchor yourself in the regulated and the advanced. First, deepen modality expertise. Advanced CT, MRI or interventional skills raise your scarcity, and scarce clinical skills are the strongest currency in any restructuring. Second, treat dose responsibility as a career asset. Radiation safety roles carry formal accountability, and accountability keeps humans employed. Third, become the department's AI-quality specialist. Triage and quality tools need clinical staff who understand their errors; the radiographer who audits the machine earns influence over how it is used. Fourth, keep patient care visibly excellent. Complaint-free, calm, efficient patient handling shows up in departmental metrics, and it is the part of your work no technology vendor can sell. Document the complex cases you handled well, because those examples make your protection visible in interviews. (kim_review_pending)
 
 FAQs
 Q: Is AI replacing radiographers or radiologists? A: The image-reading debate mostly concerns radiologists, who interpret scans. Radiographers produce the images through positioning, equipment operation and patient care, which are physical and regulated tasks. Global exposure research places that work among the least automatable [S6]. Radiographers face workflow change, not replacement. (43w)
