@@ -34,3 +34,31 @@ jobs:
           [[ "$page_status" == "200" ]] || { echo "Homepage returned HTTP $page_status"; exit 1; }
           [[ "$health_status" == "200" ]] || { echo "Health endpoint returned HTTP $health_status"; cat "$health_body"; exit 1; }
           grep -q "AI Job Risk Calculator" "$page_body" || { echo "Homepage title marker missing"; exit 1; }
+
+  check-hr-tools:
+    name: Check HR generators
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: GCC Job Description Generator
+            url: https://tools.inspireambitions.com/job-description-generator/
+            marker: Free GCC Job Description Generator
+          - label: GCC Interview Question Bank
+            url: https://tools.inspireambitions.com/interview-question-bank/
+            marker: Interview Question Bank
+    steps:
+      - name: Check ${{ matrix.label }}
+        shell: bash
+        env:
+          TOOL_URL: ${{ matrix.url }}
+          TOOL_MARKER: ${{ matrix.marker }}
+        run: |
+          set -euo pipefail
+          response_body="$(mktemp)"
+          trap 'rm -f "$response_body"' EXIT
+          status="$(curl --silent --show-error --location --retry 2 --retry-all-errors --max-time 25 --output "$response_body" --write-out '%{http_code}' "$TOOL_URL")"
+          [[ "$status" == "200" ]] || { echo "$TOOL_URL returned HTTP $status"; exit 1; }
+          grep -Fq "$TOOL_MARKER" "$response_body" || { echo "Expected page marker missing for $TOOL_URL"; exit 1; }
