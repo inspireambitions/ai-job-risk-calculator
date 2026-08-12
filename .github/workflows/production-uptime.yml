@@ -1,0 +1,36 @@
+name: Production Uptime
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/production-uptime.yml"
+  schedule:
+    - cron: "31 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-uptime
+  cancel-in-progress: true
+
+jobs:
+  check-ai-risk:
+    name: Check AI-risk production
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check homepage and health endpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+          page_body="$(mktemp)"
+          health_body="$(mktemp)"
+          trap 'rm -f "$page_body" "$health_body"' EXIT
+          page_status="$(curl --silent --show-error --location --retry 2 --retry-all-errors --max-time 25 --output "$page_body" --write-out '%{http_code}' https://calculator.inspireambitions.com/)"
+          health_status="$(curl --silent --show-error --location --retry 2 --retry-all-errors --max-time 25 --output "$health_body" --write-out '%{http_code}' https://calculator.inspireambitions.com/api/health)"
+          [[ "$page_status" == "200" ]] || { echo "Homepage returned HTTP $page_status"; exit 1; }
+          [[ "$health_status" == "200" ]] || { echo "Health endpoint returned HTTP $health_status"; cat "$health_body"; exit 1; }
+          grep -q "AI Job Risk Calculator" "$page_body" || { echo "Homepage title marker missing"; exit 1; }
