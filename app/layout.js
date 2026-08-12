@@ -4,6 +4,28 @@ import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter', weight: '600' });
 
+const applicationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'AI Job Risk Calculator',
+  url: 'https://calculator.inspireambitions.com/',
+  description: 'A free task-based calculator that estimates AI displacement risk and career protection options.',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'AED' },
+  author: { '@type': 'Person', name: 'Kim Kiyingi', jobTitle: 'HR Career Specialist', url: 'https://inspireambitions.com/about/' },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://inspireambitions.com/' },
+    { '@type': 'ListItem', position: 2, name: 'Career Tools', item: 'https://inspireambitions.com/career-tools/' },
+    { '@type': 'ListItem', position: 3, name: 'AI Job Risk Calculator', item: 'https://calculator.inspireambitions.com/' },
+  ],
+};
+
 export const metadata = {
   title: 'AI Job Risk Calculator | Will AI Take My Job?',
   description: 'Find out how AI may change your work. Get an AI Risk Score, Protection Score, and displacement range based on your actual daily tasks, informed by published research. Free.',
@@ -38,6 +60,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
       <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(applicationSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('ia-theme');if(t!=='light'&&t!=='dark'){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.dataset.theme=t;document.documentElement.style.colorScheme=t}catch(e){}})();`,
