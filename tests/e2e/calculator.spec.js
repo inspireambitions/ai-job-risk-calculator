@@ -29,9 +29,11 @@ test('completes analysis without an email wall and fits the viewport', async ({ 
   await expect(page.getByRole('heading', { name: 'AI job risk results for HR Manager' })).toBeFocused();
   await expect(page.getByText('~2034 (2032-2038)')).toBeVisible();
   await expect(page.getByText(/planning signal, not a promised date/i)).toBeVisible();
-  const cvHandoff = page.getByRole('link', { name: 'Build and Tailor My CV' });
+  const cvHandoff = page.getByRole('button', { name: 'Build and Tailor My CV' });
   await expect(cvHandoff).toBeVisible();
-  await expect(cvHandoff).toHaveAttribute('href', /cv\.inspireambitions\.com.*source=ai-risk-calculator/);
+  await cvHandoff.click();
+  await expect(page.getByRole('dialog', { name: 'Send these details to the CV builder?' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Send and open CV builder' })).toBeVisible();
   await expect(page.getByText('Email yourself the full report')).toHaveCount(0);
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth);
   expect(overflow).toBe(false);
