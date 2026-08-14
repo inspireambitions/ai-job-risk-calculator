@@ -67,8 +67,6 @@ export default function Home() {
       });
       trackToolEvent('tool_completed', {
         surface: 'ai_job_risk_results',
-        score_band: analysis.riskLevel,
-        country: data.country || 'not_specified',
       });
     } catch (err) {
       const message = err.name === 'AbortError'
