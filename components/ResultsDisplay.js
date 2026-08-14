@@ -44,6 +44,26 @@ function getTimelineText(timeline, legacyKey, currentKey) {
   return timeline?.[legacyKey] || timeline?.[currentKey] || '';
 }
 
+function getResultArticle(score, jobTitle) {
+  const title = jobTitle.toLowerCase();
+  if (/human resources|\bhr\b/.test(title)) {
+    return {
+      title: 'Will AI replace HR jobs?',
+      url: 'https://inspireambitions.com/will-ai-replace-hr/',
+    };
+  }
+  if (score >= 56) {
+    return {
+      title: 'Will AI take my job?',
+      url: 'https://inspireambitions.com/will-ai-take-my-job/',
+    };
+  }
+  return {
+    title: 'Build creative thinking and AI fluency',
+    url: 'https://inspireambitions.com/creative-thinking-ai-fluency-career-skills-2026/',
+  };
+}
+
 function TaskBar({ task }) {
   const colors = getRiskColor(task.riskScore);
   return (
@@ -86,6 +106,15 @@ export default function ResultsDisplay({ results, formData, onReset }) {
   const colors = getRiskColor(score);
   const protColors = getProtectionColor(protectionScore);
   const toolUrl = 'https://calculator.inspireambitions.com/';
+  const resultArticle = getResultArticle(score, formData.jobTitle);
+
+  const trackResultRoute = (eventName, destination) => {
+    trackToolEvent(eventName, {
+      surface: 'result',
+      destination,
+      journey: 'applications',
+    });
+  };
 
   const yearStr = displacementYear
     ? `Estimated task-displacement horizon: ~${displacementYear}${displacementRange ? ` (${displacementRange.earliest}-${displacementRange.latest})` : ''}.`
@@ -164,6 +193,7 @@ export default function ResultsDisplay({ results, formData, onReset }) {
       if (!response.ok) throw new Error('handoff unavailable');
       const { token } = await response.json();
       trackToolEvent('cv_handoff_clicked', { surface: 'result', score_band: results.riskLevel });
+      trackResultRoute('next_tool_clicked', 'cv_builder');
       window.location.href = `https://cv.inspireambitions.com/?handoff=${encodeURIComponent(token)}`;
     } catch {
       setHandoffStatus('error');
@@ -443,6 +473,21 @@ export default function ResultsDisplay({ results, formData, onReset }) {
         Share links store only an anonymous score snapshot and expire after 90 days. Your email and task text are not included.
       </p>
 
+      <aside className="border border-[#d8c895] bg-[#faf7ee] p-6 fade-in-up" aria-labelledby="result-route-title">
+        <p className="text-xs font-bold uppercase tracking-wider text-[#2f6b5e]">Your next step</p>
+        <h3 id="result-route-title" className="mt-2 text-lg font-bold text-[#1a2744]">Read guidance matched to this result</h3>
+        <p className="mt-2 text-sm text-gray-600">Use the analysis as a planning signal, then turn it into a specific skills and application plan.</p>
+        <a
+          href={resultArticle.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackResultRoute('result_article_clicked', resultArticle.url)}
+          className="mt-4 inline-block font-semibold text-[#806017] underline"
+        >
+          {resultArticle.title}
+        </a>
+      </aside>
+
       {/* CTA */}
       <div className="border border-brand-200 bg-brand-50 p-6 text-center fade-in-up">
         <p className="text-base font-bold text-gray-900 mb-2">Turn your real tasks into a stronger GCC CV</p>
@@ -480,6 +525,7 @@ export default function ResultsDisplay({ results, formData, onReset }) {
           href="https://inspireambitions.com/career-tools/"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackResultRoute('next_tool_clicked', 'career_tools_hub')}
           className="inline-block px-6 py-2.5 bg-brand-600 text-white rounded-lg text-sm font-medium hover:bg-brand-500 transition-colors"
         >
           Explore Career Tools

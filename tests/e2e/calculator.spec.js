@@ -29,6 +29,12 @@ test('completes analysis without an email wall and fits the viewport', async ({ 
   await expect(page.getByRole('heading', { name: 'AI job risk results for HR Manager' })).toBeFocused();
   await expect(page.getByText('~2034 (2032-2038)')).toBeVisible();
   await expect(page.getByText(/planning signal, not a promised date/i)).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Read guidance matched to this result' })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Will AI replace HR jobs?' })).toHaveAttribute(
+    'href',
+    'https://inspireambitions.com/will-ai-replace-hr/'
+  );
+  await expect.poll(() => page.evaluate(() => window.dataLayer?.some((entry) => entry.event === 'tool_completed'))).toBe(true);
   const cvHandoff = page.getByRole('button', { name: 'Build and Tailor My CV' });
   await expect(cvHandoff).toBeVisible();
   await cvHandoff.click();

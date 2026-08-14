@@ -65,6 +65,9 @@ export default function Home() {
         industry: data.industry || 'not_specified',
         task_count: data.tasks.length,
       });
+      trackToolEvent('tool_completed', {
+        surface: 'ai_job_risk_results',
+      });
     } catch (err) {
       const message = err.name === 'AbortError'
         ? 'The analysis took too long. Your details are still here, so you can try again.'
