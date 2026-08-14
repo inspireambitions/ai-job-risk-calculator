@@ -112,7 +112,6 @@ export default function ResultsDisplay({ results, formData, onReset }) {
     trackToolEvent(eventName, {
       surface: 'result',
       destination,
-      score_band: results.riskLevel,
       journey: 'applications',
     });
   };
